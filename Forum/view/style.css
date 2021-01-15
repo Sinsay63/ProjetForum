@@ -1,0 +1,27 @@
+body,p{
+    margin:0;
+}
+
+.top{
+    display: flex;
+    height:150px;
+    width:100%;
+    margin-bottom: 100px;
+}
+
+.gauche {
+    width:40%;
+    background-color:pink;
+    display:flex;
+}
+
+.droite{
+    width:60%;
+    background-color:gold;
+}
+
+.soloL{
+    height:100%;
+    width:150px;
+    border-radius: 50%;
+}
