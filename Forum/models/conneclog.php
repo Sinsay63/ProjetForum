@@ -5,7 +5,6 @@
     $reponse->execute(array($pseudo));
     $logs = $reponse->fetch();
    
-    if($logs){
         if (!$logs) {
             echo "Nom d'utilsateur ou mot de passe incorrect";
         }
@@ -14,15 +13,14 @@
                 session_start();
                 $_SESSION['ID'] = $logs['ID'];
                 $_SESSION['Pseudo'] = $pseudo;
-                echo '<p>Bonjour, '.$pseudo. ', vous êtes désormais connecté.</p>';
+                
+                
             }
             else {
                 echo "Nom d'utilsateur ou mot de passe incorrect";
             }
         }
-    }
-    else{
-        echo "Nom d'utilsateur ou mot de passe incorrect";
-    }
+    
+    
     
     

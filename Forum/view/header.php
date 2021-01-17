@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +17,7 @@
                     </div>
                 </div>
                 <div class="droite">
-                    <form action="to_pageinscri.php" method="post">
+                    <form action="to_pageconnexion.php" method="post">
                         <input type="submit" value="S'INSCRIRE"/>
                     </form>
                     <form action="to_pageconnexion.php" method="post">
