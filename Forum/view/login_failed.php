@@ -1,3 +1,7 @@
+
+<?php 
+require('header.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +15,7 @@
             <div class="titreconnex">
                 <h1>Vous avez déjà un compte?</h1>
             </div>
+            <p class="errorMessage">Le nom d'utilisateur ou le mot de passe est incorrect.</p>
             <form action="../after_connecté.php" method="post">
                 <div class="saisies">
                     <div class="nom_saisies"><p>Votre pseudo: </p> </div>
@@ -87,3 +92,7 @@
         </div>
     </div>
 </div>
+        
+</body>
+</html>
+

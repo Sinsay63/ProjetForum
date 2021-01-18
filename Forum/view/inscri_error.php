@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
+        <?php 
+        if ($oui==1){
+            $message="L'email ou le pseudo est déjà existant.";
+        }
+        else if($oui==2){
+            $message="L'email saisie est incorrecte.";
+        }
+        else{
+            header('location: pageconnex.php');
+        }
+?>
 <div class="form_conn_inscri">  
     <div class="conn_gauche">
         <div class="form">
             <div class="titreconnex">
                 <h1>Vous avez déjà un compte?</h1>
             </div>
-            <form action="../after_connecté.php" method="post">
+            <form action="after_connecté.php" method="post">
                 <div class="saisies">
                     <div class="nom_saisies"><p>Votre pseudo: </p> </div>
                     <div class="sais"><input type="text" name="pseudo" required/></div>
@@ -31,7 +35,8 @@
             <div class="titreconnex">
                 <h1>Création d'un compte.</h1>
             </div>
-            <form action="../after_inscri.php" method="post">
+            <p class="errorMessage"><?php echo $message; ?></p>
+            <form action="after_inscri.php" method="post">
                 <div class="saisies">
                     <div class="nom_saisies">
                         <p>Votre prénom :</p>
@@ -87,3 +92,5 @@
         </div>
     </div>
 </div>
+    </body>
+</html>
