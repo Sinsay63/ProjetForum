@@ -6,7 +6,7 @@ body,p{
     display: flex;
     height:150px;
     width:100%;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .gauche {
@@ -94,13 +94,50 @@ body,p{
 }
 
 .conn_droite{
-    margin-left: 150px;
+    background-color: lightgray;
+    width:50%;
+    display: flex;
+    justify-content: center;
 }
 .conn_gauche{
-    
+    width:50%;
+    background-color:grey;
+    display: flex;
+    justify-content: center;
 }
 
 .form_conn_inscri{
     display: flex;
     margin-bottom: 150px;
+}
+a{
+    text-decoration: none;
+}
+.form{
+    width:60%;
+}
+.form2{
+    width:60%;
+}
+.nom_saisies{
+    width:40%;
+}
+
+.saisies{
+    display:flex;
+    padding-top:3px ;
+    padding-bottom:5px;
+}
+
+.btn_envoi{
+    display: flex;
+    justify-content: center;
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.titreconnex{
+    border:solid;
+    text-align: center;
+    margin-bottom: 7%;
+    transform: skew(-20deg);
 }

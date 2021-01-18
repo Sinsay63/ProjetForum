@@ -2,5 +2,5 @@
 
 require ('models/connexion.php');
 require('view/header.php');
-require ('view/pageinscri.php');
+require ('page');
 require('view/footer.php');
