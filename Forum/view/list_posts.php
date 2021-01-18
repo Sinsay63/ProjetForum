@@ -23,7 +23,7 @@
                 </div>
                 <div class="contenu_bas">
                     <div class="pdp">
-                        <img class="imgpdp" src="view/images/solo.PNG" alt=""/>
+                        <img class="imgpdp" src="view/images/" alt=""/>
                     </div>
                     <div class="auteur">
                         <?php echo 'Par '.$result['Pseudo']; ?>

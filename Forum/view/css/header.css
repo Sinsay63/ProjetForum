@@ -1,0 +1,24 @@
+.top{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-between;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.droite{
+    background-color: red;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: flex-end;
+}
+.bouton{
+    
+}
+#b1, #b2{
+    margin-left: 20px;
+}
