@@ -1,5 +1,11 @@
-body,p{
-    margin:0;
+body,p
+{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0;
 }
 
 .top{
@@ -106,8 +112,11 @@ body,p{
     justify-content: center;
 }
 
-.form_conn_inscri{
+.form_conn_inscri
+{
     display: flex;
+    height: 100%;
+    width: 100%;
     margin-bottom: 150px;
 }
 a{

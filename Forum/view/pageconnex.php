@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/pageconnex.css"/>
     </head>
     <body>
 <div class="form_conn_inscri">  
