@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 15 jan. 2021 à 01:35
+-- Généré le : lun. 18 jan. 2021 à 13:24
 -- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.11
+-- Version de PHP : 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -52,11 +52,10 @@ INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur
 CREATE TABLE `logins` (
   `ID` bigint(20) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Password` varchar(25) NOT NULL,
+  `Password` longtext NOT NULL,
   `Prénom` varchar(25) NOT NULL,
   `Nom` varchar(25) NOT NULL,
   `Pseudo` varchar(25) NOT NULL,
-  `Sexe` varchar(3) NOT NULL,
   `Age` int(3) NOT NULL,
   `Perm_Admin` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -65,9 +64,8 @@ CREATE TABLE `logins` (
 -- Déchargement des données de la table `logins`
 --
 
-INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Sexe`, `Age`, `Perm_Admin`) VALUES
-(1, 'yanis.houdier@gmail.com', 'motdepasse', 'Yanis', 'Houdier', 'Sinsay', 'M', 19, 2),
-(2, 'nathimrichard@gmail.com', 'motdepasse2', 'Nathim', 'Richard', 'NathEtdemi', 'M', 22, 2);
+INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `Perm_Admin`) VALUES
+(1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 2);
 
 --
 -- Index pour les tables déchargées
@@ -100,7 +98,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT pour la table `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
