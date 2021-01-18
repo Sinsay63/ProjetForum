@@ -1,3 +1,8 @@
+html
+{
+    height: 100%;
+    width: 100%;
+}
 body,p
 {
 
@@ -103,13 +108,17 @@ body,p
     background-color: lightgray;
     width:50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .conn_gauche{
     width:50%;
     background-color:grey;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .form_conn_inscri
@@ -117,30 +126,69 @@ body,p
     display: flex;
     height: 100%;
     width: 100%;
-    margin-bottom: 150px;
 }
 a{
     text-decoration: none;
 }
+.form_connex
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+.champ_saisie
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form{
-    width:60%;
+    width:100%;
+    height: 100%;
+    background-color:grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .form2{
-    width:60%;
+    width:100%;
+    height: 100%;
+    background-color:lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-.nom_saisies{
-    width:40%;
+.nom_saisies
+{
+    width:30%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .saisies{
+    text-align: start;
+    width: 100%;
     display:flex;
+    justify-content: center;
+    align-items: center;
     padding-top:3px ;
     padding-bottom:5px;
 }
 
 .btn_envoi{
+    height: 30%;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     padding-top:15px;
     padding-bottom: 15px;
 }

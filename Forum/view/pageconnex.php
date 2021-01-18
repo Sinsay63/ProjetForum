@@ -11,17 +11,20 @@
             <div class="titreconnex">
                 <h1>Vous avez déjà un compte?</h1>
             </div>
-            <form action="../after_connecté.php" method="post">
-                <div class="saisies">
-                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
-                    <div class="sais"><input type="text" name="pseudo" required/></div>
-                </div>
-                <div class="saisies">
-                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
-                    <div class="sais"><input type="password" name="password" required/>  </div>
-                </div>
+            <form class="form_connex" action="../after_connecté.php" method="post">
+            	<div class="champ_saisie">
+	                <div class="saisies">
+	                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
+	                    <div class="sais"><input type="text" name="pseudo" required/></div>
+	                </div>
+	                <div class="saisies">
+	                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
+	                    <div class="sais"><input type="password" name="password" required/>  </div>
+	                </div>
+	            </div>
                 <div class="btn_envoi">
                     <input type="submit" value="Se connecter">
+                    <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
                 </div>
             </form>
         </div>
@@ -59,9 +62,11 @@
                 <div class="saisies">
                     <div class="nom_saisies">
                         <p>Votre mot de passe :</p>
+                        <p>Confirmez votre mot de passe :</p>
                     </div>
                     <div class="sais">
                         <input type="password" name="mdp" required/>
+                        <input type="password" name="mdp_conf" required/>
                     </div>
                 </div>
                 <div class="saisies">
