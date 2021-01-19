@@ -1,6 +1,6 @@
 .top{
     display: flex;
-    height: 200px;
+    height: 125px;
     width: 100%;
     background-color: blue;
     justify-content: space-between;
@@ -21,4 +21,12 @@
 }
 #b1, #b2{
     margin-left: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
 }
