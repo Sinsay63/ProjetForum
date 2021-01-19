@@ -11,6 +11,7 @@ body,p
     align-items: center;
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .top{
@@ -105,6 +106,7 @@ body,p
 }
 
 .conn_droite{
+    font-size: 20px;
     background-color: lightgray;
     width:50%;
     display: flex;
@@ -113,6 +115,7 @@ body,p
     align-items: center;
 }
 .conn_gauche{
+    font-size: 20px;
     width:50%;
     background-color:grey;
     display: flex;
@@ -146,6 +149,7 @@ a{
 .all_saisie
 {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -192,9 +196,24 @@ a{
     padding-top:3px ;
     padding-bottom:5px;
 }
-input[type="password"]
+input[type="password"], input[type="text"], input[type="integer"]
 {
-    font-size: 10px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+input[type="submit"]
+{
+    width: 125px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: darkorange;
+    color: white;
+    font-weight: bold;
 }
 .btn_envoi{
     height: 120px;

@@ -43,7 +43,7 @@
             	<div class="all_saisie">
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre prénom :</p>
+	                        <p>*Votre prénom :</p>
 	                    </div>
 	                    <div class="sais">
 	                        <input type="text" name="prenom" required/>
@@ -51,7 +51,7 @@
 	                </div>
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre nom :</p>
+	                        <p>*Votre nom :</p>
 	                    </div>
 	                    <div class="sais">
 	                       <input type="text" name="nom" required/>
@@ -59,7 +59,7 @@
 	                </div>
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre email :</p>
+	                        <p>*Votre email :</p>
 	                    </div>
 	                    <div class="sais">
 	                        <input type="text" name="email" required/>
@@ -67,16 +67,23 @@
 	                </div>
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre mot de passe :</p>
+	                        <p>*Votre mot de passe :</p>
 	                    </div>
 	                    <div class="sais">
 	                        <input type="password" name="mdp" required/>
-	                        <input type="password" placeholder="Confirmer votre mot de passe"name="mdp_conf" required/>
 	                    </div>
 	                </div>
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre âge :</p>
+	                        <p>*Vérifier votre mot de passe :</p>
+	                    </div>
+	                    <div class="sais">
+	                        <input type="password" name="mdp_conf" required/>
+	                    </div>
+	                </div>
+	                <div class="saisies">
+	                    <div class="nom_saisies">
+	                        <p>*Votre âge :</p>
 	                    </div>
 	                    <div class="sais">
 	                        <input type="integer" name="âge" required/>
@@ -84,7 +91,7 @@
 	                </div>
 	                <div class="saisies">
 	                    <div class="nom_saisies">
-	                        <p>Votre pseudo :</p>
+	                        <p>*Votre pseudo :</p>
 	                    </div>
 	                    <div class="sais">
 	                        <input type="text" name="Pseudo" required/>
@@ -94,7 +101,7 @@
                 <div class="btn_envoi">
 	                <input type="submit" value="S'incrire">
                     <div class="bas">
-	                    <div class="text_bas">
+	                    <div class="text_bas_right">
 	                    	<p> *Champs obligatoires </p>
 	                    </div>
 	                </div>
