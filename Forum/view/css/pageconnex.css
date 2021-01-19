@@ -130,7 +130,7 @@ body,p
 a{
     text-decoration: none;
 }
-.form_connex
+.form_connex, .form_connex2
 {
     display: flex;
     flex-direction: column;
@@ -138,6 +138,17 @@ a{
     align-items: center;
     height: 50%;
     width: 100%;
+}
+.form_connex2
+{
+    height: 450px;
+}
+.all_saisie
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .champ_saisie
 {
@@ -181,16 +192,41 @@ a{
     padding-top:3px ;
     padding-bottom:5px;
 }
-
+input[type="password"]
+{
+    font-size: 10px;
+}
 .btn_envoi{
-    height: 30%;
+    height: 120px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top:15px;
     padding-bottom: 15px;
+}
+.text_bas
+{
+    font-size: 10px;
+    text-align: start;
+    width: 90%;
+}
+.text_bas_right
+{
+    display: flex;
+    justify-content: end;
+    font-size: 10px;
+    text-align: end;
+    width: 90%;
+}
+.bas
+{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .titreconnex{
     border:solid;
