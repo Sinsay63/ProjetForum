@@ -13,7 +13,16 @@ body,p
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+.background
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.png");
+    background-size: cover;
+}
 .top{
     display: flex;
     height:150px;
@@ -47,7 +56,6 @@ body,p
     width:600px;
 }
 .vuelike{
-    background-color: grey;
     height: 150px;
     width:10%;
     border-top-left-radius: 12px;
@@ -61,7 +69,7 @@ body,p
    padding-top:15px;
 }
 .artitre{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 .cont_haut{
@@ -106,29 +114,31 @@ body,p
 }
 
 .conn_droite{
-    font-size: 20px;
-    background-color: lightgray;
+    font-size: 15px;
     width:50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-left: 5px dashed black;
+    color: black;
 }
 .conn_gauche{
-    font-size: 20px;
+    font-size: 15px;
     width:50%;
-    background-color:grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-right: 5px dashed black;
+    color: white;
 }
 
 .form_conn_inscri
 {
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 75%;
 }
 a{
     text-decoration: none;
@@ -139,12 +149,22 @@ a{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 50%;
     width: 100%;
+}
+.form_connex
+{
+    height: 55%;
 }
 .form_connex2
 {
-    height: 450px;
+    height: 550px;
+}
+.sais
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
 .all_saisie
 {
@@ -156,6 +176,8 @@ a{
 }
 .champ_saisie
 {
+    background-color: rgb(255,255,255,0.05);
+    border-radius: 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -165,55 +187,114 @@ a{
 .form{
     width:100%;
     height: 100%;
-    background-color:grey;
+    background-color: #615c89;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box
+{
+    border-radius: 15px;
+    width:65%;
+    height: 75%;
+    background-color: rgba(44,57,188,0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 9px 12px 25px rgba(0,0,0,0.99);
 }
 .form2{
     width:100%;
     height: 100%;
-    background-color:lightgrey;
+    background-color: orange;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: black;
 }
 .nom_saisies
 {
-    width:30%;
+    width:50%;
     display: flex;
     justify-content: flex-start;
+    margin-right: 10%;
+    font-weight: bold;
 }
 
 .saisies{
     text-align: start;
     width: 100%;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top:3px ;
     padding-bottom:5px;
 }
-input[type="password"], input[type="text"], input[type="integer"]
+.border_black
 {
     border: none;
-    width: 200px;
+    width: 300px;
     height: 40px;
     background-color: transparent;
     border-bottom: 1px solid black;
 }
-input[type="submit"]
+.border_white
 {
-    width: 125px;
-    height: 35px;
+    background-color: rgb(255,255,255,0);
+    color: white;
+    border: none;
+    width: 75%;
+    height: 40px;
+    border-bottom: 1px solid white;
+}
+.border_white:focus
+{
+    outline: 0;
+    transition: all 0.5s ease-out;
+    border-top: 1px dashed violet;
+    border-bottom: 1px dashed violet;
+    background-color: rgb(255,255,255,0.2);
+}
+
+
+.bouton_left
+{
+    width: 250px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    background-color: darkorange;
+    background-color: rgb(255,255,255,0.8);
+    color: black;
+    font-weight: bold;
+}
+.bouton_left:hover
+{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    box-shadow: 9px 12px 25px rgba(255,255,255,0.5);
+    background-color: rgb(255,255,255,1);
+}
+.bouton_right
+{
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(0,0,0,0.8);
     color: white;
     font-weight: bold;
+}
+.bouton_right:hover
+{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    box-shadow: 9px 12px 25px rgba(0,0,0,0.5);
+    background-color: rgb(0,0,0,1);
 }
 .btn_envoi{
     height: 120px;
@@ -248,10 +329,10 @@ input[type="submit"]
     align-items: center;
 }
 .titreconnex{
-    border:solid;
+    font-size: 13px;
     text-align: center;
     margin-bottom: 7%;
-    transform: skew(-20deg);
+    text-decoration: underline;
 }
 p.errorMessage {
     background-color: #e66262;
