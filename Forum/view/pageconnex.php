@@ -5,40 +5,40 @@
         <link rel="stylesheet" href="css/pageconnex.css"/>
     </head>
     <body>
-    	<div class="background">
-			<div class="form_conn_inscri">  
-			    <div class="conn_gauche">
-			        <div class="form">
-			        	<div class="box">
-				            <div class="titreconnex">
-				                <h1>Vous avez déjà un compte?</h1>
-				            </div>
-				            <form class="form_connex" action="../after_connecté.php" method="post">
-				            	<div class="champ_saisie">
-					                <div class="saisies">
-					                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
-					                    <div class="sais"><input class="border_white" type="text" name="pseudo" required/></div>
-					                </div>
-					                <div class="saisies">
-					                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
-					                    <div class="sais"><input class="border_white" type="password" name="password" required/>  </div>
-					                </div>
-					            </div>
-				                <div class="btn_envoi">
-				                    <input class="bouton_left" type="submit" value="Se connecter">
-				                    <div class="bas">
-				                    	<input type="checkbox">
-				                    	<div class="text_bas">
-				                    		<p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
-				                    	</div>
-				                    </div>
+		<div class="form_conn_inscri">  
+		    <div class="conn_gauche">
+		        <div class="form">
+		        	<div class="box">
+			            <div class="titreconnex">
+			                <h1>Vous avez déjà un compte?</h1>
+			            </div>
+			            <form class="form_connex" action="../after_connecté.php" method="post">
+			            	<div class="champ_saisie">
+				                <div class="saisies">
+				                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
+				                    <div class="sais"><input class="border_white" type="text" name="pseudo" required/></div>
 				                </div>
-				            </form>
-				        </div>
+				                <div class="saisies">
+				                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
+				                    <div class="sais"><input class="border_white" type="password" name="password" required/>  </div>
+				                </div>
+				            </div>
+			                <div class="btn_envoi">
+			                    <input class="bouton_left" type="submit" value="Se connecter">
+			                    <div class="bas">
+			                    	<input type="checkbox">
+			                    	<div class="text_bas">
+			                    		<p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
+			                    	</div>
+			                    </div>
+			                </div>
+			            </form>
 			        </div>
-			    </div>
-			    <div class="conn_droite">
-			        <div class="form2">
+		        </div>
+		    </div>
+		    <div class="conn_droite">
+		        <div class="form2">
+		        	<div class="box2">
 			            <div class="titreconnex">
 			                <h1>Création d'un compte.</h1>
 			            </div>
@@ -111,6 +111,6 @@
 			                </div>
 			            </form>
 			        </div>
-			    </div>
-			</div>
+		        </div>
+		    </div>
 		</div>
