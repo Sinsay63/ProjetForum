@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 18 jan. 2021 à 13:24
+-- Généré le : ven. 22 jan. 2021 à 16:53
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.10
 
@@ -40,8 +40,51 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`) VALUES
-(1, 'VOICI LE PREMIER ARTICLE', 'VOICE UN EXEMPLE DE DESCRIPTION D\'UN ARTICLE!', '2021-01-14 18:21:59', 2),
-(3, 'VOICI LE SECOND ARTICLE', 'CONTENU DU 2EME ARTICLE', '2021-01-14 18:46:29', 1);
+(1, 'VOICI LE PREMIER ARTICLE', 'VOICE UN EXEMPLE DE DESCRIPTION D\'UN ARTICLE!', '2021-01-18 13:41:24', 1),
+(3, 'VOICI LE SECOND ARTICLE', 'CONTENU DU 2EME ARTICLE', '2021-01-14 18:46:29', 1),
+(7, 'uuuauuauauau', 'auauuauauauauauuaua', '2021-01-22 15:41:43', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `article_categorie`
+--
+
+CREATE TABLE `article_categorie` (
+  `id_article` bigint(20) NOT NULL,
+  `id_categorie` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `article_categorie`
+--
+
+INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
+(4, 0),
+(5, 0),
+(6, 0),
+(7, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `categories`
+--
+
+INSERT INTO `categories` (`id`, `nom`) VALUES
+(1, '+18'),
+(2, 'vacances'),
+(3, 'insolites'),
+(4, 'gênantes');
 
 -- --------------------------------------------------------
 
@@ -79,6 +122,18 @@ ALTER TABLE `articles`
   ADD KEY `ID_auteur` (`ID_auteur`);
 
 --
+-- Index pour la table `article_categorie`
+--
+ALTER TABLE `article_categorie`
+  ADD PRIMARY KEY (`id_article`,`id_categorie`) USING BTREE;
+
+--
+-- Index pour la table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `logins`
 --
 ALTER TABLE `logins`
@@ -92,13 +147,19 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT pour la table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
