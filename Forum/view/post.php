@@ -5,14 +5,14 @@
         <link rel="stylesheet" href="css/post.css"/>
     </head>
     <body>
-    	<form class="container" action="models/crea_article.php">
+    	<form class="container" action="../create_topic.php">
     		<div class="main">
     			<div class="option">
     				<p> Nom de la catégorie </p>
     			</div>
     			<div class="big_box">
     				<p> Création d'un sujet de discussion </p>
-    				<select name="categorie">
+    				<select name="id_categorie">
     					<option value="">Choisir une categorie</option>
     					<option value="1">+18</option>
     					<option value="2">vacances</option>

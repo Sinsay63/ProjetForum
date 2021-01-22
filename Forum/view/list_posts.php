@@ -5,9 +5,14 @@
         <title></title>
     </head>
     <body>  <div class="container">
+        <?php
+            if (isset($_SESSION['pseudo'])){
+                echo '<a href="view/post.php"><input type="button" value="créer un nouveau sujet"></a>';
+            }
+        ?>
         <?php 
             foreach ($resultes as $result) {
-                ?>
+        ?>
         <div class="article">
             <div class="vuelike">
                 
