@@ -1,0 +1,39 @@
+html
+{
+    height: 100%;
+    width: 100%;
+}
+body,p
+{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main
+{
+	width: 70%;
+	height: 90%;
+	border: 1px solid black;
+}
+.contenu
+{
+	width: 50%;
+	height: 200px;
+}
+.trix
+{
+	height: 500px;
+	width: 50%;
+}

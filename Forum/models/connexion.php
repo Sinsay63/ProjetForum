@@ -2,7 +2,7 @@
 
     $dsn = 'mysql:host=localhost;dbname=forum';
     $user = 'root';
-    $password = '';
+    $password = 'root';
     try {
             $bdd = new PDO($dsn,$user,$password);
 
