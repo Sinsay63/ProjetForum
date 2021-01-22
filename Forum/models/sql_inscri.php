@@ -14,19 +14,17 @@ if (isset($_REQUEST['email'], $_REQUEST['nom'], $_REQUEST['prenom'],$_REQUEST['�
     $match=$reponses->fetch();
     $oui=0;
     if ($match==true){
-        $oui=1;
-        $_GET['erreur']=$oui;
+        header("Location: view/pageconnex.php?sign=1");
     }
     if (!preg_match ( " /^.+@.+.[a-zA-Z]{2,}$/ " , $email )){
-        $oui=2;
-        $_GET['erreur']=$oui;
+        header("Location: view/pageconnex.php?sign=2");
     }
     
     else if($oui ==0){
     $reponse = $bdd->prepare('INSERT INTO logins(Email,Password,Prénom,Nom,Pseudo,Age) VALUES (?,?,?,?,?,?)');
     $reponse->execute(array($email,hash('sha256',$password),$prénom,$nom,$username,$age));
       
-    if($reponse){?>
+    if($reponse){ ?>
        <div class='sucess'>
              <h3>Vous êtes inscrit avec succès.</h3>
              <p>Cliquez ici pour vous <a href='view/pageconnex.php'>connecter</a></p>

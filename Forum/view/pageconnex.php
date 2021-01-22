@@ -6,6 +6,14 @@
         <link rel="stylesheet" href="css/pageconnex.css"/>
     </head>
     <body>
+        <?php
+        if(isset($_GET['log'])){
+            $log=$_GET['log'];
+        }
+        if(isset($_GET['sign'])){
+            $oui=$_GET['sign'];
+        }
+                ?>
         <div class="form_conn_inscri">  
             <div class="conn_gauche">
                 <div class="form">
@@ -16,19 +24,19 @@
                         <form class="form_connex" action="../after_connecté.php" method="post">
                                 <?php 
                                     if(isset($log)){
-                                        $message_co="<p class='errorMessage'>Le nom d'utilisateur ou le mot de passe est incorrect.</p>";
-                                    }
-                                ?>
+                                        $message_co="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                        <p class='errorMessage'><?php echo $message_co; ?> </p>
+                                   <?php } ?>
                             <div class="champ_saisie">
-                                    <div class="saisies">
-                                        <div class="nom_saisies"><p>Votre pseudo: </p> </div>
-                                        <div class="sais"><input class="border_white" type="text" name="pseudo" required/></div>
-                                    </div>
-                                    <div class="saisies">
-                                        <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
-                                        <div class="sais"><input class="border_white" type="password" name="password" required/>  </div>
-                                    </div>
+                                <div class="saisies">
+                                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
+                                    <div class="sais"><input class="border_white" type="text" name="pseudo" required/></div>
                                 </div>
+                                <div class="saisies">
+                                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
+                                    <div class="sais"><input class="border_white" type="password" name="password" required/>  </div>
+                                </div>
+                            </div>
                             <div class="btn_envoi">
                                 <input class="bouton_left" type="submit" value="Se connecter">
                                 <div class="bas">
@@ -48,15 +56,17 @@
                         <div class="titreconnex">
                             <h1>Création d'un compte.</h1>
                         </div>
-                            <?php 
+                        <?php 
                             if(isset($oui)){
                                 if ($oui==1){
-                                    $message="<p class='errorMessage'>L'email ou le pseudo est déjà existant.</p>";
-                                }
+                                    $message="L'email ou le pseudo est déjà existant."; ?>
+                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                          <?php }
                                 else if($oui==2){
-                                    $message="<p class='errorMessage'>L'email saisie est incorrecte.</p>";
-                                }
-                            } ?>
+                                    $message="L'email saisie est incorrecte."; ?>
+                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                        <?php  }
+                        } ?>
                         <form class="form_connex2" action="../after_inscri.php" method="post">
                             <div class="all_saisie">
                                 <div class="saisies">
