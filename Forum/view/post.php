@@ -2,14 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/post.css"/>
+        <link rel="stylesheet" href="view/css/post.css"/>
+        <link rel="stylesheet" type="text/css" href="view/css/trix.css">
+        <script type="text/javascript" src="view/javascript/trix.js"></script>
     </head>
     <body>
         <form class="container" action="index.php?page=creation_article" method="post">
             <div class="main">
-                <div class="option">
-                    <p> Nom de la catégorie </p>
-                </div>
                 <div class="big_box">
                     <p> Création d'un sujet de discussion </p>
                     <select name="id_categorie">
@@ -20,7 +19,8 @@
                         <option value="4">genantes</option>
                     </select>
                     <input type="text" name="titre" placeholder="entrer titre" maxlength="40" minlength="5">
-                    <input class="contenu" type="text" name="contenu" placeholder="entrer votre message" maxlength="200" minlength="10">
+                    <input id="x" class="contenu" type="hidden" name="contenu" placeholder="entrer votre message" maxlength="200" minlength="10">
+					<trix-editor class="editor" input="x"></trix-editor>
                     <input type="submit" value="poster le topic">
                 </div>
             </div>

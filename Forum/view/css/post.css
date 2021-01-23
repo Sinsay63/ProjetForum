@@ -32,8 +32,11 @@ body,p
 	width: 50%;
 	height: 200px;
 }
-.trix
+.editor
 {
-	height: 500px;
-	width: 50%;
+	height: 70%;
+}
+.editor
+{
+	height: 400px;
 }
