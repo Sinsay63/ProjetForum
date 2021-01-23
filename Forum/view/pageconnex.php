@@ -7,11 +7,11 @@
     </head>
     <body>
         <?php
-        if(isset($_GET['log'])){
-            $log=$_GET['log'];
+        if(isset($_GET['log_error'])){
+            $log=$_GET['log_error'];
         }
-        if(isset($_GET['sign'])){
-            $oui=$_GET['sign'];
+        if(isset($_GET['sign_error'])){
+            $oui=$_GET['sign_error'];
         }
                 ?>
         <div class="form_conn_inscri">  
@@ -58,15 +58,20 @@
                         </div>
                         <?php 
                             if(isset($oui)){
-                                if ($oui==1){
+                                if ($oui==2){
                                     $message="L'email ou le pseudo est déjà existant."; ?>
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
-                          <?php }
-                                else if($oui==2){
+                        <?php   }
+                                else if($oui==1){
                                     $message="L'email saisie est incorrecte."; ?>
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
-                        <?php  }
-                        } ?>
+                        <?php   }
+                             
+                                else if($oui==3){
+                                    $message="Les mots de passe sont différents."; ?>
+                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                        <?php   } 
+                            }?>
                         <form class="form_connex2" action="../after_inscri.php" method="post">
                             <div class="all_saisie">
                                 <div class="saisies">

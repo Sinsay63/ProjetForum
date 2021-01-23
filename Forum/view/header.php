@@ -14,8 +14,7 @@
                         <h1>NOM DU FORUM </h1>
                 </div>
                 <label for="site-search">Search the site:</label>
-                <input type="search" id="site-search" name="q"
-                aria-label="Search through site content">
+                <input type="search" id="site-search" name="q" aria-label="Search through site content">
                 <button>Search</button>
                 <div class="droite">
                     <?php

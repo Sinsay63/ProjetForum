@@ -9,9 +9,13 @@ if (isset($_POST['pseudo'])){
   
   if($result==true){
       $_SESSION['pseudo'] = $username;
+      foreach ($result as $value) {
+        $_SESSION['ID']=$result['ID'];
+        $_SESSION['IsAdmin']=$result['IsAdmin'];
+      }
       header("Location: index.php");
   }
   else {
-    header("Location: view/pageconnex.php?log=1");
+    header("Location: view/pageconnex.php?log_error");
   }
 }

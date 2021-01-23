@@ -5,10 +5,9 @@ if (isset($_REQUEST['titre'], $_REQUEST['id_categorie'], $_REQUEST['contenu'])){
     $titre = stripslashes($_REQUEST['titre']);
     $id_categorie = stripslashes($_REQUEST['id_categorie']);
     $contenu = stripslashes($_REQUEST['contenu']);
-    
 
-$reponse = $bdd->prepare('INSERT INTO articles(Titre,Contenu) VALUES (?,?)');
-$reponse->execute(array($titre,$contenu));
+$reponse = $bdd->prepare('INSERT INTO articles(Titre,Contenu,ID_auteur) VALUES (?,?,?)');
+$reponse->execute(array($titre,$contenu,$_SESSION['ID']));
 
  $reponses = $bdd->query("select ID from articles WHERE Titre = '$titre' ");
  $results = $reponses->fetchAll();
