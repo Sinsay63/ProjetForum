@@ -3,17 +3,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/pageconnex.css"/>
+        <link rel="stylesheet" href="view/css/pageconnex.css"/>
     </head>
     <body>
         <?php
-        if(isset($_GET['log_error'])){
-            $log=$_GET['log_error'];
-        }
-        if(isset($_GET['sign_error'])){
-            $oui=$_GET['sign_error'];
-        }
-                ?>
+            if(isset($_GET['log_error'])){
+                $log=$_GET['log_error'];
+            }
+            if(isset($_GET['sign_error'])){
+                $oui=$_GET['sign_error'];
+            }
+        ?>
         <div class="form_conn_inscri">  
             <div class="conn_gauche">
                 <div class="form">
@@ -21,12 +21,12 @@
                         <div class="titreconnex">
                             <h1>Vous avez déjà un compte?</h1>
                         </div>
-                        <form class="form_connex" action="../after_connecté.php" method="post">
-                                <?php 
-                                    if(isset($log)){
-                                        $message_co="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
-                                        <p class='errorMessage'><?php echo $message_co; ?> </p>
-                                   <?php } ?>
+                        <form class="form_connex" action="index.php?page=connexion" method="post">
+                            <?php 
+                                if(isset($log)){
+                                    $message_co="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                    <p class='errorMessage'><?php echo $message_co; ?> </p>
+                        <?php   } ?>
                             <div class="champ_saisie">
                                 <div class="saisies">
                                     <div class="nom_saisies"><p>Votre pseudo: </p> </div>
@@ -72,7 +72,7 @@
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
                         <?php   } 
                             }?>
-                        <form class="form_connex2" action="../after_inscri.php" method="post">
+                        <form class="form_connex2" action="index.php?page=inscription" method="post">
                             <div class="all_saisie">
                                 <div class="saisies">
                                     <div class="nom_saisies">

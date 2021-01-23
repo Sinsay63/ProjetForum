@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 23 jan. 2021 à 11:05
+-- Généré le : sam. 23 jan. 2021 à 12:56
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -42,9 +42,8 @@ CREATE TABLE `articles` (
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`) VALUES
 (1, 'VOICI LE PREMIER ARTICLE', 'VOICE UN EXEMPLE DE DESCRIPTION D\'UN ARTICLE!', '2021-01-18 13:41:24', 1),
 (3, 'VOICI LE SECOND ARTICLE', 'CONTENU DU 2EME ARTICLE', '2021-01-14 18:46:29', 1),
-(7, 'uuuauuauauau', 'auauuauauauauauuaua', '2021-01-22 15:41:43', 0),
-(8, 'ouioui', 'LALALALALLALALALALA', '2021-01-23 09:33:16', 0),
-(9, 'lalalalala', 'LALALALALLALALALALA', '2021-01-23 10:01:07', 31);
+(10, 'fdsfsdfgtvf', 'sfcdxfgsdfrsfcgsd', '2021-01-23 11:32:13', 1),
+(11, 'dsfcxdsfdc ', 'sdfdxwfdxwfcd', '2021-01-23 11:34:12', 1);
 
 -- --------------------------------------------------------
 
@@ -62,12 +61,7 @@ CREATE TABLE `article_categorie` (
 --
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
-(4, 0),
-(5, 0),
-(6, 0),
-(7, 3),
-(8, 3),
-(9, 1);
+(11, 3);
 
 -- --------------------------------------------------------
 
@@ -76,7 +70,7 @@ INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
 --
 
 CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `nom` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -113,7 +107,7 @@ CREATE TABLE `logins` (
 
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`) VALUES
 (1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1),
-(31, 'dedeuchlecho@hotmail.fr', '07123e1f482356c415f684407a3b8723e10b2cbbc0b8fcd6282c49d37c9c1abc', 'Yanis', 'HOUDIER', 'lol', 19, 0);
+(35, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 18, 0);
 
 --
 -- Index pour les tables déchargées
@@ -152,19 +146,19 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

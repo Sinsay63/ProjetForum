@@ -7,7 +7,7 @@
     <body>  <div class="container">
         <?php
             if (isset($_SESSION['pseudo'])){
-                echo '<a href="view/post.php"><input type="button" value="créer un nouveau sujet"></a>';
+                echo '<a href="index.php?page=crea_article"><input type="button" value="Créer un nouveau sujet"></a>';
             }
         ?>
         <?php 
@@ -39,7 +39,7 @@
                 </div>
             </div>
          </div>
-             <?php }  ?>
+      <?php }  ?>
         </div>
     </body>
 </html>

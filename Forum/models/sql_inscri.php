@@ -1,30 +1,26 @@
 <?php
-session_start();
-if (isset($_REQUEST['email'], $_REQUEST['nom'], $_REQUEST['prenom'],$_REQUEST['âge'],$_REQUEST['mdp'],$_REQUEST['Pseudo'],$_REQUEST['mdp_conf'])){
+if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST['mdp'],$_POST['mdp_conf'],$_POST['Pseudo'])){
     
-    $username = stripslashes($_REQUEST['Pseudo']);
-    $email = stripslashes($_REQUEST['email']);
-    $password = stripslashes($_REQUEST['mdp']);
-    $passwd_conf = stripslashes($_REQUEST['mdp_conf']);
-    $nom=stripslashes($_REQUEST['nom']);
-    $prénom=stripslashes($_REQUEST['prenom']);
-    $age=stripslashes($_REQUEST['âge']);
+    $username = htmlspecialchars($_POST['Pseudo']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['mdp']);
+    $passwd_conf = htmlspecialchars($_POST['mdp_conf']);
+    $nom=htmlspecialchars($_POST['nom']);
+    $prénom=htmlspecialchars($_POST['prenom']);
+    $age=htmlspecialchars($_POST['âge']);
     
     
     $reponses = $bdd->query("SELECT Pseudo,Email FROM `logins` WHERE Pseudo='$username' or Email ='$email'");
     $match=$reponses->fetch();
     $verif=0;
     if (!preg_match ( " /^.+@.+.[a-zA-Z]{2,}$/ " , $email )){
-        $verif=1;
-        header("Location: view/pageconnex.php?sign_error=1");
+        header("Location: index.php?page=pageconnex.php?sign_error=1");
     }
     if ($match==true){
-        $verif=1;
-        header("Location: view/pageconnex.php?sign_error=2");
+        header("Location: index.php?page=pageconnex.php?sign_error=2");
     }
     if ($password != $passwd_conf){
-        $verif=1;
-        header("Location: view/pageconnex.php?sign_error=3");
+        header("Location: index.php?page=pageconnex.php?sign_error=3");
     }
     
     
@@ -35,7 +31,7 @@ if (isset($_REQUEST['email'], $_REQUEST['nom'], $_REQUEST['prenom'],$_REQUEST['�
     if($reponse){ ?>
        <div class='sucess'>
              <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='view/pageconnex.php'>connecter</a></p>
+             <p>Cliquez ici pour vous <a href='index.php?page=page_connexion'>connecter</a></p>
        </div>
        <?php
        
