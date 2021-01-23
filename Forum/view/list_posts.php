@@ -35,9 +35,13 @@
                                 </ul>
                       <?php }
                             else if($_SESSION['ID']==$result['ID_auteur']){ ?>
-                                <div class="button_plu">
-                                    <input class="button_plus"type="button" /> 
-                                </div>
+                                <ul>
+                                  <li><div class="button_plu"><input class="button_plus"type="button" /> </div>
+                                    <ul>
+                                      <li><a href="controllers/delete.php?delete_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
                       <?php } 
                         }?>
                 </div>
