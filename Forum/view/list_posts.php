@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="view/css/list_post.css"/>
     </head>
     <body>  <div class="container">
         <?php
@@ -22,13 +23,27 @@
                     <div class="titre">
                         <p class="artitre"><?php  echo $result['Titre'];?></p>
                     </div>
-                    <div class="button_plu">
-                        <input class="button_plus"type="button" value="..."/> 
-                    </div>
+                    <?php
+                        if (isset($_SESSION['pseudo'])){
+                            if($_SESSION['IsAdmin']==1){?>
+                                <ul>
+                                  <li><div class="button_plu"><input class="button_plus"type="button" /> </div>
+                                    <ul>
+                                      <li><a href="controllers/delete.php?delete_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                      <?php }
+                            else if($_SESSION['ID']==$result['ID_auteur']){ ?>
+                                <div class="button_plu">
+                                    <input class="button_plus"type="button" /> 
+                                </div>
+                      <?php } 
+                        }?>
                 </div>
                 <div class="contenu_bas">
                     <div class="pdp">
-                        <img class="imgpdp" src="view/images/" alt=""/>
+                        <img class="imgpdp" src="view/images/logo.png" alt=""/>
                     </div>
                     <div class="auteur">
                         <?php echo 'Par '.$result['Pseudo']; ?>

@@ -1,9 +1,7 @@
-
 <?php
 session_start();
 if(isset($_GET['page'])){
    $page=$_GET['page'];
-   
     if ($page=='page_connexion'){
        require('controllers/to_connex.php');
    }
@@ -12,9 +10,6 @@ if(isset($_GET['page'])){
    }
    else if ($page=='inscription'){
         require('controllers/after_inscri.php');
-   }
-   else if ($page=='delete'){
-        require('controllers/delete.php');
    }
    else if ($page=='deconnexion'){
         require('controllers/logout.php');
@@ -25,7 +20,7 @@ if(isset($_GET['page'])){
    else if ($page=='creation_article'){
         require('controllers/create_topic.php');
    }
-   }
+}
    else{
         require ('models/connexion.php');
         require('view/header.php');
@@ -34,5 +29,6 @@ if(isset($_GET['page'])){
         require('view/list_posts.php');
         require('view/footer.php'); 
    }
+   
    
 
