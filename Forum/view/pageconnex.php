@@ -7,11 +7,8 @@
     </head>
     <body>
         <?php
-            if(isset($_GET['log_error'])){
-                $log=$_GET['log_error'];
-            }
-            if(isset($_GET['sign_error'])){
-                $oui=$_GET['sign_error'];
+            if(isset($_GET['error'])){
+                $error=$_GET['error'];
             }
         ?>
         <div class="form_conn_inscri">  
@@ -23,9 +20,9 @@
                         </div>
                         <form class="form_connex" action="index.php?page=connexion" method="post">
                             <?php 
-                                if(isset($log)){
-                                    $message_co="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
-                                    <p class='errorMessage'><?php echo $message_co; ?> </p>
+                                if((isset($error)) && $error==1){
+                                    $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                    <p class='errorMessage'><?php echo $message; ?> </p>
                         <?php   } ?>
                             <div class="champ_saisie">
                                 <div class="saisies">
@@ -57,17 +54,17 @@
                             <h1>Création d'un compte.</h1>
                         </div>
                         <?php 
-                            if(isset($oui)){
-                                if ($oui==2){
-                                    $message="L'email ou le pseudo est déjà existant."; ?>
-                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
-                        <?php   }
-                                else if($oui==1){
+                            if((isset($error))){
+                                if ($error==2){
                                     $message="L'email saisie est incorrecte."; ?>
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
                         <?php   }
+                                else if($error==3){
+                                    $message="L'email ou le pseudo est déjà existant."; ?>
+                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                        <?php   }
                              
-                                else if($oui==3){
+                                else if($error==4){
                                     $message="Les mots de passe sont différents."; ?>
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
                         <?php   } 

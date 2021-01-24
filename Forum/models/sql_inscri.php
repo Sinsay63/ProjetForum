@@ -14,15 +14,15 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
     $match=$reponses->fetch();
     $verif=0;
     if (!preg_match ( " /^.+@.+.[a-zA-Z]{2,}$/ " , $email )){
-        header("Location: index.php?&sign_error=1");
+        header("Location: index.php?&error=2");
         $verif=1;
     }
     if ($match==true){
-        header("Location: index.php?sign_error=2");
+        header("Location: index.php?error=3");
         $verif=1;
     }
     if ($password != $passwd_conf){
-        header("Location: index.php?sign_error=3");
+        header("Location: index.php?error=4");
         $verif=1;
     }
     

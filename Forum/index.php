@@ -24,12 +24,10 @@ if(isset($_GET['page'])){
         require('controllers/create_topic.php');
    }
 }
-    else if(isset($_GET['log_error'])){
+    else if(isset($_GET['error'])){
         require('controllers/to_connex.php');
     }
-    else if(isset($_GET['sign_error'])){
-        require('controllers/to_connex.php');
-    }
+    
 else{
     require ('models/connexion.php');
     require('view/header.php');
