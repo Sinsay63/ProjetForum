@@ -10,5 +10,19 @@
     catch(PDOException $e)
     {
             die('erreur : '.$e->getMessage());
+    
+    }
+    $reP = $bdd->query('select ID,Durée_Ban from ban');
+    $tban = $reP->fetchAll();
+    
+         foreach ($tban as $value) {
+             if(isset($value['Durée_Ban'])){
+            $date = date('20y-m-d H:i:s');
+            if($value['Durée_Ban']<=$date ){
+                $id=$value['ID'];
+                $repon = $bdd->prepare('delete from ban where ID= ?');
+                $repon->execute(array($id));
+            }
+        }
     }
     ?>

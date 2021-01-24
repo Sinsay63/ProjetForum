@@ -29,7 +29,7 @@
             </form>
             <form action="index.php?page=modif_profil" method="post">
             <div>
-                <p> Votre mot de passe : </p>
+                <p> Changer votre mot de passe : </p>
                  <?php 
                     if((isset($err))){
                         if ($err==1){
@@ -57,7 +57,7 @@
                 </form>
                 <form action="index.php?page=modif_profil" method="post">
             <div>
-                <p> Votre E-mail :  <?php echo $value['Email']; ?> </p>
+                <p> Votre e-mail :  <?php echo $value['Email']; ?> </p>
                 <?php 
                 if((isset($err))){
                     if ($err==3){

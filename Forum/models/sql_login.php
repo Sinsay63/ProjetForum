@@ -12,7 +12,7 @@ if (isset($_POST['pseudo'])){
         $reponss = $bdd->query("SELECT * FROM `ban` WHERE ID_auteur ='$id'");
         $banni=$reponss->fetch();
 
-        $ban=$banni['Ban_Vie'];
+        $ban=$banni['Ban'];
         if($ban==1){
             header("Location: index.php?error=0");
         }

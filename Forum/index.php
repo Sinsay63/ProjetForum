@@ -1,6 +1,7 @@
 <?php
 session_start();
 if(isset($_GET['page'])){
+    
    $page=$_GET['page'];
     if ($page=='page_connexion'){
        require('controllers/to_connex.php');
@@ -32,6 +33,9 @@ if(isset($_GET['page'])){
    else if($page=='list_user'){
        require('controllers/to_list_user.php');
    }
+   else if($page=='tempban'){
+       require('controllers/temp_deban.php');
+   }
 }
     else if(isset($_GET['error'])){
         require('controllers/to_connex.php');
@@ -41,6 +45,7 @@ if(isset($_GET['page'])){
     }
     
 else{
+    
     require ('models/connexion.php');
     require('view/header.php');
     require('models/search_all_posts.php');

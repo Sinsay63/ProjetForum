@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Dim 24 jan. 2021 à 20:58
+-- Généré le : lun. 25 jan. 2021 à 00:54
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -70,9 +70,11 @@ INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
 
 CREATE TABLE `ban` (
   `ID` bigint(20) NOT NULL,
+  `Ban` int(1) NOT NULL,
   `Ban_Vie` int(1) NOT NULL,
-  `Raison_Ban` varchar(50) NOT NULL,
   `Date_Ban` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Durée_Ban` timestamp NULL DEFAULT NULL,
+  `Raison_Ban` varchar(50) NOT NULL,
   `ID_auteur` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -173,7 +175,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT pour la table `ban`
 --
 ALTER TABLE `ban`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
