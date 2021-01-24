@@ -20,6 +20,7 @@
                 if (isset($_SESSION['pseudo'])){
                     echo 'Bonjour '.$_SESSION['pseudo'];
                     echo '<a href="index.php?page=deconnexion"><input type="button" value="deconnexion"></a>';
+                    echo '<a href="index.php?page=profil"><input type="button" value="Profil"></a>';
                 }
                 else{
                 ?>

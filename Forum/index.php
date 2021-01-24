@@ -23,9 +23,18 @@ if(isset($_GET['page'])){
    else if ($page=='creation_article'){
         require('controllers/create_topic.php');
    }
+   else if ($page=='profil'){
+        require('controllers/to_profile.php');
+   }
+   else if ($page=='modif_profil'){
+        require('controllers/modif_profil.php');
+   }
 }
     else if(isset($_GET['error'])){
         require('controllers/to_connex.php');
+    }
+    else if(isset($_GET['chg_profil'])){
+        require('controllers/to_profile.php');
     }
     
 else{

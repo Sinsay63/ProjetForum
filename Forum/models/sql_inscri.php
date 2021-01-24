@@ -26,7 +26,6 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
         $verif=1;
     }
     
-    
     else if($verif ==0){
     $reponse = $bdd->prepare('INSERT INTO logins(Email,Password,Prénom,Nom,Pseudo,Age) VALUES (?,?,?,?,?,?)');
     $reponse->execute(array($email,hash('sha256',$password),$prénom,$nom,$username,$age));
