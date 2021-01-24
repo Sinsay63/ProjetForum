@@ -15,6 +15,6 @@ if (isset($_POST['pseudo'])){
       header("Location: index.php");
   }
   else {
-    header("Location: view/pageconnex.php?log_error=1");
+    header("Location: index.php?log_error=1");
   }
 }

@@ -21,7 +21,7 @@
             <div class="contenu">
                 <div class="cont_haut">
                     <div class="titre">
-                        <p class="artitre"><?php  echo $result['Titre'];?></p>
+                        <p class="artitre"><?php  echo $result['Contenu'];?></p>
                     </div>
                     <?php
                         if (isset($_SESSION['pseudo'])){
