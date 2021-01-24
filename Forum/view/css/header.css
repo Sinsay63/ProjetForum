@@ -1,9 +1,16 @@
+body{
+    margin:0;
+}
+header{
+    border-bottom: solid black 2px;;
+    width:100%;
+    
+}
 .top{
     display: flex;
     height: 125px;
     width: 100%;
-    background-color: blue;
-    justify-content: space-between;
+    background-color: grey;
 }
 .logo{
     height: 100px;
@@ -15,9 +22,13 @@
     width: 400px;
     display: flex;
     align-items: flex-end;
+    width: 35%;
+    justify-content: space-around;
 }
-.bouton{
-    
+.gauche{
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
 }
 #b1, #b2{
     margin-left: 20px;
@@ -26,3 +37,10 @@
 a{
     text-decoration: none;
 }
+#site-search,#search,#txt_search{
+    display: flex;
+    height: 20%;
+    align-self: flex-end;
+}
+
+

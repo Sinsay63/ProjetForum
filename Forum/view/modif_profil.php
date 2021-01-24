@@ -40,6 +40,10 @@
                             $message="Les mots de passe sont différents."; ?>
                             <p class='errorMessage2'><?php echo $message; ?></p>
                 <?php   }
+                else if($err==3){
+                            $message="L'ancien mot de passe et le nouveau correspondent."; ?>
+                            <p class='errorMessage2'><?php echo $message; ?></p>
+                <?php   }
                     }   ?>
                 <div>
                     <div style="padding-top:8px;"><input type="password" name="old_password" placeholder="Ancien mot de passe" required/></div>

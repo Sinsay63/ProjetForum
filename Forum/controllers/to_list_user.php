@@ -1,0 +1,10 @@
+<?php
+if($_SESSION['IsAdmin']==1){
+    require('models/connexion.php');
+    require("view/header.php");
+    require('models/ls_users.php');
+    require('view/list_user.php');
+}
+else{
+    header('location:index.php');
+}

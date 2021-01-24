@@ -7,6 +7,7 @@ if (isset($_POST['new_username'])){
     
     if($reponse){
         session_destroy();
+        //Lien à remplacer lorsqu'on aura une page de redirection vers le login
         header('location: index.php');
     }
     
@@ -30,10 +31,16 @@ if (isset($_POST['new_username'])){
          $error=1;
          header("Location: index.php?chg_profil=2");
      }
+     
+     if($new_passwd== $old_passwd){
+         $error=1;
+         header("Location: index.php?chg_profil=3");
+     }
      if($error==0){
         $repons = $bdd->query("UPDATE logins SET Password ='$new_passwd' WHERE ID= '$id'");
         if($repons){
             session_destroy();
+            //Lien à remplacer lorsqu'on aura une page de redirection vers le login
             header('location: index.php');
         }
      }
@@ -49,6 +56,8 @@ if (isset($_POST['new_username'])){
         else if ($erreur==0){
             $repons = $bdd->query("UPDATE logins SET Email ='$new_email' WHERE ID= '$id'");
             if($repons){
+                session_destroy();
+                //Lien à remplacer lorsqu'on aura une page de redirection vers le login
                 header('location: index.php');
             }
         }

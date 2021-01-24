@@ -20,10 +20,16 @@
                         </div>
                         <form class="form_connex" action="index.php?page=connexion" method="post">
                             <?php 
-                                if((isset($error)) && $error==1){
-                                    $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
-                                    <p class='errorMessage'><?php echo $message; ?> </p>
-                        <?php   } ?>
+                                if(isset($error)){
+                                    if ($error==1){
+                                        $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                        <p class='errorMessage'><?php echo $message; ?> </p>
+                            <?php   }
+                                    else if($error==0){
+                                        $message="Votre compte est banni."; ?>
+                                        <p class='errorMessage'><?php echo $message; ?> </p>
+                            <?php   }
+                                } ?>
                             <div class="champ_saisie">
                                 <div class="saisies">
                                     <div class="nom_saisies"><p>Votre pseudo: </p> </div>

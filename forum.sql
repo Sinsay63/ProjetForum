@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 23 jan. 2021 à 12:56
+-- Généré le : Dim 24 jan. 2021 à 20:58
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -40,10 +40,8 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`) VALUES
-(1, 'VOICI LE PREMIER ARTICLE', 'VOICE UN EXEMPLE DE DESCRIPTION D\'UN ARTICLE!', '2021-01-18 13:41:24', 1),
-(3, 'VOICI LE SECOND ARTICLE', 'CONTENU DU 2EME ARTICLE', '2021-01-14 18:46:29', 1),
-(10, 'fdsfsdfgtvf', 'sfcdxfgsdfrsfcgsd', '2021-01-23 11:32:13', 1),
-(11, 'dsfcxdsfdc ', 'sdfdxwfdxwfcd', '2021-01-23 11:34:12', 1);
+(2, 'VOICI LE PREMIER ARTICLE', 'VOICI LE PREMIER ARTICLE', '2021-01-23 16:13:46', 1),
+(16, 'VOICI LE DEUXIEME ARTICLE', '2eme ARTICLE LOL', '2021-01-24 16:32:44', 37);
 
 -- --------------------------------------------------------
 
@@ -61,7 +59,22 @@ CREATE TABLE `article_categorie` (
 --
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
-(11, 3);
+(2, 2),
+(16, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ban`
+--
+
+CREATE TABLE `ban` (
+  `ID` bigint(20) NOT NULL,
+  `Ban_Vie` int(1) NOT NULL,
+  `Raison_Ban` varchar(50) NOT NULL,
+  `Date_Ban` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ID_auteur` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -107,7 +120,8 @@ CREATE TABLE `logins` (
 
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`) VALUES
 (1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1),
-(35, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 18, 0);
+(37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0),
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'lol', 18, 0);
 
 --
 -- Index pour les tables déchargées
@@ -125,6 +139,13 @@ ALTER TABLE `articles`
 --
 ALTER TABLE `article_categorie`
   ADD PRIMARY KEY (`id_article`,`id_categorie`) USING BTREE;
+
+--
+-- Index pour la table `ban`
+--
+ALTER TABLE `ban`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_auteur` (`ID_auteur`);
 
 --
 -- Index pour la table `categories`
@@ -146,7 +167,13 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT pour la table `ban`
+--
+ALTER TABLE `ban`
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
@@ -158,7 +185,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -29,6 +29,9 @@ if(isset($_GET['page'])){
    else if ($page=='modif_profil'){
         require('controllers/modif_profil.php');
    }
+   else if($page=='list_user'){
+       require('controllers/to_list_user.php');
+   }
 }
     else if(isset($_GET['error'])){
         require('controllers/to_connex.php');
