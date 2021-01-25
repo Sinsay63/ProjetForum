@@ -14,14 +14,15 @@
         <?php 
             foreach ($resultes as $result) {
         ?>
-        <div class="article">
+            <a href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>"/>
+            <div class="article">
             <div class="vuelike">
                 
             </div>
             <div class="contenu">
                 <div class="cont_haut">
                     <div class="titre">
-                        <p class="artitre"><?php  echo $result['Contenu'];?></p>
+                        <p class="artitre"><?php  echo $result['Titre'];?></p>
                     </div>
                     <?php
                         if (isset($_SESSION['pseudo'])){
@@ -57,7 +58,7 @@
                     </div>
                 </div>
             </div>
-         </div>
+            </div>
       <?php }  ?>
         </div>
     </body>

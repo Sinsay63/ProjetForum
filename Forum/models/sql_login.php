@@ -14,7 +14,7 @@ if (isset($_POST['pseudo'])){
 
         $ban=$banni['Ban'];
         if($ban==1){
-            header("Location: index.php?error=0");
+            header("Location: index.php?page=page_connexion&error=0");
         }
         else if ($ban==0){
             $_SESSION['pseudo'] = $username;
@@ -24,6 +24,6 @@ if (isset($_POST['pseudo'])){
         }
     }
      else {
-          header("Location: index.php?error=1");
+          header("Location: index.php?page=page_connexion&error=1");
         }
 }

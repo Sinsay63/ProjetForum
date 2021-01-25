@@ -19,9 +19,9 @@
              if(isset($value['Durée_Ban'])){
             $date = date('20y-m-d H:i:s');
             if($value['Durée_Ban']<=$date ){
-                $id=$value['ID'];
+                $idb=$value['ID'];
                 $repon = $bdd->prepare('delete from ban where ID= ?');
-                $repon->execute(array($id));
+                $repon->execute(array($idb));
             }
         }
     }

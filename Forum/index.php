@@ -4,8 +4,13 @@ if(isset($_GET['page'])){
     
    $page=$_GET['page'];
     if ($page=='page_connexion'){
-       require('controllers/to_connex.php');
-   }
+        if(isset($_GET['error'])){
+            require('controllers/to_connex.php');
+        } 
+        else{
+            require('controllers/to_connex.php');
+        }
+    }
    else if ($page=='connexion'){
         require('controllers/after_connecté.php');
         }
@@ -25,8 +30,13 @@ if(isset($_GET['page'])){
         require('controllers/create_topic.php');
    }
    else if ($page=='profil'){
+        if(isset($_GET['chg_profil'])){
+        require('controllers/to_profile.php');
+    }
+    else{
         require('controllers/to_profile.php');
    }
+}
    else if ($page=='modif_profil'){
         require('controllers/modif_profil.php');
    }
@@ -36,14 +46,13 @@ if(isset($_GET['page'])){
    else if($page=='tempban'){
        require('controllers/temp_deban.php');
    }
-}
-    else if(isset($_GET['error'])){
-        require('controllers/to_connex.php');
-    }
-    else if(isset($_GET['chg_profil'])){
-        require('controllers/to_profile.php');
-    }
-    
+   else if ($page=='page_article'){
+       if(isset($_GET['auteur'])){
+            require("controllers/in_article.php");
+        }
+   }
+} 
+
 else{
     
     require ('models/connexion.php');
@@ -53,6 +62,7 @@ else{
     require('view/list_posts.php');
     require('view/footer.php'); 
 }
+
    
    
 
