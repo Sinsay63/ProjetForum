@@ -20,7 +20,7 @@
                 <div class="droite">
                     <?php
                     if (isset($_SESSION['pseudo'])){
-                        echo 'Bonjour '.$_SESSION['pseudo'];
+                        echo 'Bonjour '.$_SESSION['pseudo'];?><img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>      <?php
                         echo '<a href="index.php?page=deconnexion"><input type="button" value="deconnexion"></a>';
                         echo '<a href="index.php?page=profil"><input type="button" value="Profil"></a>';
                         

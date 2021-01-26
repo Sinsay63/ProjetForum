@@ -1,0 +1,29 @@
+.avatar{
+    display:flex;
+}
+.pp_avatar{
+    height:80px;
+    width:80px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right:50px;
+    margin-right:20px;
+    border-right:solid 2px;
+}
+.ava_droite{
+    display:flex;
+    justify-content: space-between;
+    width:650px;
+}
+#tx_ava{
+    height:20px;
+}
+.choix_avatars{
+    display:flex;
+    justify-content: space-between;
+    width:400px;
+}
+.pp_avatar2{
+    height:80px;
+    width:80px;
+}

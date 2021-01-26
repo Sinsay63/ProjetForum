@@ -1,0 +1,22 @@
+.content_article{
+    border: solid black 2px ;
+    margin-top:15px;
+    width:500px;
+}
+.haut{
+    display:flex;
+}
+.art_titre{
+   padding-right:20px;
+}
+.art_bas{
+    display:flex;
+}
+.publié{
+    padding-right:15px;
+}
+.pp1{
+    width:35px;
+    height:35px;
+    padding-right: 15px;
+}

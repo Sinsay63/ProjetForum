@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 25 jan. 2021 à 00:54
+-- Généré le : mar. 26 jan. 2021 à 02:11
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -40,7 +40,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`) VALUES
-(2, 'VOICI LE PREMIER ARTICLE', 'VOICI LE PREMIER ARTICLE', '2021-01-23 16:13:46', 1),
+(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-01-26 01:07:07', 1),
 (16, 'VOICI LE DEUXIEME ARTICLE', '2eme ARTICLE LOL', '2021-01-24 16:32:44', 37);
 
 -- --------------------------------------------------------
@@ -113,17 +113,18 @@ CREATE TABLE `logins` (
   `Nom` varchar(25) NOT NULL,
   `Pseudo` varchar(25) NOT NULL,
   `Age` int(3) NOT NULL,
-  `IsAdmin` int(1) NOT NULL
+  `IsAdmin` int(1) NOT NULL,
+  `Avatar_Path` varchar(50) NOT NULL DEFAULT 'view/images/user.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `logins`
 --
 
-INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`) VALUES
-(1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1),
-(37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0),
-(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'lol', 18, 0);
+INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`, `Avatar_Path`) VALUES
+(1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/administrateur.png'),
+(37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/utilisateur.png'),
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'lol', 18, 0, 'view/images/user.png');
 
 --
 -- Index pour les tables déchargées
