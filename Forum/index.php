@@ -31,7 +31,7 @@ if(isset($_GET['page'])){
     }
     else if ($page=='profil'){
         if(isset($_GET['chg_profil'])){
-        require('controllers/to_profile.php');
+            require('controllers/to_profile.php');
         }
         else{
             require('controllers/to_profile.php');
@@ -51,10 +51,13 @@ if(isset($_GET['page'])){
             require("controllers/in_article.php");
         }
    }
-    else if ($page='new_avatar'){
-            if(isset($_GET['url'])){
-                require("controllers/chg_avatar.php");
+    else if ($page=='new_avatar'){
+        if(isset($_GET['url'])){
+            require("controllers/chg_avatar.php");
         }
+    }
+        else if ($page=='delete'){
+            require('controllers/delete.php');
         }
 } 
 else{

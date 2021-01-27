@@ -7,7 +7,6 @@
     </head>
     <body>  <div class="container">
         <?php
-        /*  */
             if (isset($_SESSION['pseudo'])){
                 echo '<a href="index.php?page=crea_article"><input type="button" value="Créer un nouveau sujet"></a>';
             }
@@ -26,7 +25,7 @@
                                 <li>
                                     <input class="button_plus"type="button" value="..." /> 
                                     <ul>
-                                        <li><a href="controllers/delete.php?delete_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                        <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
                                     </ul>
                                 </li>
                           <?php }
@@ -34,7 +33,7 @@
                                     <ul>
                                         <li><div class="button_plu"><input class="button_plus"type="button" /> </div>
                                             <ul>
-                                                <li><a href="controllers/delete.php?delete_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                                <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
                                             </ul>
                                         </li>
                                     </ul>

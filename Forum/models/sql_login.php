@@ -1,13 +1,13 @@
 <?php
 
 if (isset($_POST['pseudo'])){
-  $username = htmlspecialchars($_POST['pseudo']);
-  $password = htmlspecialchars($_POST['password']);
+    $username = htmlspecialchars($_POST['pseudo']);
+    $password = htmlspecialchars($_POST['password']);
   
-  $reponse = $bdd->query("SELECT * FROM `logins` WHERE Pseudo='$username' and Password='".hash('sha256',$password)."'");
-  $result=$reponse->fetch();
+    $reponse = $bdd->query("SELECT * FROM `logins` WHERE Pseudo='$username' and Password='".hash('sha256',$password)."'");
+    $result=$reponse->fetch();
   
-  if($result==true){
+    if($result==true){
         $id=$result['ID'];
         $reponss = $bdd->query("SELECT * FROM `ban` WHERE ID_auteur ='$id'");
         $banni=$reponss->fetch();

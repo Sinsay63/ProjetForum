@@ -30,12 +30,13 @@
                 if (isset($com)){
                     foreach ($com as $come) { ?>
                         <div class="commentaires">
-                            <div><?php  echo $come['Commentaires']; ?></div>
+                            <div><?php  echo $come['Commentaires']; ?><a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>">Supprimer</a></div>
                             <div><?php  echo 'Ecrit par '.$come['Pseudo']; ?></div>
                         </div>
         <?php       }
-                }   ?>
-            <form action="index.php?page=page_article"method="post">
+                }   
+                ?>
+            <form action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
                 <p>Votre commentaire:</p>
                 <input type="text" name="commentaire"/>
                 <input type="submit" value="Envoyer" >

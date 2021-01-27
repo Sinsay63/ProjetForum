@@ -27,13 +27,13 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
     }
     
     else if($verif ==0){
-    $reponse = $bdd->prepare('INSERT INTO logins(Email,Password,Prénom,Nom,Pseudo,Age) VALUES (?,?,?,?,?,?)');
-    $reponse->execute(array($email,hash('sha256',$password),$prénom,$nom,$username,$age));
+        $reponse = $bdd->prepare('INSERT INTO logins(Email,Password,Prénom,Nom,Pseudo,Age) VALUES (?,?,?,?,?,?)');
+        $reponse->execute(array($email,hash('sha256',$password),$prénom,$nom,$username,$age));
       
     if($reponse){ ?>
        <div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='index.php?page=page_connexion'>connecter</a></p>
+            <h3>Vous êtes inscrit avec succès.</h3>
+            <p>Cliquez ici pour vous <a href='index.php?page=page_connexion'>connecter</a></p>
        </div>
        <?php
        

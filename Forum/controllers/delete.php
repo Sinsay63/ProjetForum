@@ -1,5 +1,4 @@
 <?php 
-require ('../models/connexion.php');
-require('../models/delete_post.php');
-delete($bdd);
+require ('models/connexion.php');
+require('models/delete_post.php');
 header('location: index.php');
