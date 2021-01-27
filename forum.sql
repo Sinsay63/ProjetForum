@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 26 jan. 2021 à 02:11
+-- Généré le : mer. 27 jan. 2021 à 12:55
 -- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.11
+-- Version de PHP : 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,8 +40,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`) VALUES
-(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-01-26 01:07:07', 1),
-(16, 'VOICI LE DEUXIEME ARTICLE', '2eme ARTICLE LOL', '2021-01-24 16:32:44', 37);
+(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-01-26 01:07:07', 1);
 
 -- --------------------------------------------------------
 
@@ -59,8 +58,26 @@ CREATE TABLE `article_categorie` (
 --
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
-(2, 2),
-(16, 1);
+(2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `article_commentaire`
+--
+
+CREATE TABLE `article_commentaire` (
+  `ID_article` bigint(20) NOT NULL,
+  `ID_commentaire` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `article_commentaire`
+--
+
+INSERT INTO `article_commentaire` (`ID_article`, `ID_commentaire`) VALUES
+(2, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -98,6 +115,26 @@ INSERT INTO `categories` (`id`, `nom`) VALUES
 (2, 'vacances'),
 (3, 'insolites'),
 (4, 'gênantes');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaires`
+--
+
+CREATE TABLE `commentaires` (
+  `ID` bigint(20) NOT NULL,
+  `Commentaires` text NOT NULL,
+  `ID_auteur` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`ID`, `Commentaires`, `ID_auteur`) VALUES
+(1, 'COMMENTAIRE NUMERO 1', 1),
+(2, 'COMMENTAIRE 2', 37);
 
 -- --------------------------------------------------------
 
@@ -144,6 +181,12 @@ ALTER TABLE `article_categorie`
   ADD PRIMARY KEY (`id_article`,`id_categorie`) USING BTREE;
 
 --
+-- Index pour la table `article_commentaire`
+--
+ALTER TABLE `article_commentaire`
+  ADD UNIQUE KEY `ID_article` (`ID_article`,`ID_commentaire`);
+
+--
 -- Index pour la table `ban`
 --
 ALTER TABLE `ban`
@@ -155,6 +198,12 @@ ALTER TABLE `ban`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Index pour la table `logins`
@@ -183,6 +232,12 @@ ALTER TABLE `ban`
 --
 ALTER TABLE `categories`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `logins`

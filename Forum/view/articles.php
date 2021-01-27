@@ -26,9 +26,20 @@
                                 </div>
                             </div>
                         </div>
-            <?php   }?>
-                
-            
+            <?php   }
+                if (isset($com)){
+                    foreach ($com as $come) { ?>
+                        <div class="commentaires">
+                            <div><?php  echo $come['Commentaires']; ?></div>
+                            <div><?php  echo 'Ecrit par '.$come['Pseudo']; ?></div>
+                        </div>
+        <?php       }
+                }   ?>
+            <form action="index.php?page=page_article"method="post">
+                <p>Votre commentaire:</p>
+                <input type="text" name="commentaire"/>
+                <input type="submit" value="Envoyer" >
+            </form>
         </div>
     </body>
 </html>
