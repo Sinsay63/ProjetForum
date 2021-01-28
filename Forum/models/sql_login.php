@@ -12,9 +12,18 @@ if (isset($_POST['pseudo'])){
         $reponss = $bdd->query("SELECT * FROM `ban` WHERE ID_auteur ='$id'");
         $banni=$reponss->fetch();
 
-        $ban=$banni['Ban'];
-        if($ban==1){
-            header("Location: index.php?page=page_connexion&error=0");
+        $bandef=$banni['Ban_Vie'];
+        $tempban=$banni['Durée_Ban'];
+        $raisban=$banni['Raison_Ban'];
+        
+        if($ban_Vie==1){
+            header("Location: index.php?page=page_connexion&error=0&rais='$raisban'");
+        }
+        if(!empty($tempban)){
+            date_default_timezone_set('Europe/Paris');
+            $date = date('20y-m-d H:i');
+            $durée= $date - $raisban;
+            header("Location: index.php?page=page_connexion&error=6&tempban='$durée'");
         }
         else if ($ban==0){
             $_SESSION['pseudo'] = $username;

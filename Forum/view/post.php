@@ -18,10 +18,10 @@
                         <option value="3">insolites</option>
                         <option value="4">genantes</option>
                     </select>
-                    <input type="text" name="titre" placeholder="entrer titre" maxlength="40" minlength="5">
-                    <input id="x" class="contenu" type="hidden" name="contenu" placeholder="entrer votre message" maxlength="200" minlength="10">
-					<trix-editor class="editor" input="x"></trix-editor>
-                    <input type="submit" value="poster le topic">
+                    <input type="text" name="titre" placeholder="Entrez un titre" maxlength="40" minlength="5">
+                    <input id="x" class="contenu" type="hidden" name="contenu" placeholder="Entrez votre message" maxlength="200" minlength="10">
+                    <trix-editor class="editor" input="x"></trix-editor>
+                    <input type="submit" value="Poster le topic">
                 </div>
             </div>
         </form>

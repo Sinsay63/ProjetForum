@@ -26,10 +26,20 @@
                                         <p class='errorMessage'><?php echo $message; ?> </p>
                             <?php   }
                                     else if($error==0){
-                                        $message="Votre compte est banni."; ?>
-                                        <p class='errorMessage'><?php echo $message; ?> </p>
-                            <?php   }
-                                } ?>
+                                        if(isset($_GET['rais'])){
+                                            $message="Votre compte est banni à vie.<br> Raison: ".$_GET['rais']; ?>
+                                            <p class='errorMessage'><?php echo $message; ?> </p>
+                            <?php   
+                                        }
+                                        }
+                                    else if($error==6){
+                                        if(isset($_GET['tempban'])){
+                                            $message="Votre compte est banni pour une durée de ".$_GET['tempban']; ?>
+                                            <p class='errorMessage'><?php echo $message; ?> </p>
+                            <?php       }
+                                    }
+                                } 
+                                ?>
                             <div class="champ_saisie">
                                 <div class="saisies">
                                     <div class="nom_saisies"><p>Votre pseudo: </p> </div>
