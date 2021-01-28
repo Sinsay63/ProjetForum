@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 27 jan. 2021 à 12:55
+-- Généré le : jeu. 28 jan. 2021 à 20:04
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.10
 
@@ -95,6 +95,13 @@ CREATE TABLE `ban` (
   `ID_auteur` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `ban`
+--
+
+INSERT INTO `ban` (`ID`, `Ban`, `Ban_Vie`, `Date_Ban`, `Durée_Ban`, `Raison_Ban`, `ID_auteur`) VALUES
+(200, 1, 1, '2021-01-28 10:06:01', NULL, 'ban a vie', 37);
+
 -- --------------------------------------------------------
 
 --
@@ -125,6 +132,7 @@ INSERT INTO `categories` (`id`, `nom`) VALUES
 CREATE TABLE `commentaires` (
   `ID` bigint(20) NOT NULL,
   `Commentaires` text NOT NULL,
+  `Date_Commentaire` timestamp NOT NULL DEFAULT current_timestamp(),
   `ID_auteur` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -132,9 +140,9 @@ CREATE TABLE `commentaires` (
 -- Déchargement des données de la table `commentaires`
 --
 
-INSERT INTO `commentaires` (`ID`, `Commentaires`, `ID_auteur`) VALUES
-(1, 'COMMENTAIRE NUMERO 1', 1),
-(2, 'COMMENTAIRE 2', 37);
+INSERT INTO `commentaires` (`ID`, `Commentaires`, `Date_Commentaire`, `ID_auteur`) VALUES
+(1, 'COMMENTAIRE NUMERO 1', '2021-01-28 07:19:05', 1),
+(2, 'COMMENTAIRE 2', '2021-01-28 07:19:05', 37);
 
 -- --------------------------------------------------------
 
@@ -160,8 +168,8 @@ CREATE TABLE `logins` (
 
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`, `Avatar_Path`) VALUES
 (1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/administrateur.png'),
-(37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/utilisateur.png'),
-(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'lol', 18, 0, 'view/images/user.png');
+(37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/user.png'),
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user.png');
 
 --
 -- Index pour les tables déchargées
@@ -219,13 +227,13 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT pour la table `ban`
 --
 ALTER TABLE `ban`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
@@ -237,7 +245,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
