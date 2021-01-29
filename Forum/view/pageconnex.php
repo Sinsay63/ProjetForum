@@ -15,53 +15,52 @@
             <div class="conn_gauche">
                 <div class="form">
                     <div class="box">
-                        <div class="titreconnex">
-                            <h1>Vous avez déjà un compte?</h1>
-                        </div>
                         <form class="form_connex" action="index.php?page=connexion" method="post">
-                            <?php 
-                                if(isset($error)){
-                                    if ($error==1){
-                                        $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
-                                        <p class='errorMessage'><?php echo $message; ?> </p>
-                            <?php   }
-                                    else if($error==0){
-                                        if(isset($_GET['rais'])){
-                                            $message="Votre compte est banni à vie. Raison : ".$_GET['rais'];
-                                            ?>
-                                            <p class='errorMessage'><?php echo $message; ?> </p>
-                            <?php   
-                                        }
-                                    }
-                                    else if($error==6){
-                                        if(isset($_GET['tempban'])){
-                                            $message="Votre compte est banni pour une durée de ".$_GET['tempban']; ?>
-                                            <p class='errorMessage'><?php echo $message; ?> </p>
-                            <?php       }
-                                    }
-                                } 
-                                ?>
-                            <div class="champ_saisie">
-                                <div class="saisies">
-                                    <div class="nom_saisies"><p>Votre pseudo: </p> </div>
-                                    <div class="sais"><input class="border_white" type="text" name="pseudo" required/></div>
-                                </div>
-                                <div class="saisies">
-                                    <div class="nom_saisies"> <p>Votre mot de passe :</p></div>
-                                    <div class="sais"><input class="border_white" type="password" name="password" required/>  </div>
-                                </div>
+                            <div class="titreconnex">
+                                <h1>Déja utilisateur?</h1>
                             </div>
-                            <div class="btn_envoi">
-                                <input class="bouton_left" type="submit" value="Se connecter">
-                                <div class="bas">
-                                    <input type="checkbox">
-                                    <div class="text_bas">
-                                        <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
+                                <?php 
+                                    if(isset($error)){
+                                        if ($error==1){
+                                            $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                            <p class='errorMessage'><?php echo $message; ?> </p>
+                                <?php   }
+                                        else if($error==0){
+                                            if(isset($_GET['rais'])){
+                                                $message="Votre compte est banni à vie. Raison : ".$_GET['rais'];
+                                                ?>
+                                                <p class='errorMessage'><?php echo $message; ?> </p>
+                                <?php   
+                                            }
+                                        }
+                                        else if($error==6){
+                                            if(isset($_GET['tempban'])){
+                                                $message="Votre compte est banni pour une durée de ".$_GET['tempban']; ?>
+                                                <p class='errorMessage'><?php echo $message; ?> </p>
+                                <?php       }
+                                        }
+                                    } 
+                                    ?>
+                                <div class="champ_saisie">
+                                    <div class="saisies">
+                                        <div class="sais"><input class="border_white" type="text" name="pseudo" placeholder="Pseudo" required/></div>
+                                    </div>
+                                    <div class="saisies">
+                                        <div class="sais"><input class="border_white" type="password" name="password" placeholder="Mot de passe"required/>  </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                                <div class="btn_envoi">
+                                    <input class="bouton_left" type="submit" value="Se connecter">
+                                    <div class="bas">
+                                        <input type="checkbox">
+                                        <div class="text_bas">
+                                            <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="conn_droite">

@@ -15,7 +15,7 @@
                             </div>
                             <div class="contenu_art">
                                 <div class="">
-                                    <p><?php echo $value['Contenu'];  ?></p>
+                                    <p><?php echo html_entity_decode($value['Contenu']);  ?></p>
                                 </div> 
                             </div> 
                             <div class="">

@@ -25,28 +25,31 @@ body
 }
 
 .conn_droite{
+    background-image: url("../images/background2.JPG");
+    border-left: 10px solid violet;
     font-size: 15px;
     width:50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-left: 5px dashed black;
     color: black;
 }
 .conn_gauche{
+    background-image: url("../images/background.JPG");
+    border-right: 10px solid violet;
     font-size: 15px;
     width:50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 5px dashed black;
     color: white;
 }
 
 .form_conn_inscri
 {
+    background-size: cover;
     display: flex;
     height: 100%;
     width: 100%;
@@ -87,26 +90,24 @@ a{
 .form{
     width:100%;
     height: 100%;
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .box,.box2
 {
-    border-radius: 15px;
+    border-radius: 10px;
     width:45%;
-    background-color: rgba(0,0,0,0.1);
+    height: 70%;
+    background-color: black;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-shadow: 9px 12px 25px rgba(0,0,0,0.99);
+    box-shadow: 9px 12px 10px rgba(0,0,0,0.3);
 }
 .form2{
     width:100%;
     height: 100%;
-    background-color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,41 +143,49 @@ a{
 }
 .border_white
 {
-    background-color: rgb(255,255,255,0.2);
-    color: white;
+    background: none;
     border-radius: 5px;
-    border: none;
-    width: 75%;
-    height: 40px;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    border: 0;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    outline: none;
+    width: 180px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
 }
 .border_white:focus
 {
-    outline: 0;
-    transition: all 0.5s ease-out;
-    border-top: 1px dashed violet;
-    border-bottom: 1px dashed violet;
-    background-color: rgb(255,255,255,0.2);
+    width: 280px;
+    border-color: #2ecc71;
 }
 
 
 .bouton_left
 {
-    width: 250px;
-    height: 40px;
-    border: none;
+    background: none;
     border-radius: 5px;
-    font-size: 18px;
-    background-color: rgb(255,255,255,0.8);
-    color: black;
-    font-weight: bold;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    border: 0;
+    border: 2px solid #2ecc71;
+    padding: 14px;
+    outline: none;
+    width: 130px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
 }
 .bouton_left:hover
 {
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    box-shadow: 9px 12px 25px rgba(255,255,255,0.5);
-    background-color: rgb(255,255,255,1);
+    background: #2ecc71;
 }
+
 .bouton_right
 {
     width: 250px;
@@ -207,6 +216,7 @@ a{
 }
 .text_bas
 {
+
     font-size: 8px;
     text-align: start;
     width: 90%;
@@ -221,7 +231,7 @@ a{
 }
 .bas
 {
-    padding-top: 3%;
+    padding-top: 10%;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -230,7 +240,8 @@ a{
 .titreconnex{
     font-size: 10px;
     text-align: center;
-    text-decoration: underline;
+    font-style: italic;
+
 }
 p.errorMessage {
     background-color: #e66262;
