@@ -11,7 +11,7 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
     
     
     $reponses = $bdd->prepare("SELECT Pseudo,Email FROM `logins` WHERE Pseudo= ? or Email = ? ");
-    $repons->execute(array($username,$email));
+    $reponses->execute(array($username,$email));
     $match=$reponses->fetch();
     $verif=0;
     if (!preg_match ( " /^.+@.+.[a-zA-Z]{2,}$/ " , $email )){
