@@ -10,11 +10,8 @@ if(isset($_GET['ID_auteur']) && isset($_GET['ID'])){
         $com= $repa->fetchAll();
 }
 else {
-    function search_all_post($bdd){
         $reponse = $bdd->query('select log.Pseudo,art.Titre, art.Contenu,art.ID, art.Date_Publication,art.ID_auteur,log.Avatar_Path from logins as log inner join articles as art on art.ID_auteur = log.ID');
-        $results = $reponse->fetchAll();
-        return $results;
-    }
+        $resultes = $reponse->fetchAll();
 }
 
     

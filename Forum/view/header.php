@@ -12,6 +12,13 @@
                 
                 <div class="Titre">
                     <h1>NOM DU FORUM </h1>
+                    <?php 
+                    
+                    $origin = new DateTime('2021-01-29 13:19:11');
+                    $date1 = new DateTime("now");
+                    $interval = $origin->diff($date1);
+                echo $interval->format('%R%a days');
+                    ?>
                 </div>
                 <label for="site-search" id="txt_search">Search the site:</label>
                 <input type="search" id="site-search" name="q" aria-label="Search through site content">

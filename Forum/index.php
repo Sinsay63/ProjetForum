@@ -3,7 +3,10 @@ session_start();
 if(isset($_GET['page'])){
     
    $page=$_GET['page'];
-    if ($page=='page_connexion'){
+   if($page=='accueil'){
+       require('controllers/accueil.php');
+   }
+    else if ($page=='page_connexion'){
         if(isset($_GET['error'])){
             require('controllers/to_connex.php');
         } 
@@ -61,12 +64,7 @@ if(isset($_GET['page'])){
         }
 } 
 else{
-    require ('models/connexion.php');
-    require('view/header.php');
-    require('models/search_all_posts.php');
-    $resultes=search_all_post($bdd);
-    require('view/list_posts.php');
-    require('view/footer.php'); 
+    header('location: index.php?page=accueil');
 }
 
    

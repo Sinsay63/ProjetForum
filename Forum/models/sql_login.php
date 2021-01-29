@@ -5,7 +5,7 @@ if (isset($_POST['pseudo'])){
     $password = htmlspecialchars($_POST['password']);
   
     $reponse = $bdd->prepare("SELECT * FROM `logins` WHERE Pseudo= ? and Password= ?");
-    $reponss->execute(array($username,hash('sha256',$password)));
+    $reponse->execute(array($username,hash('sha256',$password)));
     $result=$reponse->fetch();
   
     if($result==true){
@@ -26,9 +26,9 @@ if (isset($_POST['pseudo'])){
         
         if(!empty($tempban)){
             date_default_timezone_set('Europe/Paris');
-            $date = date('20y-m-d H:i:s',$tempban);
             
-            header("Location: index.php?page=page_connexion&error=6&tempban='$date'");
+            $durée= $date - $tempban;
+            header("Location: index.php?page=page_connexion&error=6&tempban='$durée'");
         }
         
         else if ($ban==0){

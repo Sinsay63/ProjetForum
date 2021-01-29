@@ -30,7 +30,11 @@
                 if (isset($com)){
                     foreach ($com as $come) { ?>
                         <div class="commentaires">
-                            <div><?php  echo $come['Commentaires']; ?><a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>">Supprimer</a></div>
+                            <div><?php  echo $come['Commentaires']; if(isset($_SESSION['pseudo'])) {
+                                if ($_SESSION['IsAdmin']==1 || $come['Pseudo']==$_SESSION['pseudo']){
+                            ?><a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>">Supprimer</a></div>
+                                <?php } 
+                                }?>
                             <div><?php  echo 'Ecrit par '.$come['Pseudo']; ?></div>
                         </div>
         <?php       }
