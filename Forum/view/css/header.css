@@ -1,6 +1,10 @@
 body{
     margin:0;
 }
+@font-face {
+    font-family: 'nom';
+    src: url('view/font/Bafora Regular Demo.ttf')
+}
 header{
     border-bottom: solid black 2px;;
     width:100%;
@@ -46,4 +50,7 @@ a{
     width:35px;
     height:35px;
 }
-
+h1{
+  font-family: 'nom';
+  font-size: 10px;
+}

@@ -12,7 +12,7 @@
             die('erreur : '.$e->getMessage());
     
     }
-    $reP = $bdd->query('select ID,Durée_Ban from ban');
+    $reP = $bdd->query("select ID,Durée_Ban from ban");
     $tban = $reP->fetchAll();
     
          foreach ($tban as $value) {
