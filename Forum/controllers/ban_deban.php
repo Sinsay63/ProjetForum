@@ -18,7 +18,6 @@ else if(isset($_GET['btid'])){
     $id=$_GET['btid'];
     $raison= htmlspecialchars($_POST['raison_ban_temp']);
     require('../models/connexion.php');
-    
     require('../models/ls_users.php');
     require("../models/tempban.php");
     header("location: ../index.php?page=list_user");

@@ -1,4 +1,5 @@
 <?php
 $ID=$_SESSION['ID'];
-$reponse = $bdd->query("SELECT * FROM `logins` WHERE ID='$ID'");
+$reponse = $bdd->prepare("SELECT * FROM `logins` WHERE ID = ? ");
+$rep->execute(array($ID));
 $infos = $reponse->fetchAll();

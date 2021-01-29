@@ -10,8 +10,10 @@ if (isset($_POST['titre'], $_POST['id_categorie'], $_POST['contenu'])){
     $reponse = $bdd->prepare('INSERT INTO articles(Titre,Contenu,ID_auteur) VALUES (?,?,?)');
     $reponse->execute(array($titre,$contenu,$id_auteur));
 
-    $reponses = $bdd->query("select ID from articles WHERE Titre = '$titre' ");
+    $reponses = $bdd->prepare("select ID from articles WHERE Titre = ? ");
+    $reponses->execute(array($titre));
     $results = $reponses->fetchAll();
+    
     foreach ($results as $value) {
         $id_article=$value["ID"];
     }

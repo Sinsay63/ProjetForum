@@ -6,7 +6,8 @@ if (isset($_POST['commentaire'])){
     $rEp = $bdd->prepare("INSERT INTO commentaires(Commentaires,ID_auteur) VALUES(?,?)");
     $rEp->execute(array($commentaire,$_SESSION['ID']));
 
-    $repon = $bdd->query("select ID from commentaires where Commentaires = '$commentaire'");
+    $repon = $bdd->prepare("select ID from commentaires where Commentaires = ? ");
+    $repon->execute(array($commentaire));
     $comid = $repon->fetchAll();
 
     foreach ($comid as $id_com) {

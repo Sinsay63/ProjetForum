@@ -27,11 +27,12 @@
                             <?php   }
                                     else if($error==0){
                                         if(isset($_GET['rais'])){
-                                            $message="Votre compte est banni à vie.<br> Raison: ".$_GET['rais']; ?>
+                                            $message="Votre compte est banni à vie. Raison :".$_GET['rais'];
+                                            ?>
                                             <p class='errorMessage'><?php echo $message; ?> </p>
                             <?php   
                                         }
-                                        }
+                                    }
                                     else if($error==6){
                                         if(isset($_GET['tempban'])){
                                             $message="Votre compte est banni pour une durée de ".$_GET['tempban']; ?>

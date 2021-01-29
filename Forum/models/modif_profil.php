@@ -3,7 +3,8 @@ $id=$_SESSION['ID'];
 if (isset($_POST['new_username'])){
     
     $new_username = htmlspecialchars($_POST['new_username']);
-    $reponse = $bdd->query("UPDATE logins SET Pseudo='$new_username' WHERE ID= '$id'");
+    $reponse = $bdd->prepare("UPDATE logins SET Pseudo= ? WHERE ID= ?");
+    $reponse->execute(array($new_username,$id));
     
     if($reponse){
         session_destroy();
@@ -17,8 +18,10 @@ if (isset($_POST['new_username'])){
         $new_passwd = hash('sha256',htmlspecialchars($_POST['new_password']));
         $new_passwd2 = hash('sha256',htmlspecialchars($_POST['new_password2']));
     
-        $reponse = $bdd->query("SELECT Password FROM `logins` WHERE ID= '$id'");
+        $reponse = $bdd->prepare("SELECT Password FROM `logins` WHERE ID= ?");
+        $reponse->execute(array($id));
         $result=$reponse->fetchAll();
+        
         foreach ($result as $value) {
             $passwd=$value['Password'];
         }
@@ -37,7 +40,8 @@ if (isset($_POST['new_username'])){
          header("Location: index.php?chg_profil=3");
      }
      if($error==0){
-        $repons = $bdd->query("UPDATE logins SET Password ='$new_passwd' WHERE ID= '$id'");
+        $repons = $bdd->prepare("UPDATE logins SET Password = ? WHERE ID= ? ");
+        $repons->execute(array($new_passwd,$id));
         if($repons){
             session_destroy();
             //Lien à remplacer lorsqu'on aura une page de redirection vers le login
@@ -54,7 +58,8 @@ if (isset($_POST['new_username'])){
             header("Location: index.php?chg_profil=3");
         }
         else if ($erreur==0){
-            $repons = $bdd->query("UPDATE logins SET Email ='$new_email' WHERE ID= '$id'");
+            $repons = $bdd->prepare("UPDATE logins SET Email = ? WHERE ID= ? ");
+            $repons->execute(array($new_email,$id));
             if($repons){
                 session_destroy();
                 //Lien à remplacer lorsqu'on aura une page de redirection vers le login
