@@ -250,6 +250,14 @@ p.errorMessage {
     color: #FFFFFF;
     border-radius: 3px;
     height:20px;
+    margin:0;
+    width:291px;
+}
+p.errorMessage1 {
+    padding: 5px 10px;
+    color: white;
+    height:20px;
+    margin:0;
 }
 p.errorMessage2 {
     background-color: #e66262;
@@ -258,4 +266,5 @@ p.errorMessage2 {
     color: #FFFFFF;
     border-radius: 3px;
     height:20px;
+    margin:0;
 }

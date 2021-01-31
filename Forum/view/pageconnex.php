@@ -34,9 +34,11 @@
                                             }
                                         }
                                         else if($error==6){
-                                            if(isset($_GET['tempban'])){
-                                                $message="Votre compte est banni pour une durée de ".$_GET['tempban']; ?>
-                                                <p class='errorMessage'><?php echo $message; ?> </p>
+                                            if(isset($_GET['tempa'])){
+                                                ?>
+                                                <p class='errorMessage'>Votre compte est temp ban. Durée restante: </p>
+                                                <p class='errorMessage1'> <?php echo $_GET['tempa'].' an '.$_GET['tempj'].' jours '.$_GET['temph'].' heures '.$_GET['tempm'].' minutes '.$_GET['temps'].' secondes';
+                                                ?> </p>
                                 <?php       }
                                         }
                                     } 
