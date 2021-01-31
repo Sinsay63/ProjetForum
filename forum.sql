@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 28 jan. 2021 à 20:04
+-- Généré le : Dim 31 jan. 2021 à 21:51
 -- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.10
+-- Version de PHP : 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -89,18 +89,11 @@ CREATE TABLE `ban` (
   `ID` bigint(20) NOT NULL,
   `Ban` int(1) NOT NULL,
   `Ban_Vie` int(1) NOT NULL,
-  `Date_Ban` timestamp NOT NULL DEFAULT current_timestamp(),
-  `Durée_Ban` timestamp NULL DEFAULT NULL,
+  `Date_Ban` datetime NOT NULL DEFAULT current_timestamp(),
+  `Durée_Ban` datetime DEFAULT NULL,
   `Raison_Ban` varchar(50) NOT NULL,
   `ID_auteur` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `ban`
---
-
-INSERT INTO `ban` (`ID`, `Ban`, `Ban_Vie`, `Date_Ban`, `Durée_Ban`, `Raison_Ban`, `ID_auteur`) VALUES
-(200, 1, 1, '2021-01-28 10:06:01', NULL, 'ban a vie', 37);
 
 -- --------------------------------------------------------
 
@@ -169,7 +162,7 @@ CREATE TABLE `logins` (
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`, `Avatar_Path`) VALUES
 (1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/administrateur.png'),
 (37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/user.png'),
-(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user.png');
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user-female.png');
 
 --
 -- Index pour les tables déchargées
@@ -227,13 +220,13 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pour la table `ban`
 --
 ALTER TABLE `ban`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
