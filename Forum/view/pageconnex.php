@@ -17,12 +17,12 @@
                     <div class="form">
                         <form class="form_connex" action="index.php?page=connexion" method="post">
                             <div class="titreconnex">
-                                <p>Déja utilisateur?</p>
+                                <p>Déjà utilisateur?</p>
                             </div>
                                 <?php 
                                     if(isset($error)){
                                         if ($error==1){
-                                            $message="Le nom d'utilisateur ou le mot de passe est incorrect."; ?>
+                                            $message="Nom d'utilisateur ou mot de passe incorrect."; ?>
                                             <p class='errorMessage'><?php echo $message; ?> </p>
                                 <?php   }
                                         else if($error==0){
@@ -53,22 +53,18 @@
                                 </div>
                                 <div class="btn_envoi">
                                     <input class="bouton_left" type="submit" value="Se connecter">
-                                    <div class="bas">
+                                    <div class="bas_left">
                                         <input type="checkbox">
                                         <div class="text_bas">
                                             <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
                                         </div>
                                     </div>
                                 </div>
-                            
                         </div>
                     </form>
                 </div>
                 <div class="conn_droite">
                     <div class="form2">
-                        <div class="titreconnex">
-                            <h1>Création d'un compte.</h1>
-                        </div>
                         <?php 
                             if((isset($error))){
                                 if ($error==2){
@@ -86,67 +82,49 @@
                         <?php   } 
                             }?>
                         <form class="form_connex2" action="index.php?page=inscription" method="post">
+                        	<div class="titreconnex_droite">
+                                <p>Création d'un compte</p>
+                            </div>
                             <div class="all_saisie">
                                 <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <p>*Votre prénom :</p>
-                                    </div>
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="prenom" required/>
+                                        <input class="border_black" type="text" name="prenom" placeholder="Prenom" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="nom_saisies">
-                                        <p>*Votre nom :</p>
-                                    </div>
-                                    <div class="sais">
-                                       <input class="border_black" type="text" name="nom" required/>
+                                       <input class="border_black" type="text" name="nom" placeholder="Nom" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="nom_saisies">
-                                        <p>*Votre email :</p>
-                                    </div>
-                                    <div class="sais">
-                                        <input class="border_black" type="text" name="email" required/>
+                                        <input class="border_black" type="text" name="email" placeholder="E-mail" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <p>*Votre mot de passe :</p>
-                                    </div>
                                     <div class="sais">
-                                        <input class="border_black" type="password" name="mdp" required/>
+                                        <input class="border_black" type="password" name="mdp" placeholder="Mot de passe" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <p>*Vérifier votre mot de passe :</p>
-                                    </div>
                                     <div class="sais">
-                                        <input class="border_black" type="password" name="mdp_conf" required/>
+                                        <input class="border_black" type="password" name="mdp_conf" placeholder="Confirmation du mot de passe" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <p>*Votre âge :</p>
-                                    </div>
                                     <div class="sais">
-                                        <input class="border_black" type="integer" name="âge" required/>
+                                        <input class="border_black" type="integer" name="âge" placeholder="Age" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <p>*Votre pseudo :</p>
-                                    </div>
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="Pseudo" required/>
+                                        <input class="border_black" type="text" name="Pseudo" placeholder="Pseudo" required/>
                                     </div>
                                 </div>
                             </div>
                             <div class="btn_envoi">
                                 <input class="bouton_right" type="submit" value="S'incrire">
-                                <div class="bas">
+                                <div class="bas_right">
                                     <div class="text_bas_right">
                                         <p> *Champs obligatoires </p>
                                     </div>

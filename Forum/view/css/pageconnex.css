@@ -13,6 +13,11 @@ body
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+@font-face
+{
+    font-family: "biko_font";
+    src: url(../font/Biko_Bold.otf);
+}
 .background
 {
     display: flex;
@@ -26,8 +31,8 @@ body
 
 .conn_droite{
     background: #3498db;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     font-size: 15px;
     width:50%;
     display: flex;
@@ -39,8 +44,8 @@ body
 .conn_gauche
 {
     background: white;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     font-size: 15px;
     width:50%;
     display: flex;
@@ -77,6 +82,10 @@ a{
     align-items: center;
     width: 100%;
 }
+.form_connex2
+{
+    height: 100%;
+}
 
 .sais
 {
@@ -89,6 +98,7 @@ a{
 {
     display: flex;
     width: 100%;
+    height: 1000px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -130,7 +140,6 @@ a{
     width:50%;
     display: flex;
     justify-content: flex-start;
-    margin-right: 10%;
     font-weight: bold;
 }
 
@@ -146,17 +155,45 @@ a{
 }
 .border_black
 {
-    border: none;
-    border-radius: 5px;
-    width: 75%;
-    height: 20px;
-
-    background-color: rgb(255,255,255,0.2);
+    padding: 9px 10px;
+    margin: 2px auto;
+    border-radius: 24px;
+    font-size: 14px;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 0;
+    border: 2px solid lightgrey;
+    outline: none;
+    width: 190px;
+    color: white;
+    transition: 0.5s;
+}
+.border_black::placeholder
+{
+    color: white;
+}
+.border_black:hover
+{
+    background: rgba(255,255,255,0.1);
+}
+.border_black:focus
+{
+    font-size: 14px;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 0;
+    border: 2px solid lightgrey;
+    outline: none;
+    width: 280px;
+    color: white;
+    border-radius: 24px;
 }
 .border_white
 {
+    font-size: 14px;
     background: none;
-    border-radius: 5px;
     display: block;
     margin: 12px auto;
     text-align: center;
@@ -169,8 +206,13 @@ a{
     border-radius: 24px;
     transition: 0.5s;
 }
+.border_white:hover
+{
+    background: rgba(52,152,219,0.1);
+}
 .border_white:focus
 {
+    background: none;
     width: 280px;
     border-color: #2ecc71;
 }
@@ -184,7 +226,7 @@ a{
     margin: 12px auto;
     text-align: center;
     border: 0;
-    padding: 10px;
+    padding: 12px;
     outline: none;
     width: 150px;
     color: white;
@@ -201,22 +243,25 @@ a{
 
 .bouton_right
 {
-    width: 250px;
-    height: 40px;
-    border: none;
+    background: white;
     border-radius: 5px;
-    font-size: 18px;
-    background-color: rgb(0,0,0,0.8);
-    margin-top: 3%;
-    color: white;
-    font-weight: bold;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    border: 0;
+    padding: 12px;
+    outline: none;
+    width: 150px;
+    color: #3498db;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.3)
 }
 .bouton_right:hover
 {
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    box-shadow: 9px 12px 25px rgba(0,0,0,0.5);
-    background-color: rgb(0,0,0,1);
+    color: white;
+    background: #2ecc71;
 }
 .btn_envoi
 {
@@ -241,9 +286,9 @@ a{
     justify-content: end;
     font-size: 10px;
     text-align: end;
-    width: 90%;
+    width:100%;
 }
-.bas
+.bas_left
 {
     color: black;
     padding-top: 10%;
@@ -252,25 +297,35 @@ a{
     justify-content: space-around;
     align-items: center;
 }
-.titreconnex
+.bas_right
 {
-    font-size: 18px;
     color: black;
-    text-decoration: underline;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titreconnex, .titreconnex_droite
+{
+    font-family: biko_font;
+    color: #3498db;
+    font-size: 23px;
     text-align: center;
-    font-style: italic;
-    font-weight: bold;
-
+}
+.titreconnex_droite
+{
+    color: white;
 }
 p.errorMessage {
+    text-align: center;
     background-color: #e66262;
-    border: #AA4502 1px solid;
     padding: 5px 10px;
     color: #FFFFFF;
     border-radius: 3px;
     height:20px;
     margin:0;
-    width:291px;
+    width: 70%;
+    height: 30%;
 }
 p.errorMessage1 {
     padding: 5px 10px;
