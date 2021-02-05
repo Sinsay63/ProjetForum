@@ -1,9 +1,10 @@
 body{
     margin:0;
+    padding: 0;
 }
 @font-face {
-    font-family: 'nom';
-    src: url('view/font/Bafora Regular Demo.ttf')
+    font-family: policetitre;
+    src: url('../font/Bafora Regular Demo.ttf')
 }
 header{
     border-bottom: solid black 2px;;
@@ -14,25 +15,34 @@ header{
     display: flex;
     height: 125px;
     width: 100%;
-    background-color: grey;
+    background-color: #d3b593;
+    background-image: url(../images/fond.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .logo{
     height: 100px;
     width: 100px;
 }
 .droite{
-    background-color: red;
     height: 100%;
     width: 400px;
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    width: 35%;
+    width: 20%;
     justify-content: space-around;
+}
+.mid{
+    display: flex;
+    flex-direction: column;
+    width: 60%; 
+    align-items: center;
 }
 .gauche{
     display: flex;
     justify-content: space-around;
-    width: 65%;
+    width: 20%;
 }
 #b1, #b2{
     margin-left: 20px;
@@ -41,16 +51,33 @@ header{
 a{
     text-decoration: none;
 }
-#site-search,#search,#txt_search{
-    display: flex;
-    height: 20%;
-    align-self: flex-end;
-}
 .pp{
-    width:35px;
-    height:35px;
+    width:55px;
+    height:55px;
 }
-h1{
-  font-family: 'nom';
-  font-size: 10px;
+.Titre{
+    height: 80%;
+    display: flex;
+}
+.title{
+  margin: 0;
+  font-family: policetitre;
+  font-size: 80px;
+}
+.recherche{
+    display: flex; 
+}
+.dropdown .content {
+    display:none;
+}
+.dropdown:hover .content{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #91864e;
+}
+.dropdown button{
+    background-color: transparent;
+    border: none;
 }
