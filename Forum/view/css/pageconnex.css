@@ -25,8 +25,9 @@ body
 }
 
 .conn_droite{
-    background-image: url("../images/background2.JPG");
-    border-left: 10px solid violet;
+    background: #3498db;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     font-size: 15px;
     width:50%;
     display: flex;
@@ -35,9 +36,11 @@ body
     align-items: center;
     color: black;
 }
-.conn_gauche{
-    background-image: url("../images/background.JPG");
-    border-right: 10px solid violet;
+.conn_gauche
+{
+    background: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     font-size: 15px;
     width:50%;
     display: flex;
@@ -49,10 +52,19 @@ body
 
 .form_conn_inscri
 {
+    background-image: url("../images/background.JPG");
     background-size: cover;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
+}
+.huge_box
+{
+    display: flex;
+    height: 75%;
+    width: 60%;
 }
 a{
     text-decoration: none;
@@ -152,8 +164,8 @@ a{
     border: 2px solid #3498db;
     padding: 14px 10px;
     outline: none;
-    width: 180px;
-    color: white;
+    width: 200px;
+    color: black;
     border-radius: 24px;
     transition: 0.5s;
 }
@@ -166,23 +178,24 @@ a{
 
 .bouton_left
 {
-    background: none;
+    background: #3498db;
     border-radius: 5px;
     display: block;
     margin: 12px auto;
     text-align: center;
     border: 0;
-    border: 2px solid #2ecc71;
-    padding: 14px;
+    padding: 10px;
     outline: none;
-    width: 130px;
+    width: 150px;
     color: white;
     border-radius: 24px;
     transition: 0.5s;
     cursor: pointer;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.3)
 }
 .bouton_left:hover
 {
+    color: white;
     background: #2ecc71;
 }
 
@@ -205,7 +218,8 @@ a{
     box-shadow: 9px 12px 25px rgba(0,0,0,0.5);
     background-color: rgb(0,0,0,1);
 }
-.btn_envoi{
+.btn_envoi
+{
     padding-top: 3%;
     width: 100%;
     text-align: center;
@@ -231,16 +245,21 @@ a{
 }
 .bas
 {
+    color: black;
     padding-top: 10%;
     width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.titreconnex{
-    font-size: 10px;
+.titreconnex
+{
+    font-size: 18px;
+    color: black;
+    text-decoration: underline;
     text-align: center;
     font-style: italic;
+    font-weight: bold;
 
 }
 p.errorMessage {

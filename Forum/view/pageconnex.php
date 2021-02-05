@@ -11,13 +11,13 @@
                 $error=$_GET['error'];
             }
         ?>
-        <div class="form_conn_inscri">  
-            <div class="conn_gauche">
-                <div class="form">
-                    <div class="box">
+        <div class="form_conn_inscri">
+            <div class="huge_box">
+                <div class="conn_gauche">
+                    <div class="form">
                         <form class="form_connex" action="index.php?page=connexion" method="post">
                             <div class="titreconnex">
-                                <h1>Déja utilisateur?</h1>
+                                <p>Déja utilisateur?</p>
                             </div>
                                 <?php 
                                     if(isset($error)){
@@ -64,10 +64,8 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class="conn_droite">
-                <div class="form2">
-                    <div class="box2">
+                <div class="conn_droite">
+                    <div class="form2">
                         <div class="titreconnex">
                             <h1>Création d'un compte.</h1>
                         </div>
