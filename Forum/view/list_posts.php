@@ -26,6 +26,12 @@
                                     <input class="button_plus"type="button" value="..." /> 
                                     <ul>
                                         <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                         <?php if($result['IsClosed']==0){ ?>
+                                                <li><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a><li>
+                                            <?php   }
+                                                else if($result['IsClosed']==1){ ?>
+                                                <li><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=1">Réouvrir</a><li>
+                                        <?php    } ?>
                                     </ul>
                                 </li>
                           <?php }

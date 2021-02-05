@@ -62,6 +62,11 @@ if(isset($_GET['page'])){
         else if ($page=='delete'){
             require('controllers/delete.php');
         }
+        else if($page=="opencloseart"){
+            if (isset ($_GET['id']) && isset($_GET['opcl'])){
+                require('controllers/open_close_art.php');
+            }
+        }
 } 
 else{
     header('location: index.php?page=accueil');

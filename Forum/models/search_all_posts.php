@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_GET['ID_auteur']) && isset($_GET['ID'])){
-        $repons = $bdd->prepare("select log.Pseudo, art.Titre, art.Contenu, art.Date_Publication,art.ID_auteur,art.ID,log.Avatar_Path  from logins as log inner join articles as art on art.ID = ? and log.ID = ? ");
+        $repons = $bdd->prepare("select log.Pseudo, art.Titre, art.Contenu, art.Date_Publication,art.ID_auteur,art.ID,log.Avatar_Path,art.IsClosed  from logins as log inner join articles as art on art.ID = ? and log.ID = ? ");
         $repons->execute(array($id_art,$id_aut));
         $content = $repons->fetchAll();
         
@@ -10,7 +10,7 @@ if(isset($_GET['ID_auteur']) && isset($_GET['ID'])){
         $com= $repa->fetchAll();
 }
 else {
-        $reponse = $bdd->query('select log.Pseudo,art.Titre, art.Contenu,art.ID, art.Date_Publication,art.ID_auteur,log.Avatar_Path from logins as log inner join articles as art on art.ID_auteur = log.ID');
+        $reponse = $bdd->query('select log.Pseudo,art.Titre, art.Contenu,art.ID, art.Date_Publication,art.ID_auteur,log.Avatar_Path,art.IsClosed from logins as log inner join articles as art on art.ID_auteur = log.ID');
         $resultes = $reponse->fetchAll();
 }
 

@@ -27,6 +27,14 @@
                             </div>
                         </div>
             <?php   }
+            if ($_SESSION['IsAdmin']==1){
+                if($value['IsClosed']==0){ ?>
+                    <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=0">Clore</a>
+        <?php   }
+                else if($value['IsClosed']==1){ ?>
+                    <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1">Réouvrir</a>
+            <?php    } 
+            }
                 if (isset($com)){
                     foreach ($com as $come) { ?>
                         <div class="commentaires">
@@ -38,13 +46,17 @@
                             <div><?php  echo 'Ecrit par '.$come['Pseudo']; ?></div>
                         </div>
         <?php       }
-                }   
+                }
+                if($value['IsClosed']==0){
                 ?>
             <form action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
                 <p>Votre commentaire:</p>
                 <input type="text" name="commentaire"/>
                 <input type="submit" value="Envoyer" >
             </form>
+            <?php
+            
+                } ?> 
         </div>
     </body>
 </html>
