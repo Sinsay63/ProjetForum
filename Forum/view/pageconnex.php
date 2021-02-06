@@ -56,7 +56,7 @@
                                     <div class="bas_left">
                                         <input type="checkbox">
                                         <div class="text_bas">
-                                            <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies. Apprendre encore plus </p>
+                                            <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -88,37 +88,37 @@
                             <div class="all_saisie">
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="prenom" placeholder="Prenom" required/>
-                                    </div>
-                                </div>
-                                <div class="saisies">
-                                    <div class="nom_saisies">
-                                       <input class="border_black" type="text" name="nom" placeholder="Nom" required/>
-                                    </div>
-                                </div>
-                                <div class="saisies">
-                                    <div class="nom_saisies">
-                                        <input class="border_black" type="text" name="email" placeholder="E-mail" required/>
+                                        <input class="border_black" type="text" name="prenom" placeholder="*Prenom" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="password" name="mdp" placeholder="Mot de passe" required/>
+                                       <input class="border_black" type="text" name="nom" placeholder="*Nom" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="password" name="mdp_conf" placeholder="Confirmation du mot de passe" required/>
+                                        <input class="border_black" type="text" name="email" placeholder="*E-mail" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="integer" name="âge" placeholder="Age" required/>
+                                        <input class="border_black" type="password" name="mdp" placeholder="*Mot de passe" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="Pseudo" placeholder="Pseudo" required/>
+                                        <input class="border_black" type="password" name="mdp_conf" placeholder="*Confirmation du mot de passe" required/>
+                                    </div>
+                                </div>
+                                <div class="saisies">
+                                    <div class="sais">
+                                        <input class="border_black" type="integer" name="âge" placeholder="*Age" required/>
+                                    </div>
+                                </div>
+                                <div class="saisies">
+                                    <div class="sais">
+                                        <input class="border_black" type="text" name="Pseudo" placeholder="*Pseudo" required/>
                                     </div>
                                 </div>
                             </div>

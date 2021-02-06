@@ -30,7 +30,8 @@ body
 }
 
 .conn_droite{
-    background: #3498db;
+    background-size: cover;
+    background-image: url("../images/background_bleu.png");
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     font-size: 15px;
@@ -43,7 +44,6 @@ body
 }
 .conn_gauche
 {
-    background: white;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     font-size: 15px;
@@ -52,12 +52,13 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    background-image: url("../images/background_blanc.png");
+    background-size: cover;
 }
 
 .form_conn_inscri
 {
-    background-image: url("../images/background.JPG");
+    background-image: url("../images/background3.JPG");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -70,6 +71,7 @@ body
     display: flex;
     height: 75%;
     width: 60%;
+    box-shadow: 30px 30px 30px rgba(0,0,0,0.2); 
 }
 a{
     text-decoration: none;
@@ -163,9 +165,9 @@ a{
     display: block;
     text-align: center;
     border: 0;
-    border: 2px solid lightgrey;
+    border: 2px solid white;
     outline: none;
-    width: 190px;
+    width: 200px;
     color: white;
     transition: 0.5s;
 }
@@ -184,7 +186,7 @@ a{
     display: block;
     text-align: center;
     border: 0;
-    border: 2px solid lightgrey;
+    border: 2px solid #da88de;
     outline: none;
     width: 280px;
     color: white;
@@ -220,6 +222,7 @@ a{
 
 .bouton_left
 {
+    font-family: biko_font;
     background: #3498db;
     border-radius: 5px;
     display: block;
@@ -233,7 +236,7 @@ a{
     border-radius: 24px;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 3px 5px 10px rgba(0,0,0,0.3)
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2)
 }
 .bouton_left:hover
 {
@@ -243,6 +246,7 @@ a{
 
 .bouton_right
 {
+    font-family: biko_font;
     background: white;
     border-radius: 5px;
     display: block;
@@ -256,12 +260,12 @@ a{
     border-radius: 24px;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 3px 5px 10px rgba(0,0,0,0.3)
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2)
 }
 .bouton_right:hover
 {
     color: white;
-    background: #2ecc71;
+    background: #da88de;
 }
 .btn_envoi
 {
@@ -276,22 +280,23 @@ a{
 .text_bas
 {
 
-    font-size: 8px;
+    font-size: 9px;
     text-align: start;
     width: 90%;
 }
 .text_bas_right
 {
+    color: white;
     display: flex;
     justify-content: end;
-    font-size: 10px;
+    font-size: 12px;
     text-align: end;
     width:100%;
 }
 .bas_left
 {
     color: black;
-    padding-top: 10%;
+    padding-top: 7%;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -300,7 +305,7 @@ a{
 .bas_right
 {
     color: black;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
