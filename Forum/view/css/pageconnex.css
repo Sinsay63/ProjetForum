@@ -174,6 +174,7 @@ a{
 .border_black::placeholder
 {
     color: white;
+    opacity: 0.9;
 }
 .border_black:hover
 {
@@ -218,10 +219,15 @@ a{
     width: 280px;
     border-color: #2ecc71;
 }
-
+.border_white::placeholder
+{
+    color: black;
+    opacity: 0.7;
+}
 
 .bouton_left
 {
+    font-size: 15px;
     font-family: biko_font;
     background: #3498db;
     border-radius: 5px;
@@ -246,6 +252,7 @@ a{
 
 .bouton_right
 {
+    font-size: 15px;
     font-family: biko_font;
     background: white;
     border-radius: 5px;
@@ -339,11 +346,15 @@ p.errorMessage1 {
     margin:0;
 }
 p.errorMessage2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #e66262;
-    border: #AA4502 1px solid;
-    padding: 5px 10px;
+    padding: 10px 5px;
     color: #FFFFFF;
     border-radius: 3px;
-    height:20px;
     margin:0;
+    width: 100%;
+    height: 30%;
 }

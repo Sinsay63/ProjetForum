@@ -65,7 +65,12 @@
                 </div>
                 <div class="conn_droite">
                     <div class="form2">
-                        <?php 
+                        
+                        <form class="form_connex2" action="index.php?page=inscription" method="post">
+                        	<div class="titreconnex_droite">
+                                <p>Création d'un compte</p>
+                            </div>
+                            <?php 
                             if((isset($error))){
                                 if ($error==2){
                                     $message="L'email saisie est incorrecte."; ?>
@@ -81,10 +86,6 @@
                                     <div><p class='errorMessage2'><?php echo $message; ?></p></div>
                         <?php   } 
                             }?>
-                        <form class="form_connex2" action="index.php?page=inscription" method="post">
-                        	<div class="titreconnex_droite">
-                                <p>Création d'un compte</p>
-                            </div>
                             <div class="all_saisie">
                                 <div class="saisies">
                                     <div class="sais">
