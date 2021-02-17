@@ -55,9 +55,7 @@ if(isset($_GET['page'])){
         }
    }
     else if ($page=='new_avatar'){
-        if(isset($_GET['url'])){
             require("controllers/chg_avatar.php");
-        }
     }
         else if ($page=='delete'){
             require('controllers/delete.php');

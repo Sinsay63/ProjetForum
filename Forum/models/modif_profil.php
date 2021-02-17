@@ -7,8 +7,7 @@ if (isset($_POST['new_username'])){
     $reponse->execute(array($new_username,$id));
     
     if($reponse){
-        session_destroy();
-        //Lien à remplacer lorsqu'on aura une page de redirection vers le login
+        $_SESSION['Pseudo']=$new_username;
         header('location: index.php');
     }
     
@@ -28,16 +27,16 @@ if (isset($_POST['new_username'])){
         $error=0;
     if ($old_passwd != $passwd){
         $error=1;
-        header("Location: index.php?chg_profil=1");
+        header("Location: index.php?page=profil&chg_profil=1");
     }
      if ($new_passwd != $new_passwd2){
          $error=1;
-         header("Location: index.php?chg_profil=2");
+         header("Location: index.php?page=profil&chg_profil=2");
      }
      
      if($new_passwd== $old_passwd){
          $error=1;
-         header("Location: index.php?chg_profil=3");
+         header("Location: index.php?page=profil&chg_profil=3");
      }
      if($error==0){
         $repons = $bdd->prepare("UPDATE logins SET Password = ? WHERE ID= ? ");
@@ -45,7 +44,7 @@ if (isset($_POST['new_username'])){
         if($repons){
             session_destroy();
             //Lien à remplacer lorsqu'on aura une page de redirection vers le login
-            header('location: index.php');
+            header('location: index.php?page=page_connexion');
         }
      }
     }
@@ -55,7 +54,7 @@ if (isset($_POST['new_username'])){
         $new_email=htmlspecialchars($_POST['new_email']);
         if (!preg_match ( " /^.+@.+.[a-zA-Z]{2,}$/ " , $new_email )){
             $erreur=1;
-            header("Location: index.php?chg_profil=3");
+            header("Location: index.php?page=profil&chg_profil=4");
         }
         else if ($erreur==0){
             $repons = $bdd->prepare("UPDATE logins SET Email = ? WHERE ID= ? ");
@@ -63,7 +62,7 @@ if (isset($_POST['new_username'])){
             if($repons){
                 session_destroy();
                 //Lien à remplacer lorsqu'on aura une page de redirection vers le login
-                header('location: index.php');
+                header('location: index.php?page=page_connexion');
             }
         }
 }
