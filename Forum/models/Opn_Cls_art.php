@@ -12,4 +12,12 @@ if (isset ($_GET['opcl']) && isset($_GET['id'])){
         $cls->execute(array($id));
         $clse =$cls->fetch();
     }
+    if(isset($_GET['ID_auteur']) and isset($_GET['IDs'])){
+        $autid=$_GET['ID_auteur'];
+        $artid=$_GET['IDs'];
+        header("location: index.php?page=page_article&ID_auteur=$autid&ID=$artid");
+    }
+    else{
+          header("location: index.php");
+    }
 }

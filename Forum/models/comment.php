@@ -15,6 +15,8 @@ if (isset($_POST['commentaire'])){
    }
     $Rep = $bdd->prepare("INSERT INTO article_commentaire(ID_article,ID_commentaire) VALUES(?,?)");
     $Rep->execute(array($id_art,$idcom));
-     
+    $autid=$_GET['ID_auteur'];
+    $artid=$_GET['ID'];
+    header("location: index.php?page=page_article&ID_auteur=$autid&ID=$artid");
 }
 

@@ -7,7 +7,7 @@ if (isset($_POST['titre'], $_POST['id_categorie'], $_POST['contenu'])){
     $contenu = htmlentities($_POST['contenu'], ENT_QUOTES ,"UTF-8");
     $id_auteur=$_SESSION['ID'];
     
-    $reponse = $bdd->prepare('INSERT INTO articles(Titre,Contenu,ID_auteur) VALUES (?,?,?)');
+    $reponse = $bdd->prepare('INSERT INTO articles(Titre,Contenu,ID_auteur,Date_Publication) VALUES (?,?,?,CURRENT_TIMESTAMP)');
     $reponse->execute(array($titre,$contenu,$id_auteur));
 
     $reponses = $bdd->prepare("select ID from articles WHERE Titre = ? ");
