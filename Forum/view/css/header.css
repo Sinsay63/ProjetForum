@@ -51,10 +51,6 @@ header{
 a{
     text-decoration: none;
 }
-.pp{
-    width:55px;
-    height:55px;
-}
 .Titre{
     height: 80%;
     display: flex;
@@ -67,17 +63,42 @@ a{
 .recherche{
     display: flex; 
 }
-.dropdown .content {
-    display:none;
+header li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
 }
-.dropdown:hover .content{
+header li a {
     display: block;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #91864e;
+    padding: 20px;
 }
-.dropdown button{
-    background-color: transparent;
-    border: none;
+
+header li a:hover{
+    background-color: #1abc9c;
+    color: #fff;
+}
+.header li:hover .sub-menu{
+    display: block;
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #1abc9c;
+    width: 150px;
+    height: 150px;
+}
+.sub-menu li{
+    display: block;
+}
+.sub-menu li a{
+    color: #fff;
+}
+.sub-menu li:hover a{
+    background-color: #fff;
+    color: #1abc9c;
+}
+.pp {
+    height: 70px;
+    width: 70px;
+    margin-right: 100px;
 }

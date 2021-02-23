@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="view/css/header.css"/>
+        <link rel="stylesheet" href="view/css/reset.css"/>
     </head>
     <body>
         <header>
@@ -25,16 +26,26 @@
                     if (isset($_SESSION['pseudo'])){
                         echo 'Bonjour '.$_SESSION['pseudo'];?>
                         <div class="dropdown">
-                            <button type="button"> <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/></button> 
-                            <div class="content">
-                                <a href="index.php?page=profil"  value="Profil" >Profil</a>
-                                <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
-                                <?php
-                                if($_SESSION['IsAdmin']==1){
-                                    echo '<a href="index.php?page=list_user" value="Users"> Users </a>';
-                                }
-                                ?>
-                            </div>
+                            <ul>
+                                <li>
+                                    <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="index.php?page=profil"  value="Profil" >Profil</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            if($_SESSION['IsAdmin']==1){
+                                                echo '<a href="index.php?page=list_user" value="Users"> Users </a>';
+                                            }
+                                            ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     <?php
                     }
