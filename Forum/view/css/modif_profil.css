@@ -2,6 +2,7 @@ html
 {
     height: 100%;
     width: 100%;
+    margin: 0;
 }
 body
 {
@@ -19,7 +20,10 @@ body
     src: url(../font/Biko_Bold.otf);
 }
 
-
+p
+{
+	margin: revert;
+}
 .background
 {
 	background-image: url("../images/background3.JPG");
@@ -39,7 +43,7 @@ body
     height: 80%;
     width: 65%;
     box-shadow: 30px 30px 30px rgba(0,0,0,0.2);
-    background: white;
+    background: none;
 }
 .left
 {
@@ -49,7 +53,9 @@ body
 	align-items: center;
 	height: 100%;
 	width: 50%;
-	background: yellow;
+	background: white;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 .right
 {
@@ -59,7 +65,9 @@ body
 	align-items: center;
 	height: 100%;
 	width: 50%;
-	background: orange;
+	background: #3498db;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 .avatar
@@ -67,27 +75,178 @@ body
 	height: 30%;
 	width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    border-bottom: 1px solid #3498db;
+}
+.choix_avatars
+{
+	text-align: center;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+}
+.choix_fichier_avatar
+{
+	text-decoration: underline;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+    font-family: biko_font;
+    background: #3498db;
+    text-align: center;
+    border: 0;
+    padding: 12px;
+    outline: none;
+    width: 50%;
+    height: 40%;
+    color: white;
+    border-radius:19% 19% 19% 18% / 100% 100% 100% 100%;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2)
+}
+.choix_fichier_avatar:hover
+{
+    background: #2ecc71;
+}
+.validation_avatar
+{
+	font-size: 15px;
+    font-family: biko_font;
+    background: #3498db;
+    display: block;
+    text-align: center;
+    border: 0;
+    padding: 12px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2);
+    margin-left: 10px;
+}
+.validation_avatar:hover
+{
+	background: #2ecc71;
+}
+.pp_avatar
+{
+    height: 100%;
+    width: 100%;
+    border: 3px solid #3498db;
+    border-radius: 75%;
 }
 .pseudo
 {
 	height: 30%;
 	width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    border-bottom: 1px solid white;
 }
 .img_avatar
 {
-	height: 80px;
-	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	width: 25%;
+}
+.choix_pseudo
+{
+	text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin-left: 15%;
+}
+.bouton_modif_pseudo
+{
+	font-size: 15px;
+    font-family: biko_font;
+    background: white;
+    display: block;
+    text-align: center;
+    border: 0;
+    padding: 12px;
+    outline: none;
+    color: #3498db;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2);
+  	margin-right: 10px;
+}
+.bouton_modif_pseudo:hover
+{
+	background: #da88de;
+	color: white;
+}
+.box_modif_pseudo
+{
+	font-size: 14px;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 0;
+    border: 2px solid white;
+    padding: 14px 10px;
+    outline: none;
+    width: 70%;
+    height: 18%;
+    color: white;
+    border-radius: 26px;
+    transition: 0.5s;
+}
+.box_modif_pseudo:focus
+{
+    height: 40%;
+    border-radius:19% 19% 19% 18% / 100% 100% 100% 100%;
+    border-color: #da88de;
+}
+.box_modif_pseudo:hover
+{
+	background: rgba(255,255,255,0.1);
+}
+.box_modif_pseudo::placeholder
+{
+	opacity: 0.9;
+}
+.votre_pseudo
+{
+	margin: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-style: italic;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50%;
+	width: 25%;
+}
+.text_modif_mdp, .text_modif_mail
+{
+	font-family: biko_font;
+	text-decoration: underline;
+	font-size: 20px;
+	color: #3498db;
 }
 .modif_mdp
 {
 	text-align: center;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	width: 90%;
 	height: 50%;
@@ -103,20 +262,40 @@ body
 }
 .mdp_box_container
 {
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
-.mdp_box
+.mdp_box, .mail_box
 {
-	text-align: center;
-	width: 80%;
-	height: 20%;
-	border: none;
+	font-size: 14px;
+    background: none;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    border: 0;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    outline: none;
+    width: 45%;
+    height: 8%;
+    color: black;
+    border-radius: 26px;
+    transition: 0.5s;
 
+}
+.mdp_box:hover
+{
+	background: rgba(52,152,219,0.1);
+}
+.mdp_box:focus
+{
+	background: none;
+    width: 70%;
+    border-color: #2ecc71;
 }
 .mail
 {
@@ -125,7 +304,11 @@ body
 	justify-content: center;
 	align-items: center;
 	width: 90%;
-	height: 50%;
+	height: 62%;
+}
+.text_modif_mail
+{
+	color: white;
 }
 .mail_container
 {
@@ -138,32 +321,67 @@ body
 }
 .mail_box
 {
-	text-align: center;
-	width: 80%;
-	height: 20%;
-	border: none;
+	height: 5%;
+	color: white;
+	border-color: white;
 }
-.pp_avatar
+.mail_box:hover
 {
-    height: 80px;
-    width: 80px;
-    border: 3px solid black;
-    border-radius: 40px;
+	background: rgba(255,255,255,0.1);
 }
-.ava_droite{
-    display:flex;
-    justify-content: space-between;
-    width:650px;
+.mail_box:focus
+{
+	background: none;
+    width: 70%;
+    border-color: #da88de;
+}
+.mail_box::placeholder
+{
+	opacity: 0.9;
+}
+.validation
+{
+	width: 100%;
+	margin-top: 10px;
+}
+.btn_validation, .btn_validation_mail
+{
+	font-size: 15px;
+    font-family: biko_font;
+    background: #3498db;
+    border-radius: 5px;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    border: 0;
+    padding: 12px;
+    outline: none;
+    width: 150px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px rgba(0,0,0,0.2)
+}
+.btn_validation:hover
+{
+	color: white;
+    background: #2ecc71;
+}
+.btn_validation_mail
+{
+	color: #3498db;
+	background: white;
+}
+.btn_validation_mail:hover
+{
+	background: #da88de;
+	color: white;
 }
 #tx_ava{
     height:20px;
 }
-.choix_avatars
-{
-    display:flex;
-    justify-content: space-between;
-    width:400px;
-}
+
 .lien_modif_avatar
 {
 }
@@ -171,4 +389,16 @@ body
 .pp_avatar2{
     height:80px;
     width:80px;
+}
+.errorMessage2
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75%;
+	height: 15%;
+	background: #e66262;
+	color: white;
+	text-align: center;
+	border-radius: 3px;
 }
