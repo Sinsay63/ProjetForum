@@ -1,6 +1,5 @@
-body{
-    margin:0;
-    padding: 0;
+*{
+    box-sizing: border-box;
 }
 @font-face {
     font-family: policetitre;
@@ -19,6 +18,27 @@ header{
     background-image: url(../images/fond.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+body{
+    transition: background 0.2s linear;
+}
+body.dark{
+    background-color: #292C35;
+}
+body.dark p {
+    color: #fff;
+}
+body.dark .top{
+    background-color: #292C35;
+}
+body.dark h1 {
+    color: #fff;
+}
+body.dark .psd{
+    color: #fff;
+}
+body.dark .pp{
+    border-color: #fff;
 }
 .logo{
     height: 100px;
@@ -99,5 +119,58 @@ header li:hover .sub-menu{
 .pp {
     height: 70px;
     width: 70px;
+    border-radius: 50px;
+    border: double 5px black;
+}
+.menud{
+    width: 70px;
     margin-right: 100px;
+    margin-top: 20px;
+    position: relative;
+}
+.nuit{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+}
+.ball {
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
+}
+.psd{
+    position: absolute;
+    height: 50px;
+    width: 50px; 
+    margin-right: 20px;
+    top: 30px;
 }

@@ -22,12 +22,14 @@
                     </div>  
                 </div>
                 <div class="droite">
-                    <?php
-                    if (isset($_SESSION['pseudo'])){
-                        echo 'Bonjour '.$_SESSION['pseudo'];?>
+                    <div class="psd">
+                        <?php
+                        if (isset($_SESSION['pseudo'])){
+                            echo 'Bonjour '.$_SESSION['pseudo'];?>
+                    </div>
                         <div class="dropdown">
                             <ul>
-                                <li>
+                                <li class="menud">
                                     <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
                                     <ul class="sub-menu">
                                         <li>
@@ -60,11 +62,18 @@
                     <?php
                     }
                     ?>
-                    <div class="modenuit">
-                        <button id="darkTrigger">Dark Theme</button>
+                    <div class="nuit">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                        
                     </div>
                 </div>
             </div>
+            <script type="text/javascript" src="view/javascript/modenuit.js"></script>
         </header>
     </body>
 </html>
