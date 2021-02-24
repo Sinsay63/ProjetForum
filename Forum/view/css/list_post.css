@@ -63,22 +63,22 @@
     align-items: center;
 }
 
-li{
+.cont_haut li{
     list-style: none;
     height:30px;
     padding-top:8px;
 }
 
-li ul {
+.cont_haut li ul {
     display:none;
     margin: 0;
     padding:0;
  }
-  li:hover ul {
+.cont_haut li:hover ul {
     display:block;
     padding-right: 10px;
  }
- li:hover input{
+.cont_haut li:hover input{
     margin-left:18px; 
  }
  a{
