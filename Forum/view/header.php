@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="view/css/header.css"/>
         <link rel="stylesheet" href="view/css/reset.css"/>
+        <script src="https://kit.fontawesome.com/e4c565c7ff.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -16,9 +17,10 @@
                         <h1 class="title">AnecdoteSpecialChars </h1>
                     </div>
                     <div class="recherche">
-                        <label for="site-search" id="txt_search">Search the site:</label>
-                        <input type="search" id="site-search" name="q" aria-label="Search through site content">
-                        <button id="search">Search</button>
+                        <input class="recherche-txt" type="text" name="box" placeholder="Rechercher...">
+                        <a class="bouton-btn" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
                     </div>  
                 </div>
                 <div class="droite">
@@ -33,15 +35,21 @@
                                     <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="index.php?page=profil"  value="Profil" >Profil</a>
+                                            <div class="lien">
+                                                <a href="index.php?page=profil"  value="Profil" >Profil</a>
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
                                         </li>
                                         <li>
-                                            <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                            <div class="lien">
+                                                <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
                                         </li>
                                         <li>
                                             <?php
                                             if($_SESSION['IsAdmin']==1){
-                                                echo '<a href="index.php?page=list_user" value="Users"> Users </a>';
+                                                echo '<div class="lien"><a href="index.php?page=list_user" value="Users"> Users </a><i class="fas fa-angle-right"></i></div>';
                                             }
                                             ?>
                                         </li>
@@ -53,9 +61,9 @@
                     }
                         else{
                     ?>
-                    <div class="bouton">
+                    <div class="connexion">
                         <a href="index.php?page=page_connexion"/>
-                            <input id="b1" type="submit" value="Connexion"/>
+                            <input class="bt1" id="b1" type="submit" value="Connexion"/>
                             <input id="b2" type="submit" value="Inscription"/>
                         </a>
                     </div>
@@ -69,7 +77,6 @@
                             <i class="fas fa-sun"></i>
                             <div class="ball"></div>
                         </label>
-                        
                     </div>
                 </div>
             </div>
