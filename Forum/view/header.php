@@ -32,41 +32,41 @@
                                     <?php echo 'Bonjour  ' .$_SESSION["pseudo"] ;?>
                                 </p> 
                             </div>
-                        <div class="dropdown">
-                            <ul>
-                                <li class="menud">
-                                    <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <div class="lien">
-                                                <a href="index.php?page=profil"  value="Profil" >Profil</a>
-                                                <i class="fas fa-angle-right"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="lien">
-                                                <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
-                                                <i class="fas fa-angle-right"></i>
-                                            </div>
-                                        </li>
-                                        <li>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="menud">
+                                        <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <div class="lien">
+                                                    <a href="index.php?page=profil"  value="Profil" >Profil</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="lien">
+                                                    <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </li>
+                                            <li>
                                             <?php
                                             if($_SESSION['IsAdmin']==1){ ?> 
-                                            <div class="lien">
-                                                <?php echo '<a href="index.php?page=list_user" value="Users"> Users </a>';?>
-                                                <i class="fas fa-angle-right"></i>
+                                                <div class="lien">
+                                                    <?php echo '<a href="index.php?page=list_user" value="Users"> Users </a>';?>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
                                             <?php
                                             }
                                             ?>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                    
                     <?php
-                    }
+                    } 
                         else{
                     ?>
                     <div class="connexion">
