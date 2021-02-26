@@ -24,9 +24,14 @@
                     </div>  
                 </div>
                 <div class="droite">
+                    <div class="Hdroit">
                         <?php
-                        if (isset($_SESSION['pseudo'])){
-                            echo '<div class="nom"> <p> Bonjour  '.$_SESSION["pseudo"].' </p> </div>' ;?>
+                        if (isset($_SESSION['pseudo'])){ ?>
+                            <div class="nom"> 
+                                <p>
+                                    <?php echo 'Bonjour  ' .$_SESSION["pseudo"] ;?>
+                                </p> 
+                            </div>
                         <div class="dropdown">
                             <ul>
                                 <li class="menud">
@@ -46,15 +51,18 @@
                                         </li>
                                         <li>
                                             <?php
-                                            if($_SESSION['IsAdmin']==1){
-                                                echo '<div class="lien"><a href="index.php?page=list_user" value="Users"> Users </a><i class="fas fa-angle-right"></i></div>';
+                                            if($_SESSION['IsAdmin']==1){ ?> 
+                                            <div class="lien">
+                                                <?php echo '<a href="index.php?page=list_user" value="Users"> Users </a>';
                                             }
                                             ?>
+                                            <i class="fas fa-angle-right"></i></div>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
+                    </div>
                     <?php
                     }
                         else{

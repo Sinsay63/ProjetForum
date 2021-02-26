@@ -92,34 +92,33 @@ body.dark .label {
     height: 70px;
     width: 100px;
 }
+.Hdroit{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 7%;
+}
 .dropdown{
     display: flex;
-    position: relative;
     height: 100px;
     width: 100px;
     align-items: center;
-    margin-left: 8px;
-    z-index: 1;
+    margin-right: 20px;
 }
 .nom{ 
-    position: absolute;
     display: flex;
     align-items: center;
     text-align: center;
-    right:1%;
-    margin-top: 25px;
     height: 50px;
     width: 100px; 
     border: solid 1px black;
-    z-index: 2;
 }
 .nuit{
     display: flex;
-    align-items: flex-end;
-   height: 20px;
-   width: 50px;
-   margin-left: 150px;
-   margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 7%;
 }
 
 a{
