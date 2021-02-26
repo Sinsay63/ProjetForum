@@ -19,7 +19,14 @@ body
     font-family: "biko_font";
     src: url(../font/Biko_Bold.otf);
 }
-
+input
+{
+    box-sizing: revert;
+}
+label
+{
+    box-sizing: revert;
+}
 p
 {
 	margin: revert;
