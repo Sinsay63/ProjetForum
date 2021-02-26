@@ -3,13 +3,24 @@ $id=$_SESSION['ID'];
 if (isset($_POST['new_username'])){
     
     $new_username = htmlspecialchars($_POST['new_username']);
-    $reponse = $bdd->prepare("UPDATE logins SET Pseudo= ? WHERE ID= ?");
-    $reponse->execute(array($new_username,$id));
+    $rep=$bdd->prepare('Select Pseudo from logins');
+    $rep->execute(array());
+    $pseudo=$rep->fetch();
+    foreach ($pseudo as $value) {
+        if ($value==$new_username){
+            
+        }
+        else{
+            $reponse = $bdd->prepare("UPDATE logins SET Pseudo= ? WHERE ID= ?");
+            $reponse->execute(array($new_username,$id));
     
     if($reponse){
         $_SESSION['Pseudo']=$new_username;
         header('location: index.php');
     }
+        }
+    }
+    
     
 }
     if (isset($_POST['old_password'], $_POST['new_password'],$_POST['new_password2'])){

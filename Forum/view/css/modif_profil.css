@@ -27,10 +27,6 @@ label .validation_avatar, .choix_fichier_avatar
 {
     box-sizing: revert;
 }
-.background p
-{
-	margin: revert;
-}
 .background
 {
 	background-image: url("../images/background3.JPG");
@@ -122,7 +118,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .validation_avatar
 {
-	font-size: 15px;
+    font-size: 15px;
     font-family: biko_font;
     background: #3498db;
     display: block;
@@ -150,8 +146,8 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .pseudo
 {
-	height: 30%;
-	width: 100%;
+    height: 15%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,13 +163,11 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .choix_pseudo
 {
-	text-align: center;
+    text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 50%;
-    margin-left: 15%;
 }
 .bouton_modif_pseudo
 {
@@ -190,7 +184,7 @@ label .validation_avatar, .choix_fichier_avatar
     transition: 0.5s;
     cursor: pointer;
     box-shadow: 3px 5px 12px rgba(0,0,0,0.2);
-  	margin-right: 10px;
+  	margin-left: 15px;
 }
 .bouton_modif_pseudo:hover
 {
@@ -199,7 +193,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .box_modif_pseudo
 {
-	font-size: 14px;
+    font-size: 14px;
     background: none;
     display: block;
     text-align: center;
@@ -225,27 +219,38 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .box_modif_pseudo::placeholder
 {
+	color: white;
 	opacity: 0.9;
 }
 .votre_pseudo
 {
-	margin: 5px;
-	font-size: 25px;
-	font-weight: bold;
-	text-decoration: underline;
-	font-style: italic;
-	color: white;
+	margin-top: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 50%;
-	width: 25%;
+}
+.username2{
+    padding-top:10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+}
+.username1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+}
+.username{
+    text-align: center;
 }
 .text_modif_mdp, .text_modif_mail
 {
 	font-family: biko_font;
 	text-decoration: underline;
-	font-size: 20px;
+	font-size: 25px;
 	color: #3498db;
 }
 .modif_mdp
@@ -266,6 +271,7 @@ label .validation_avatar, .choix_fichier_avatar
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+        margin-top: 25px;
 }
 .mdp_box_container
 {
@@ -292,6 +298,7 @@ label .validation_avatar, .choix_fichier_avatar
     color: black;
     border-radius: 26px;
     transition: 0.5s;
+    width: 213px;
 
 }
 .mdp_box:hover
@@ -300,7 +307,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .mdp_box:focus
 {
-	background: none;
+    background: none;
     width: 70%;
     border-color: #2ecc71;
 }
@@ -310,19 +317,31 @@ label .validation_avatar, .choix_fichier_avatar
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 90%;
-	height: 62%;
+        margin-top:25px;
 }
 .text_modif_mail
 {
-	color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+.text_modif_mail2
+{
+    padding-top:10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    padding-bottom: 20px;
 }
 .mail_container
 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 	width: 100%;
 	height: 100%;
 }
@@ -344,6 +363,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .mail_box::placeholder
 {
+    color: white;
 	opacity: 0.9;
 }
 .validation

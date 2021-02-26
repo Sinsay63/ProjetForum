@@ -43,7 +43,7 @@
                                 <input class="revert" type="file" name="avatar" id="fileUpload" hidden>
                                 <label class="choix_fichier_avatar" for="fileUpload">Choisir un fichier</label>
                                 <input class="revert" type="submit" name="submit" id="upload" value="Upload" hidden/>
-                                <label class="validation_avatar" for="upload">Ok</label>   
+                                <label class="validation_avatar" for="upload">Modifier</label>   
                             </form>
                         </div>
                         <form class="modif_mdp" action="index.php?page=modif_profil" method="post">
@@ -77,33 +77,39 @@
                                 </div>
                             </div>
                             <div class="validation">
-                                <input class="btn_validation" type="submit" value="Changer">
+                                <input class="btn_validation" type="submit" value="Modifier">
                             </div>
                         </form>
                         </div>
                         <div class="right">
+                            <div class="votre_pseudo">
+                                <div class="username">
+                                    <p class="username1">Votre pseudo :  </p>
+                                    <p class="username2"><?php echo $value['Pseudo']; ?> </p>
+                                </div>
+                            </div> 
                             <form class="pseudo" action="index.php?page=modif_profil" method="post">
                                 <div class="choix_pseudo">
-                                    <input class="bouton_modif_pseudo" type="submit" value="Ok">
                                     <input class="box_modif_pseudo" type="text" name="new_username" placeholder="Nouveau pseudo" minlength="4" maxlength="15" required/>
+                                    <input class="bouton_modif_pseudo" type="submit" value="Modifier">
                                 </div>
-                                <div class="votre_pseudo">
-                                    <p><?php echo $value['Pseudo']; ?> </p>
-                                </div> 
                             </form>
                             <form class="mail" action="index.php?page=modif_profil" method="post">
-                                <div class="mail_container">
-                                    <p class="text_modif_mail"> Votre e-mail :  <?php echo $value['Email']; ?> </p>
-                                    <?php 
-                                    if((isset($err))){
-                                        if ($err==4){
-                                            $message="Le format de l'email est incorrect."; ?>
-                                            <p class='errorMessage2'><?php echo $message; ?></p>
-                                <?php   }
-                                    }  ?>
-                                    <input class="mail_box" type="text" name="new_email" placeholder="Nouvelle adresse email" required/>
-                                    <div class="validation">
-                                        <input class="btn_validation_mail" type="submit" value="Changer">
+                                <div class="content_mail">
+                                    <div class="mail_container">
+                                        <p class="text_modif_mail"> Votre email :   </p>
+                                        <p class="text_modif_mail2">  <?php echo $value['Email']; ?> </p>
+                                        <?php 
+                                        if((isset($err))){
+                                            if ($err==4){
+                                                $message="Le format de l'email est incorrect."; ?>
+                                                <p class='errorMessage2'><?php echo $message; ?></p>
+                                    <?php   }
+                                        }  ?>
+                                        <input class="mail_box" type="text" name="new_email" placeholder="Nouvelle adresse email" required/>
+                                        <div class="validation">
+                                            <input class="btn_validation_mail" type="submit" value="Modifier">
+                                        </div>
                                     </div>
                                 </div>
                             </form>
