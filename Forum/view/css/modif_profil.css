@@ -19,15 +19,15 @@ body
     font-family: "biko_font";
     src: url(../font/Biko_Bold.otf);
 }
-input
+input .choix_fichier_avatar, input .revert, .mdp_box, .btn_validation, .bouton_modif_pseudo, .box_modif_pseudo, .mail_box, .btn_validation_mail
 {
     box-sizing: revert;
 }
-label
+label .validation_avatar, .choix_fichier_avatar
 {
     box-sizing: revert;
 }
-p
+.background p
 {
 	margin: revert;
 }

@@ -7,20 +7,6 @@
     </head>
     <body>  
         <div class="container">
-            <div class="cote_cat">
-                <div class="cat_populaire">
-                    <p> categorie les plus populaire </p>
-                </div>
-                <div class="cat">
-                    <p> categorie 1 </p>
-                </div>
-                <div class="cat">
-                    <p> categorie 2 </p>
-                </div>
-                <div class="cat">
-                    <p> categorie 3 </p>
-                </div>
-            </div>
             <div class="main">
                 <div class="top_cat">
                     <div class="titre_cat">

@@ -40,9 +40,9 @@
                             }
                             ?>
                             <form class="choix_avatars" action="index.php?page=new_avatar" method="post" enctype="multipart/form-data">
-                                <input type="file" name="avatar" id="fileUpload" hidden>
+                                <input class="revert" type="file" name="avatar" id="fileUpload" hidden>
                                 <label class="choix_fichier_avatar" for="fileUpload">Choisir un fichier</label>
-                                <input type="submit" name="submit" id="upload" value="Upload" hidden/>
+                                <input class="revert" type="submit" name="submit" id="upload" value="Upload" hidden/>
                                 <label class="validation_avatar" for="upload">Ok</label>   
                             </form>
                         </div>
