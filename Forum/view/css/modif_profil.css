@@ -345,6 +345,7 @@ label .validation_avatar, .choix_fichier_avatar
 .mail_box::placeholder
 {
 	opacity: 0.9;
+    color: white;
 }
 .validation
 {

@@ -10,7 +10,13 @@
             <div class="main">
                 <div class="top_cat">
                     <div class="titre_cat">
-                        <p> nom de la catégorie </p>
+                        <select class="cat_menu" name="cat_menu">
+                            <option value="" hidden>recherche de catégories</option>
+                            <option value="1">+18</option>
+                            <option value="2">Vacances</option>
+                            <option value="2">Insolites</option>
+                            <option value="2">Génantes</option>
+                        </select>
                     </div>
                     <div class="mes_topics">
                         <select class="mes_topics_menu" name="mes_topics">
@@ -34,21 +40,36 @@
             <div class="article">
                 <div class="contenu">
                     <div class="contenu_gauche">
-                    </div>
-                    <div class="contenu_droite">
                         <div class="contenu_haut">
                             <div class="titre">
                                 <a class="titre_text" href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>"><p class="artitre"><?php  echo $result['Titre'];?></p></a>
                             </div>
-                            <?php
+                            
+                        </div>
+                    </div>
+                    <div class="contenu_droite">
+                        <div class="pdp_aut">
+                            <div class="pdp">
+                                <img class="imgpdp" src="<?php echo $result['Avatar_Path'];  ?>" alt=""/>
+                            </div>
+                            <div class="auteur">
+                                <?php echo $result['Pseudo']; ?>
+                            </div>
+                        </div>
+                        <div class="date">
+                          <?php  echo 'Le '.$result['Date_Publication']; ?>
+                        </div>
+                        <?php
                                 if (isset($_SESSION['pseudo'])){
                                     if($_SESSION['IsAdmin']==1){?>
                                     <li>
-                                        <input class="button_plus"type="button" value="..." /> 
+                                        <a class="button_plus" type="button" href="#popup1">...</a>
                                         <ul>
+                                    
                                             <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
                                              <?php if($result['IsClosed']==0){ ?>
-                                                    <li><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a><li>
+                                                    <li>
+                                                        <div class="button_clore"><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a><li>
                                                 <?php   }
                                                     else if($result['IsClosed']==1){ ?>
                                                     <li><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=1">Réouvrir</a><li>
@@ -60,24 +81,12 @@
                                         <ul>
                                             <li><div class="button_plu"><input class="button_plus"type="button" /> </div>
                                                 <ul class="options">
-                                                    <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                                    <li><div class="button_supprimer"><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></div></li>
                                                 </ul>
                                             </li>
                                         </ul>
                               <?php } 
                                 }?>
-                        </div>
-                        <div class="contenu_bas">
-                            <div class="pdp">
-                                <img class="imgpdp" src="<?php echo $result['Avatar_Path'];  ?>" alt=""/>
-                            </div>
-                            <div class="auteur">
-                                <?php echo 'Par '.$result['Pseudo']; ?>
-                            </div>
-                            <div class="date">
-                              <?php  echo 'Le '.$result['Date_Publication']; ?>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -343,7 +343,9 @@ p.errorMessage {
     width: 70%;
     height: 30%;
 }
-p.errorMessage1 {
+p.errorMessage1 
+{
+    background-color: #e66262;
     padding: 5px 10px;
     color: white;
     height:20px;
