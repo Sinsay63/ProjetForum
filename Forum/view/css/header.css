@@ -12,12 +12,10 @@ header{
 }
 .top{
     display: flex;
-    height: 125px;
     width: 100%;
-    background-color: #d3b593;
-    background-image: url(../images/fond.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    height: 160px;
+    background-color: #fff;
+    border-bottom: 1px solid black;
 }
 body{
     transition: background 0.2s linear;
@@ -76,7 +74,6 @@ body.dark .label {
     width:15%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 .mid{
     display: flex;
@@ -89,8 +86,41 @@ body.dark .label {
     justify-content: space-around;
     width: 15%;
 }
-#b1,#b2{
-    margin-right: 30px;
+.connexion{
+    background-color: red;
+    height: 70px;
+    width: 100px;
+}
+.dropdown{
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    margin-left: 8px;
+    z-index: 1;
+}
+.nom{ 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    right:1%;
+    margin-top: 25px;
+    height: 50px;
+    width: 100px; 
+    border: solid 1px black;
+    z-index: 2;
+}
+.nuit{
+    display: flex;
+    align-items: flex-end;
+   position: absolute;
+   top: 15%;
+   right: 1%;
+   height: 20px;
+   width: 50px;
+   z-index: 3;
 }
 
 a{
@@ -104,6 +134,9 @@ a{
   margin: 0;
   font-family: policetitre;
   font-size: 80px;
+}
+h1{
+    font: inherit;
 }
 header li {
     display: inline-block;
@@ -146,20 +179,15 @@ header li:hover .sub-menu{
     height: 70px;
     width: 70px;
     border-radius: 50px;
-    margin: 5px 5px 5px 5px;
     border: double 5px black;
 }
 .menud{
-    width: 90px;
+    width: 80px;
     height: 90px;
     border-radius: 50px;
     margin-top: 20px;
     margin-left: 10px;
     position: relative;
-}
-.nuit{
-    margin-bottom: 20px;
-    margin-left: 160px;
 }
 .checkbox{
     opacity: 0;
@@ -199,16 +227,9 @@ header li:hover .sub-menu{
 .fa-angle-right{
     padding-right: 10px;
 }
-.psd{
-    position: absolute;
-    height: 50px;
-    width: 50px; 
-    margin-left: 130px;
-    top: 30px;
-}
 .recherche{
     position: absolute;
-    top: 13%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #e5e5e5;

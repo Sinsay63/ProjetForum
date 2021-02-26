@@ -24,11 +24,9 @@
                     </div>  
                 </div>
                 <div class="droite">
-                    <div class="psd">
                         <?php
                         if (isset($_SESSION['pseudo'])){
-                            echo 'Bonjour '.$_SESSION['pseudo'];?>
-                    </div>
+                            echo '<div class="nom"> <p> Bonjour  '.$_SESSION["pseudo"].' </p> </div>' ;?>
                         <div class="dropdown">
                             <ul>
                                 <li class="menud">
