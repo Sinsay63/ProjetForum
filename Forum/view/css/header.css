@@ -80,6 +80,7 @@ body.dark .label {
     flex-direction: column;
     width: 70%; 
     align-items: center;
+    justify-content: center;
 }
 .gauche{
     display: flex;
@@ -115,12 +116,10 @@ body.dark .label {
 .nuit{
     display: flex;
     align-items: flex-end;
-   position: absolute;
-   top: 15%;
-   right: 1%;
    height: 20px;
    width: 50px;
-   z-index: 3;
+   margin-left: 150px;
+   margin-top: 10px;
 }
 
 a{
@@ -228,13 +227,10 @@ header li:hover .sub-menu{
     padding-right: 10px;
 }
 .recherche{
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     background: #e5e5e5;
     height: 45px;
     border-radius: 40px;
+    margin-bottom: 20px;
     padding: 10px;
     display: flex;
     justify-content: center;
