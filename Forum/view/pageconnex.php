@@ -89,7 +89,7 @@
                             <div class="all_saisie">
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="prenom" placeholder="*Prenom" required/>
+                                        <input class="border_black" type="text" name="prenom" placeholder="*Prénom" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="text" name="email" placeholder="*E-mail" required/>
+                                        <input class="border_black" type="text" name="email" placeholder="*Email" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="saisies">
                                     <div class="sais">
-                                        <input class="border_black" type="password" name="mdp_conf" placeholder="*Confirmation du mot de passe" required/>
+                                        <input class="border_black" type="password" name="mdp_conf" placeholder="*Confirmation mot de passe" required/>
                                     </div>
                                 </div>
                                 <div class="saisies">
