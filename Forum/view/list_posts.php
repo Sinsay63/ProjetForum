@@ -18,31 +18,36 @@
                             <option value="2">Génantes</option>
                         </select>
                     </div>
+                    <?php
+            if (isset($_SESSION['pseudo'])){
+                ?>
                     <div class="mes_topics">
                         <select class="mes_topics_menu" name="mes_topics">
                             <option value="" hidden>Mes topics</option>
                             <option value="1">Propres créations</option>
                             <option value="2">Topics aimés</option>
                         </select>
-
                     </div>
-                    <div class="crea_sujet">
-
-        <?php
-            if (isset($_SESSION['pseudo'])){
-                echo '<a href="index.php?page=crea_article"><input class="button_crea_sujet" type="button" value="Créer un nouveau sujet"></a>';
+                <div class="crea_sujet">
+                    <a href="index.php?page=crea_article"><input class="button_crea_sujet" type="button" value="Créer un nouveau sujet"></a>
+                </div> <?php
             }
-        ?>          </div>
-                </div>
+        ?>   
+            </div>
         <?php 
             foreach ($resultes as $result) { ?>
 
             <div class="article">
                 <div class="contenu">
                     <div class="contenu_gauche">
+                        <div class="box_cat_img">
+                            <img class="img_cat" src="<?php echo $result['images']; ?>">
+                        </div>
                         <div class="contenu_haut">
                             <div class="titre">
-                                <a class="titre_text" href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>"><p class="artitre"><?php  echo $result['Titre'];?></p></a>
+                                <a class="titre_text" href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>">
+                                    <p class="artitre"><?php  echo $result['Titre'];?></p>
+                                </a>
                             </div>
                             
                         </div>
