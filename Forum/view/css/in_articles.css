@@ -1,16 +1,82 @@
-.content_article{
-    border: solid black 2px ;
-    margin-top:15px;
-    width:500px;
+html
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
-.haut{
+@font-face
+{
+    font-family: "biko_font";
+    src: url(../font/Biko_Bold.otf);
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: biko_font;
+}
+.colonne_gauche
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px; 
+}
+
+.content_article
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid grey 1px;
+    margin-top:15px;
+    width: 90%;
+    height: 100%;
+    background-color: pink;
+}
+.content_com
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.haut
+{
+    margin: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
     display:flex;
+    font-size: 30px;
+}
+.contenu_art
+{
+    margin: 50px;
+    font-size: 23px;
 }
 .art_titre{
    padding-right:20px;
 }
-.art_bas{
+.art_bas
+{
+    font-size: 19px;
     display:flex;
+    margin: 10px;
 }
 .publié{
     padding-right:15px;
@@ -19,4 +85,11 @@
     width:35px;
     height:35px;
     padding-right: 15px;
+}
+
+.partie_droite
+{
+    height: 100%;
+    width: 50%;
+    background-color: yellow;
 }
