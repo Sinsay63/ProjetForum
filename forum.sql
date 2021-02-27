@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 19 fév. 2021 à 22:27
+-- Généré le : sam. 27 fév. 2021 à 19:15
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -41,7 +41,8 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`, `IsClosed`) VALUES
-(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-02-19 22:13:03', 1, 1);
+(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-02-19 22:13:03', 1, 0),
+(31, 'dfffsetrstsdretertybdy', '&lt;div&gt;fsdfcsdfsdfsdfssdfsdcfdsdf&lt;strong&gt;dfscdfsdcfsd&lt;/strong&gt;&lt;/div&gt;', '2021-02-27 17:19:40', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -59,7 +60,8 @@ CREATE TABLE `article_categorie` (
 --
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
-(2, 2);
+(2, 2),
+(31, 1);
 
 -- --------------------------------------------------------
 
@@ -77,7 +79,6 @@ CREATE TABLE `article_commentaire` (
 --
 
 INSERT INTO `article_commentaire` (`ID_article`, `ID_commentaire`) VALUES
-(2, 1),
 (2, 2);
 
 -- --------------------------------------------------------
@@ -104,18 +105,19 @@ CREATE TABLE `ban` (
 
 CREATE TABLE `categories` (
   `id` bigint(20) NOT NULL,
-  `nom` varchar(20) NOT NULL
+  `nom` varchar(20) NOT NULL,
+  `images` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
-INSERT INTO `categories` (`id`, `nom`) VALUES
-(1, '+18'),
-(2, 'vacances'),
-(3, 'insolites'),
-(4, 'gênantes');
+INSERT INTO `categories` (`id`, `nom`, `images`) VALUES
+(1, '+18', 'view/images/pegi18.png'),
+(2, 'vacances', 'view/images/vacance.jpg'),
+(3, 'insolites', ''),
+(4, 'gênantes', 'view/images/gene.png');
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,6 @@ CREATE TABLE `commentaires` (
 --
 
 INSERT INTO `commentaires` (`ID`, `Commentaires`, `Date_Commentaire`, `ID_auteur`) VALUES
-(1, 'Mdr le commentaire numéro fvvxc', '2021-01-28 07:19:05', 1),
 (2, 'COMMENTAIRE 2', '2021-01-28 07:19:05', 37);
 
 -- --------------------------------------------------------
@@ -161,9 +162,10 @@ CREATE TABLE `logins` (
 --
 
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`, `Avatar_Path`) VALUES
-(1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/dog-soviet.png'),
+(1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/hacker.jpg'),
 (37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/user.png'),
-(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user-female.png');
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user-female.png'),
+(39, 'dedeuchlecho@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'asqsd', 'qsdqsd', 'LOL', 18, 0, 'view/images/hacker.jpg');
 
 --
 -- Index pour les tables déchargées
@@ -221,13 +223,13 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `ban`
 --
 ALTER TABLE `ban`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
@@ -239,13 +241,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
