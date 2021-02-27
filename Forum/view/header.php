@@ -10,7 +10,14 @@
         <header>
             <div class="top">
                 <div class="gauche">
-                    <a href="index.php"/><img class="logo" src="view/images/logo.png" alt=""/></a>
+                    <div class="inner">
+                        <div class="img1">
+                            <a href="index.php"><i class="fas fa-home"></i></a>
+                        </div>
+                        <div class="para">
+                            <p> Bienvenue sur mon forum </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="mid">
                     <div class="Titre">
@@ -24,9 +31,9 @@
                     </div>  
                 </div>
                 <div class="droite">
-                    <div class="Hdroit">
                         <?php
                         if (isset($_SESSION['pseudo'])){ ?>
+                        <div class="Hdroit">
                             <div class="nom"> 
                                 <p>
                                     <?php echo 'Bonjour  ' .$_SESSION["pseudo"] ;?>
@@ -64,21 +71,20 @@
                                     </li>
                                 </ul>
                             </div>
-                    
+                        </div>
                     <?php
                     } 
                         else{
                     ?>
                     <div class="connexion">
                         <a href="index.php?page=page_connexion"/>
-                            <input class="bt1" id="b1" type="submit" value="Connexion"/>
-                            <input id="b2" type="submit" value="Inscription"/>
+                            <button class="btn"> <span>Connexion</span></button>
+                            <button class="btn"> <span>Inscription</span></button>
                         </a>
                     </div>
                     <?php
                     }
                     ?>
-                    </div>
                     <div class="nuit">
                         <input type="checkbox" class="checkbox" id="checkbox">
                         <label for="checkbox" class="label">

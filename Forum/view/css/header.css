@@ -13,8 +13,8 @@ header{
 .top{
     display: flex;
     width: 100%;
-    height: 160px;
-    background-color: #d6b8b8;
+    height: 130px;
+    background-color: #F0FFFF;
 }
 body{
     transition: background 0.2s linear;
@@ -37,7 +37,7 @@ body.dark .psd{
     color: #fff;
 }
 body.dark .pp{
-    border-color: #fff;
+    border-color: #464649;
 }
 body.dark .sub-menu{
     background-color: black;
@@ -65,59 +65,80 @@ body.dark .label {
 }
 body.dark header svg{
     fill: #26262c;
-    background-color: #292C35;
+    background-color: #464649;
+}
+body.dark .Hdroit{
+    background-color: #000000;
+    border-color: #464649;
+}
+body.dark .nom{
+    background-color: #464649;
+}
+body.dark .gauche{
+    background: #26262c;
+    border-color: #464649;
+}
+body.dark .inner{
+    background: #464649;
+}
+body.dark .fa-home{
+    color: #fff;
+}
+body.dark .btn{
+    color: #fff;
+}
+body.dark .btn::before, body.dark .btn::after{
+    background: #26262c;
 }
 
 /* Mode nuit */
-.logo{
-    height: 100px;
-    width: 100px;
-}
 .droite{
     height: 100%;
-    width:15%;
+    width:20%;
     display: flex;
     flex-direction: column;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; ;
-    background-color: #fff;
 }
 .mid{
     display: flex;
     flex-direction: column;
-    width: 70%; 
+    width: 60%; 
     align-items: center;
     justify-content: center;
 }
-.gauche{
-    display: flex;
-    justify-content: space-around;
-    width: 15%;
-}
 .connexion{
-    background-color: red;
-    height: 70px;
-    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
 }
 .Hdroit{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     margin-right: 7%;
+     background-color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: solid 1px #e4e4e4;
 }
 .dropdown{
     display: flex;
     height: 100px;
-    width: 100px;
+    width: 50%;
     align-items: center;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 .nom{ 
     display: flex;
     align-items: center;
-    text-align: center;
-    height: 50px;
-    width: 100px; 
-    border: solid 1px black;
+    justify-content: center;
+    height: 90px;
+    width: 50%; 
+    border-radius: 52% 48% 40% 60% / 38% 30% 70% 62% ;
+    background-color: #e4e4e4;
+    margin-right: 5%;
 }
 .nuit{
     display: flex;
@@ -125,19 +146,21 @@ body.dark header svg{
     justify-content: flex-end;
     flex-grow: 1;
     margin-right: 7%;
+    margin-top: 7%;
 }
 
 a{
     text-decoration: none;
 }
 .Titre{
-    height: 80%;
+    height: 70%;
     display: flex;
+    margin-top: 20px;
 }
 .title{
   margin: 0;
   font-family: policetitre;
-  font-size: 80px;
+  font-size: 85px;
 }
 h1{
     font: inherit;
@@ -183,7 +206,7 @@ header li:hover .sub-menu{
     height: 70px;
     width: 70px;
     border-radius: 50px;
-    border: double 5px black;
+    border: solid 2px #e4e4e4;
 }
 .menud{
     width: 80px;
@@ -241,6 +264,9 @@ header li:hover .sub-menu{
     justify-content: center;
     align-items: center;
 }
+.recherche:hover{
+    border: solid 1px #f39c12;
+}
 .bouton-btn{
     color: #f39c12;
     float: right;
@@ -269,9 +295,84 @@ header li:hover .sub-menu{
     align-items: center;
 }
 header svg{
-    fill: #d6b8b8;
+    fill: #F0FFFF;
     background-color: #e5e5e5;
 }
 header{
     height: 45%;
+}
+.gauche{
+    background: #F0FFFF;
+    width: 20%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.inner{
+    display: flex;
+    background: #e4e4e4;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 0% 0%);
+    transition: clip-path .5s ease-in-out;
+}
+.para{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+} 
+.gauche:hover .inner{
+    clip-path: circle(75%);
+}
+.img1{
+    height: 100px;
+    width: 100px;
+}
+.fa-home{
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.btn{
+    width: 130px;
+    height: 40px;
+    background: none;
+    border: 2px solid;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn::before,.btn::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #F0FFFF;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+.btn::before{
+    top: -4px;
+    left: 10%;
+}
+
+.btn::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn:hover::before{
+    left: 80%;
+}
+.btn:hover::after{
+    right: 80%;
 }
