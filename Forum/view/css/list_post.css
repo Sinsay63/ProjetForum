@@ -45,8 +45,10 @@ body
     justify-content: center;
     align-items: center;
     width: 75%;
-    height: 5%;
+    height: 13%;
+    margin: 20px;
 }
+
 .titre_cat
 {
     display: flex;
@@ -54,20 +56,31 @@ body
     align-items: center;
     width: 50%;
     height: 50%;
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.cat_menu:hover, .mes_topics_menu:hover, .button_crea_sujet:hover
+{
+    cursor: pointer;
 }
 .mes_topics
 {
+    text-align: center;
     height: 50%;
-    width: 25%;
-    border: 1px solid black;
+    width: 30%;
+    border: 1px solid grey;
+    border-left: none;
 }
 .mes_topics_menu
 {
+    text-align: center;
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
+    background: rgba(0,0,0,0.1);
+    color: black;
 }
 .cat_menu
 {
@@ -76,22 +89,46 @@ body
     height: 100%;
     background-color: transparent;
     border: none;
+    background: rgba(0,0,0,0.1);
+    color: black;
+}
+.crea_sujet
+{
+    height: 50%;
+    width: 30%;
+    border: 1px solid grey;
+    border-top-right-radius: 5px;
+    border-left: none;
+    border-bottom-right-radius: 5px;
+
+}
+.button_crea_sujet
+{
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    background: rgba(0,0,0,0.1);
+    color: black;
 }
 .article
 {
-    margin: 50px;
+    margin: 20px;
     display: flex;
-    border:black solid;
-    border-radius:15px;
+    border: 1px solid grey;
+    border-radius:10px;
     height: 210px;
     width: 60%;
+    background: white;
+    z-index: 1;
 }
 .contenu
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:100%
+    width:100%;
+    z-index: 1;
 }
 .contenu_gauche
 {
@@ -110,7 +147,8 @@ body
     align-items: center;
     height: 100%;
     width: 30%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
+    z-index: 1;
 }
 
 .contenu_haut
@@ -159,8 +197,7 @@ body
     border-radius: 50%;
     height:40px;
     width:40px;
-    background: yellow;
-    border: 1px solid black;
+    background-color: lightskyblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,6 +253,7 @@ body
     justify-content: center;
     align-items: center;
     margin-left: 10%;
+    color:lightskyblue;
 }
 
 .contenu_droite li{
@@ -228,6 +266,7 @@ body
     display:none;
     margin: 0;
     padding:0;
+
  }
 
  .contenu_droite li:hover ul 
@@ -242,4 +281,21 @@ body
     color:black;
  }
 
-
+.button_plus
+{
+    color: white;
+}
+.box_supprimer
+{
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 75px;
+    width: 100px;
+    text-align: center;
+}
+.white
+{
+    color: white;
+}

@@ -11,7 +11,7 @@
                 <div class="top_cat">
                     <div class="titre_cat">
                         <select class="cat_menu" name="cat_menu">
-                            <option value="" hidden>recherche de catégories</option>
+                            <option value="" hidden>Recherche de catégories</option>
                             <option value="1">+18</option>
                             <option value="2">Vacances</option>
                             <option value="2">Insolites</option>
@@ -30,7 +30,7 @@
 
         <?php
             if (isset($_SESSION['pseudo'])){
-                echo '<a href="index.php?page=crea_article"><input type="button" value="Créer un nouveau sujet"></a>';
+                echo '<a href="index.php?page=crea_article"><input class="button_crea_sujet" type="button" value="Créer un nouveau sujet"></a>';
             }
         ?>          </div>
                 </div>
@@ -62,17 +62,17 @@
                         <?php
                                 if (isset($_SESSION['pseudo'])){
                                     if($_SESSION['IsAdmin']==1){?>
-                                    <li>
-                                        <a class="button_plus" type="button" href="#popup1">...</a>
-                                        <ul>
+                                    <li class="bouton_plus">
+                                        <a class="button_plus" type="button">...</a>
+                                        <ul class="box_supprimer">
                                     
-                                            <li><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
+                                            <li><a class="white" href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></li>
                                              <?php if($result['IsClosed']==0){ ?>
                                                     <li>
-                                                        <div class="button_clore"><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a><li>
+                                                        <div class="button_clore"><a class="white" href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a><li>
                                                 <?php   }
                                                     else if($result['IsClosed']==1){ ?>
-                                                    <li><a href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=1">Réouvrir</a><li>
+                                                    <li><a class="white" href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=1">Réouvrir</a><li>
                                             <?php    } ?>
                                         </ul>
                                     </li>
