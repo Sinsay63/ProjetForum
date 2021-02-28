@@ -82,18 +82,20 @@
                         </form>
                         </div>
                         <div class="right">
-                            <div class="votre_pseudo">
-                                <div class="username">
-                                    <p class="username1">Votre pseudo :  </p>
-                                    <p class="username2"><?php echo $value['Pseudo']; ?> </p>
-                                </div>
-                            </div> 
-                            <form class="pseudo" action="index.php?page=modif_profil" method="post">
-                                <div class="choix_pseudo">
-                                    <input class="box_modif_pseudo" type="text" name="new_username" placeholder="Nouveau pseudo" minlength="4" maxlength="15" required/>
-                                    <input class="bouton_modif_pseudo" type="submit" value="Modifier">
-                                </div>
-                            </form>
+                            <div class="modif_pseudo">
+                                <div class="votre_pseudo">
+                                    <div class="username">
+                                        <p class="username1">Votre pseudo :  </p>
+                                        <p class="username2"><?php echo $value['Pseudo']; ?> </p>
+                                    </div>
+                                </div> 
+                                <form class="pseudo" action="index.php?page=modif_profil" method="post">
+                                    <div class="choix_pseudo">
+                                        <input class="box_modif_pseudo" type="text" name="new_username" placeholder="Nouveau pseudo" minlength="4" maxlength="15" required/>
+                                        <input class="bouton_modif_pseudo" type="submit" value="Modifier">
+                                    </div>
+                                </form>
+                            </div>   
                             <form class="mail" action="index.php?page=modif_profil" method="post">
                                 <div class="content_mail">
                                     <div class="mail_container">
