@@ -15,7 +15,7 @@
                             <a href="index.php"><i class="fas fa-home"></i></a>
                         </div>
                         <div class="para">
-                            <p> Bienvenue sur mon forum </p>
+                            <p> Bienvenue sur un forum rempli d'anecdotes en tout genre. </p>
                         </div>
                     </div>
                 </div>

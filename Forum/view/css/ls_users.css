@@ -206,3 +206,19 @@ body
     border: 1px solid #bbb;
     border-radius: 5px;
 }
+/* Mode nuit */
+body.dark .page_users_container {
+    background-color: #464649;
+}
+body.dark .Users {
+    border: 1px solid #000000;
+    background: #18181b;
+}
+body.dark .ban {
+    border: 1px solid #303032;
+    background-color: #1f1f23;
+}
+body.dark .pseudo {
+    color: #fff;
+}
+/* Mode nuit */
