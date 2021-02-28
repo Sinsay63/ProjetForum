@@ -55,6 +55,19 @@ html
     width: 90%;
     height: 100%;
 }
+.commentaires
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid grey 1px;
+    margin-top:15px;
+    width: 90%;
+    height: 100%;
+    background-color: pink;
+}
 .haut
 {
     margin: 10px;

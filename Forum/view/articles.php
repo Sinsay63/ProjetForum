@@ -27,7 +27,6 @@
                                     </div>
                                 </div>
                             </div>
-                        <div class="content_com">
                 <?php   }
                         if (isset($_SESSION['ID'])){
                             if($_SESSION['IsAdmin']==1){ ?>
@@ -37,7 +36,8 @@
                                 <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=0&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Clore</a>
                     <?php   }
                             else if($value['IsClosed']==1){ ?>
-                                <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a>
+                                <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> ?>
+                        <div class="content_com">
                         <?php    } 
                         }
                         }
@@ -63,9 +63,10 @@
                                             <?php
                                         }
                                     }?>
-                                </div>
-                                <div>
-                                    <?php  echo 'Ecrit par '.$come['Pseudo']; ?>
+                                
+                                    <div>
+                                        <?php  echo 'Ecrit par '.$come['Pseudo']; ?>
+                                    </div>
                                 </div>
 
                     
@@ -75,7 +76,7 @@
                     ?>
                 <form action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
                     <p>Votre commentaire:</p>
-                    <input type="text" name="commentaire"/>
+                    <input type="text" minlength="20" name="commentaire"/>
                     <input type="submit" value="Envoyer" >
                 </form>
                 <?php
