@@ -27,7 +27,6 @@ trix-toolbar .trix-button-row {
   overflow-x: auto; }
 trix-toolbar .trix-button-group {
   display: flex;
-  margin-bottom: 10px;
   border-radius: 3px; }
   trix-toolbar .trix-button-group:not(:first-child) {
     margin-left: 1.5vw; }
@@ -50,7 +49,6 @@ trix-toolbar .trix-button {
   margin: 0;
   outline: none;
   border: none;
-  border-bottom: 1px solid #ddd;
   border-radius: 0;
   background: transparent; }
   trix-toolbar .trix-button:not(:first-child) {
