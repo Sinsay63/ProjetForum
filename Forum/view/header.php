@@ -51,12 +51,6 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="lien">
-                                                    <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
-                                                    <i class="fas fa-angle-right"></i>
-                                                </div>
-                                            </li>
-                                            <li>
                                             <?php
                                             if($_SESSION['IsAdmin']==1){ ?> 
                                                 <div class="lien">
@@ -66,6 +60,12 @@
                                             <?php
                                             }
                                             ?>
+                                            </li>
+                                            <li>
+                                                <div class="lien">
+                                                    <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
                                             </li>
                                         </ul>
                                     </li>
