@@ -22,3 +22,10 @@ else if(isset($_GET['btid'])){
     require("../models/tempban.php");
     header("location: ../index.php?page=list_user");
 }
+else if(isset($_GET['opid'])){
+    $id=$_GET['opid'];
+    require('../models/connexion.php');
+    require('../models/ls_users.php');
+    require("../models/put_admin.php");
+    header("location: ../index.php?page=list_user");
+}

@@ -1,8 +1,125 @@
-p{
-    margin:0;
+
+.page_users_container{
+    display:flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+}
+
+.titre_page_users{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Users{
+    display: flex ;
+    justify-content: center;
+    width:500px;
+    border:2px black solid;
+}
+.user{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.pseudo{
+   font-size: 22px; 
+   font-weight: bold;
+   text-align: center;
+}
+.raison,.durée{
+    text-align: center;
+}
+.raison{
+    margin-top:10px;
+}
+.deban{
+    border: 2px black solid;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.unban{
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.ban{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+.def_ban{
+    
+}
+.form_ban_def{
+    display: flex;
+    justify-content: center;
+}
+.form_def{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.button_ban_def{
+    width: 100px;
+    margin-top:10px;
+    
+}
+.input_def{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.noms_ban{
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.form_temp_ban{
+    display: flex;
+    justify-content: center;
+}
+.form_temp{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.input_temp{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.button_unban a {
+    color:black;
+}
+.button_unban {
+    width:100px;
+}
+.btn_unban{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
 }
 .txt_area{
-    width:170px;
+    width:180px;
 }
 .txt_area2{
     width:275px;

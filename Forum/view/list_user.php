@@ -5,38 +5,67 @@
         <link rel="stylesheet" href="view/css/ls_users.css"/>
     </head>
     <body>
-        <h1>LISTE USERS</h1>
+        <div class="page_users_container">
+            <div class="Users">
+                <div class="user">
+                <h1 class="titre_page_users">LISTE UTILISATEURS</h1>
         <?php 
         foreach ($users as $value) { ?> 
             <?php if($value['Ban']==1){
-                echo $value['Pseudo'];?>  <a href="controllers/ban_deban.php?did=<?php echo $value['ID'];  ?>" style="padding-left:10px; padding-bottom: 15px;" />Débannir</a>
-                <?php echo 'Raison du ban: '.$value['Raison_Ban']; ?><br><br>
+                ?>
+                <div class="deban">
+                    <p class="pseudo"><?php echo $value['Pseudo']; ?></p>  
+                    <div class="unban">
+                        <div class="btn_unban">
+                            <button type="button" class="button_unban"><a href="controllers/ban_deban.php?did=<?php echo $value['ID'];  ?>"/>Débannir</a></button> 
+                        </div>
+                        <p class="raison">Raison du ban:</p>
+                        <p class="raison"> <?php echo $value['Raison_Ban']; ?></p>
+                    </div>
+                </div>
     <?php   }
             else { 
                 date_default_timezone_set('Europe/Paris');
                  $date = date('20y-m-d');
                  $heure = date('H:i');
                 ?>
-                <div style="display:flex;padding-bottom: 15px; padding-top: 20px;">
-                    <div style="width:80px;"><?php  echo $value['Pseudo'];  ?></div>
-                    <form action="controllers/ban_deban.php?bid=<?php echo $value['ID'];?>" style="display: flex;" method="post">
-                        <p style="padding-right: 15px; padding-left: 15px;">Raison du ban: </p>
-                        <input  type="text" class="txt_area2" name="raison_ban_def" maxlength="45" required>
-                        <input  style="margin-left: 15px;" type="submit" value="Ban Def">
-                    </form>
+                <div class="ban">
+                    <div class="pseudo">
+                            <?php  echo $value['Pseudo'];  ?>
+                    </div>
+                    <div class="def_ban">
+                        <p class="noms_ban">Ban à vie: </p>
+                        <form class="form_ban_def" action="controllers/ban_deban.php?bid=<?php echo $value['ID'];?>" method="post">
+                            <div class="form_def">
+                                <p class="raison">Raison du ban: </p>
+                                <div class="input_def">
+                                    <input  type="text" class="txt_area2" name="raison_ban_def" placeholder="Entrez la raison du ban" maxlength="25" required>
+                                    <input class="button_ban_def" type="submit" value="Bannir">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="temp_ban">
+                        <p class="noms_ban"> Ban temporaire: </p>
+                        <form class="form_temp_ban" action="controllers/ban_deban.php?btid=<?php echo $value['ID']; ?>" method="post">
+                            <div class="form_temp">
+                                <p class="durée">Durée du ban:</p>
+                                <div class="input_temp">
+                                <input type="datetime-local" class="txt_area" name="dateheure" min="<?php echo $date.'T'.$heure;?>" required>
+                                <p class="raison">Raison du ban: </p>
+                                <input type="text" class="txt_area2" name="raison_ban_temp" placeholder="Entrez la raison du ban" maxlength="45" required >
+                                <input class="button_ban_def"type="submit" value="Bannir">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                    <form action="controllers/ban_deban.php?btid=<?php echo $value['ID']; ?>" style="display: flex; padding-left:80px;" method="post">
-                        <p style="padding-right: 15px; padding-left: 15px;">Durée du ban:</p>
-                        <input type="datetime-local" class="txt_area" name="dateheure" min="<?php echo $date.'T'.$heure;?>" required>
-                         <p style="padding-right: 15px; padding-left: 15px;">Raison du ban: </p>
-                         <input  type="text" class="txt_area2" name="raison_ban_temp" maxlength="45" required >
-                              
-                        <input  style="margin-left: 15px;" type="submit" value="TempBan">
-                    </form>
-                <br><br>
     <?php   }
   }
         ?>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
