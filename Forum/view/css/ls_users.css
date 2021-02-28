@@ -1,23 +1,56 @@
+html
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+@font-face
+{
+    font-family: "biko_font";
+    src: url(../font/Biko_Bold.otf);
+}
+body
+{
 
-.page_users_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.page_users_container
+{
+    width: 100%;
+    height: 200%;
+    margin-bottom: 10px;
     display:flex;
     justify-content: center;
     background-color: #e5e5e5;
 }
 
-.titre_page_users{
+.titre_page_users
+{
     display: flex;
     justify-content: center;
     font-size: 30px;
     font-weight: bold;
 }
-.Users{
+.Users
+{
     display: flex ;
     justify-content: center;
-    width:500px;
-    border:2px black solid;
+    width:75%;
+    height: 100%;
+    border:1px solid #bbb;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.04);
 }
-.user{
+.user
+{
+    width: 75%;
+    height: 100%;
     display:flex;
     flex-direction: column;
     align-content: center;
@@ -47,33 +80,64 @@
     align-content: center;
     flex-direction: column;
 }
-
-.ban{
+.temp_ban
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.ban
+{
+    height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    border: 2px solid black;
+    border: 1px solid #bbb;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
     margin-bottom: 15px;
 }
-.def_ban{
-    
+.def_ban
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
-.form_ban_def{
+.form_ban_def
+{
+    width: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
-.form_def{
+.form_def
+{
+    width: 75%;
+    height: 100%;
     display: flex;
     align-content: center;
     flex-direction: column;
 }
-.button_ban_def{
-    width: 100px;
-    margin-top:10px;
-    
+.button_ban_def
+{
+    width: 25%;
+    height: 25%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
-.input_def{
+.button_ban_def:hover
+{
+    cursor: pointer;
+}
+.input_def
+{
+    height: 75%;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -86,11 +150,17 @@
     text-decoration: underline;
     font-size: 18px;
 }
-.form_temp_ban{
+.form_temp_ban
+{
+    width: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
-.form_temp{
+.form_temp
+{
+    width: 75%;
+    height: 100%;
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -118,9 +188,21 @@
     flex-direction: column;
     margin: 10px 0px 10px 0px;
 }
-.txt_area{
-    width:180px;
+.txt_area
+{
+
+    width:40%;
+    height: 25%;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
-.txt_area2{
-    width:275px;
+.txt_area2
+{
+    text-align: center;
+    margin:20px;
+    width:75%;
+    height: 50px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
