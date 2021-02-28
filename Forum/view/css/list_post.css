@@ -195,10 +195,11 @@ body
     border-radius: 50%;
     height:40px;
     width:40px;
-    background-color: lightskyblue;
+    background-color: #e4e4e4;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000000;
 }
 .button_plu
 {
@@ -250,7 +251,7 @@ body
     justify-content: center;
     align-items: center;
     margin-left: 10%;
-    color:lightskyblue;
+    color: #000000;
 }
 
 .contenu_droite li{
@@ -277,10 +278,6 @@ body
     color:black;
  }
 
-.button_plus
-{
-    color: white;
-}
 .box_supprimer
 {
     z-index: 10;
@@ -320,5 +317,12 @@ body.dark .contenu_droite{
     background: #2F4F4F;
     border-left: 1px solid #464649;
 }
-
+body.dark .button_plus
+{
+    background-color: #26262c;
+    color: #fff;
+}
+body.dark .auteur, body.dark .date{
+    color: #fff;
+}
 /* Mode nuit */
