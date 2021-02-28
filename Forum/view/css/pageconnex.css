@@ -206,7 +206,7 @@ a{
     padding: 14px 10px;
     outline: none;
     width: 200px;
-    color: black;
+    color: #3498db;
     border-radius: 24px;
     transition: 0.5s;
 }
@@ -218,11 +218,12 @@ a{
 {
     background: none;
     width: 280px;
+    color: #3498db;
     border-color: #2ecc71;
 }
 .border_white::placeholder
 {
-    color: black;
+    color: #3498db;
     opacity: 0.7;
 }
 
@@ -296,7 +297,6 @@ a{
 {
     color: white;
     display: flex;
-    justify-content: end;
     font-size: 12px;
     text-align: end;
     width:100%;
@@ -363,3 +363,50 @@ p.errorMessage2 {
     width: 100%;
     height: 30%;
 }
+/* Mode nuit */
+body.dark .form_conn_inscri{
+    background: #464649;
+}
+body.dark .border_white{
+    border: 2px solid #0c0f1d;
+    color: #fff;
+}
+body.dark .border_white::placeholder{
+    color: #fff;
+    opacity: 0.9;
+}
+body.dark .border_black{
+    border: 2px solid #26262c;
+    color: #fff;
+}
+body.dark .border_black::placeholder{
+    color: #fff;
+    opacity: 0.9;
+}
+body.dark .bouton_left{
+    background: #0c0f1d;
+}
+body.dark .bouton_left:hover
+{
+    color: white;
+    background: #464649;
+}
+body.dark .bouton_right
+{
+    color: #fff;
+    background: #26262c;
+}
+body.dark .bouton_right:hover
+{
+    color: white;
+    background: #464649;
+}
+body.dark .conn_gauche{
+    background-image: url(../images/background_blanc_dark.png);
+}
+body.dark .conn_droite{
+    background-image: url(../images/backgroundbleu_dark.png);
+}
+
+
+/* Mode nuit */
