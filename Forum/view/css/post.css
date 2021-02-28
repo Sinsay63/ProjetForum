@@ -9,7 +9,7 @@ html
     font-family: "biko_font";
     src: url(../font/Biko_Bold.otf);
 }
-body,p
+body
 {
 
     display: flex;
@@ -19,7 +19,10 @@ body,p
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+.align_toi
+{
+	text-align: center;
+}
 .huge_container
 {
 	margin-top: 50px;
@@ -85,9 +88,13 @@ body,p
 	border-radius: 5px;
 	border: 1px solid #bbb;
 }
+.trix-button-group
+{
+	margin-bottom: 0px;
+}
 .choix_titre:hover
 {
-	cursor: pointer;
+	cursor: text;
 }
 .choix_titre:focus
 {

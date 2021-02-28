@@ -10,7 +10,7 @@
         <form class="huge_container" action="index.php?page=creation_article" method="post">
             <div class="main">
                 <div class="big_box">
-                    <p> Création d'un sujet de discussion </p>
+                    <p class="align_toi"> Création d'un sujet de discussion </p>
                     <select class="choix_cat" name="id_categorie">
                         <option value="">Choisir une categorie</option>
                         <option value="1">+18</option>
