@@ -21,7 +21,9 @@
                     <input class="choix_titre" type="text" name="titre" placeholder="Entrez un titre" maxlength="40" minlength="20">
                     <input id="x" class="contenu" type="hidden" name="contenu" placeholder="Entrez votre message" maxlength="200" minlength="10">
                     <trix-editor class="editor" input="x"></trix-editor>
-                    <input type="submit" value="Poster le topic">
+                    <div class="zone_button">
+                        <input class="poster_le_topic" type="submit" value="Poster le topic">
+                    </div>
                 </div>
             </div>
         </form>
