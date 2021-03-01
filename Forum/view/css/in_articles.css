@@ -9,9 +9,46 @@ html
     font-family: "biko_font";
     src: url(../font/Biko_Bold.otf);
 }
-
+.poster_com
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 20%;
+    width: 40%;
+}
+.envoie_com
+{
+    margin: 20px;
+    width: 90%;
+    height: 25px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+.envoie_com:focus
+{
+    outline: none;
+}
+.button_envoie_com
+{
+    width: 50%;
+    height: 25px;
+    border: 1px solid #bbb;
+    text-align: center;
+    border-radius: 5px;
+}
+.button_envoie_com:hover
+{
+    cursor: pointer;
+}
 .content
 {
+    margin-top: -10px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +56,7 @@ html
     height: 100%;
     width: 100%;
     font-family: biko_font;
+    background-color: #e5e5e5;
 }
 .colonne_gauche
 {
@@ -28,7 +66,7 @@ html
     align-items: center;
     height: 100%;
     width: 50%;
-    border: 2px solid black;
+    border: 2px solid #bbb;
     border-radius: 5px; 
 }
 
@@ -39,11 +77,11 @@ html
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: solid grey 1px;
+    border: solid #bbb 1px;
     margin-top:15px;
     width: 90%;
     height: 100%;
-    background-color: pink;
+    background-color: rgba(255,255,255,0.5);
 }
 .content_com
 {
@@ -62,11 +100,22 @@ html
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: solid grey 1px;
+    border: solid #bbb 1px;
     margin-top:15px;
     width: 90%;
     height: 100%;
-    background-color: pink;
+    background-color: rgba(255,255,255,0.5);
+}
+.comment_content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.margin
+{
+    margin: 20px;
 }
 .haut
 {

@@ -53,31 +53,33 @@
                                 else{
     ?>
                                 <div class="commentaires">
-                                    <div><?php  echo $come['Commentaires']; 
+                                    <div class="comment_content"><?php  echo $come['Commentaires']; 
                                     if(isset($_SESSION['pseudo'])) {
                                         if ($_SESSION['IsAdmin']==1 || $come['Pseudo']==$_SESSION['pseudo']){?>
-                                            <a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>">Supprimer</a></div>
+                                        	<div class="margin">
+                                            	<a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>">Supprimer</a>
                                   <?php }
                                         if($come['Pseudo']==$_SESSION['pseudo']){ ?>
                                             <a href="index.php?page=page_article&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>&modif=<?php echo $come['ID']; ?>">Modifier</a>
+                                        	</div>
                                             <?php
                                         }
                                     }?>
-                                
-                                    <div>
+                                    <div class="margin">
                                         <?php  echo 'Ecrit par '.$come['Pseudo']; ?>
                                     </div>
                                 </div>
+                            </div>
 
                     
                                 <?php   }}
                         }
                     if($value['IsClosed']==0){
                     ?>
-                <form action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
+                <form class="poster_com" action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
                     <p>Votre commentaire:</p>
-                    <input type="text" minlength="20" name="commentaire"/>
-                    <input type="submit" value="Envoyer" >
+                    <input class="envoie_com" type="text" minlength="20" name="commentaire"/>
+                    <input class="button_envoie_com" type="submit" value="Envoyer" >
                 </form>
                 <?php
                 
