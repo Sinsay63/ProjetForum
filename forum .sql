@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 01 mars 2021 à 16:57
+-- Généré le : lun. 01 mars 2021 à 23:32
 -- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.10
+-- Version de PHP : 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,9 +41,10 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`, `IsClosed`) VALUES
-(2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-02-19 22:13:03', 1, 0),
-(31, 'dfffsetrstsdretertybdy', '&lt;div&gt;fsdfcsdfsdfsdfssdfsdcfdsdf&lt;strong&gt;dfscdfsdcfsd&lt;/strong&gt;&lt;/div&gt;', '2021-02-27 17:19:40', 1, 0),
-(34, 'sdffcsefcsefsecfxxesfcsdcfsdfcsefsc', '&lt;div&gt;ecfsefcsfseccfsfdfgdfvdfgdrgdf&lt;/div&gt;', '2021-03-01 16:05:12', 1, 0);
+(36, 'Grrrrrrrrrrr', '&lt;div&gt;je vous raconterai tout plus tard :p&lt;br&gt;&lt;br&gt;&lt;/div&gt;', '2021-03-01 23:23:10', 1, 0),
+(37, 'ATTENTION CA TOURNE MAL', '&lt;div&gt;JE CROIVE EN LES&amp;nbsp;&lt;strong&gt;FANT&Ocirc;MES C&#039;EST VRAI&lt;/strong&gt;&lt;/div&gt;', '2021-03-01 23:24:00', 38, 0),
+(38, 'Salade tomate oignon chef', '&lt;div&gt;Tequila Heineken Pas le temps de niaiser&amp;nbsp;&lt;/div&gt;', '2021-03-01 23:24:30', 38, 0),
+(39, 'Ma soeur et moi', '&lt;div&gt;Chuuuut, c&#039;est un secret entre nous , mais je suis ton &lt;strong&gt;p&egrave;re&lt;/strong&gt;&lt;/div&gt;', '2021-03-01 23:25:08', 38, 0);
 
 -- --------------------------------------------------------
 
@@ -61,9 +62,10 @@ CREATE TABLE `article_categorie` (
 --
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
-(2, 2),
-(31, 1),
-(34, 3);
+(36, 1),
+(37, 3),
+(38, 2),
+(39, 4);
 
 -- --------------------------------------------------------
 
@@ -81,14 +83,9 @@ CREATE TABLE `article_commentaire` (
 --
 
 INSERT INTO `article_commentaire` (`ID_article`, `ID_commentaire`) VALUES
-(2, 2),
-(2, 24),
-(2, 25),
-(2, 26),
-(2, 27),
-(2, 28),
-(2, 29),
-(31, 19);
+(2, 36),
+(31, 19),
+(35, 41);
 
 -- --------------------------------------------------------
 
@@ -146,14 +143,9 @@ CREATE TABLE `commentaires` (
 --
 
 INSERT INTO `commentaires` (`ID`, `Commentaires`, `Date_Commentaire`, `ID_auteur`) VALUES
-(2, 'COMMENTAIRE 2', '2021-01-28 07:19:05', 37),
-(19, 'jhjjhjhjhjbhjghjfgvgdfgvdgdgdvgfdfgvdgvdf', '2021-03-01 10:03:30', 1),
-(24, 'lol', '2021-03-01 10:20:46', 1),
-(25, 'azdsefexfdfxdfcxfxcfx', '2021-03-01 10:23:40', 1),
-(26, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:19', 1),
-(27, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:50', 1),
-(28, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:53', 1),
-(29, 'mdr lol je susi mort de rire', '2021-03-01 10:56:18', 1);
+(19, 'J\'ai jamais autant ri ahha', '2021-03-01 10:03:30', 1),
+(36, 'Ah ouais c\'est chaud là', '2021-03-01 19:44:50', 1),
+(41, 'MDR lol', '2021-03-01 21:50:07', 1);
 
 -- --------------------------------------------------------
 
@@ -239,13 +231,13 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT pour la table `ban`
 --
 ALTER TABLE `ban`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
 
 --
 -- AUTO_INCREMENT pour la table `categories`
@@ -257,7 +249,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
