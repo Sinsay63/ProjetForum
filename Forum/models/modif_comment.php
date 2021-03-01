@@ -9,9 +9,18 @@ if(isset($_SESSION['ID'])){
         $comment=$_POST['new_comment'];
         $mod=$bdd->prepare('UPDATE commentaires SET Commentaires = ? WHERE ID_auteur= ? and ID = ?');
         $mod->execute(array($comment,$_SESSION['ID'],$_GET['modif']));
-        $modif=$mod->fetch();
-        
-    }
-    $autid=$_GET['ID_auteur'];
+        $modif=$mod->fetchAll();
+        $autid=$_GET['ID_auteur'];
         $artid=$_GET['ID'];
+        ?>
+        <script language="Javascript">
+           <!--
+                 document.location.replace("index.php?page=page_article&ID_auteur=<?php echo $autid;?>&ID=<?php echo $artid; ?>");
+           // -->
+        </script>
+         <?php
+    }
 }
+
+
+

@@ -39,21 +39,31 @@
                     <?php   }
                             else if($value['IsClosed']==1){ ?>
                                 <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> 
-                        <div class="content_com">
+                        
                         <?php    } 
                         }
                         }
                         if (isset($com)){
-                            foreach ($com as $come) {
+                            foreach ($com as $come) { ?>
+                                <div class="content_com"> <?php
                                 if(isset($_GET['modif']) and $come['ID']==$_GET['modif']){ ?>
+                                
+                                    <div class="commentaires">
+                                         <div class="comment_content">
                                 <form action="" method="post">
-                                    <input style="width:400px; height:40px;" name="new_comment" value='<?php echo $comme['Commentaires'];  ?>'>
+                                    <input style="width:400px; height:40px;" name="new_comment" value='<?php echo $come['Commentaires'];  ?>' required minlength="5">
                                     <input type="submit" value="Modifier">
                                 </form>
+                                             <div class="margin">
+                                        <?php  echo 'Ecrit par '.$come['Pseudo']; ?>
+                                    </div>
+                                         </div>
+                                    </div>
+                                </div>
                                 <?php
                                 }
-                                else{
-    ?>
+                                else{ ?>
+                                
                                 <div class="commentaires">
                                     <div class="comment_content"><?php  echo $come['Commentaires']; 
                                     if(isset($_SESSION['pseudo'])) {
@@ -76,11 +86,11 @@
                     
                                 <?php   }}
                         }
-                    if($value['IsClosed']==0){
+                    if($value['IsClosed']==0 && isset($_SESSION['ID'])) {
                     ?>
                 <form class="poster_com" action="index.php?page=page_article&ID_auteur=<?php echo $id_aut;?>&ID=<?php echo $id_art; ?>" method="post">
                     <p>Votre commentaire:</p>
-                    <input class="envoie_com" type="text" minlength="20" name="commentaire"/>
+                    <input class="envoie_com" type="text" minlength="5" name="commentaire"/>
                     <input class="button_envoie_com" type="submit" value="Envoyer" >
                 </form>
                 <?php
