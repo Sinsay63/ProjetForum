@@ -12,13 +12,12 @@ if (isset($_POST['commentaire'])){
 
     foreach ($comid as $id_com) {
       $idcom=$id_com['ID'];  
-   }
+    }
     $Rep = $bdd->prepare("INSERT INTO article_commentaire(ID_article,ID_commentaire) VALUES(?,?)");
     $Rep->execute(array($id_art,$idcom));
     if($Rep){
-        
-    $autid=$_GET['ID_auteur'];
-    $artid=$_GET['ID']; ?>
+        $autid=$_GET['ID_auteur'];
+        $artid=$_GET['ID']; ?>
         <script language="Javascript">
            <!--
                  document.location.replace("index.php?page=page_article&ID_auteur=<?php echo $autid;?>&ID=<?php echo $artid; ?>");

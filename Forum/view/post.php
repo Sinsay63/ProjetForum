@@ -18,7 +18,7 @@
                         <option value="3">horreur</option>
                         <option value="4">gênante</option>
                     </select>
-                    <input class="choix_titre" type="text" name="titre" placeholder="Entrez un titre" maxlength="40" minlength="20">
+                    <input class="choix_titre" type="text" name="titre" placeholder="Entrez un titre" maxlength="40" minlength="10">
                     <input id="x" class="contenu" type="hidden" name="contenu" placeholder="Entrez votre message" maxlength="200" minlength="10">
                     <trix-editor class="editor" input="x"></trix-editor>
                     <div class="zone_button">

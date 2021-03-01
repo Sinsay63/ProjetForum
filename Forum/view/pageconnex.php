@@ -19,71 +19,90 @@
                             <div class="titreconnex">
                                 <p>Déjà utilisateur?</p>
                             </div>
-                                <?php 
-                                    if(isset($error)){
-                                        if ($error==1){
-                                            $message="Nom d'utilisateur ou mot de passe incorrect."; ?>
-                                            <p class='errorMessage'><?php echo $message; ?> </p>
-                                <?php   }
-                                        else if($error==0){
-                                            if(isset($_GET['rais'])){
-                                                $message="Votre compte est banni à vie. Raison : ".$_GET['rais'];
-                                                ?>
-                                                <p class='errorMessage'><?php echo $message; ?> </p>
-                                <?php   
+                    <?php   if(isset($error)){
+                                if ($error==1){
+                                    $message="Nom d'utilisateur ou mot de passe incorrect."; ?>
+                                    <p class='errorMessage'><?php echo $message; ?> </p>
+                        <?php   }
+                                else if($error==0){
+                                    if(isset($_GET['rais'])){
+                                        $message="Votre compte a été banni à vie. Raison : ".$_GET['rais'];?>
+                                        <p class='errorMessage'><?php echo $message; ?> </p>
+                           <?php    }
+                                }
+                                else if($error==6){
+                                    if(isset($_GET['tempa'])){ ?>
+                                        <p class='errorMessage'>Votre compte est banni temporairement. Durée restante: </p>
+                                        <p class='errorMessage1'> 
+                                            <?php 
+                                            if($_GET['tempa']==0 && $_GET['tempj']==0 && $_GET['temph']==0 && $_GET['tempm']==0 ){
+                                                echo $_GET['temps'].' secondes';
                                             }
-                                        }
-                                        else if($error==6){
-                                            if(isset($_GET['tempa'])){
-                                                ?>
-                                                <p class='errorMessage'>Votre compte est temp ban. Durée restante: </p>
-                                                <p class='errorMessage1'> <?php echo $_GET['tempa'].' an '.$_GET['tempj'].' jours '.$_GET['temph'].' heures '.$_GET['tempm'].' minutes '.$_GET['temps'].' secondes';
-                                                ?> </p>
-                                <?php       }
-                                        }
-                                    } 
-                                    ?>
-                                <div class="champ_saisie">
-                                    <div class="saisies">
-                                        <div class="sais"><input class="border_white" type="text" name="pseudo" placeholder="Pseudo" required/></div>
-                                    </div>
-                                    <div class="saisies">
-                                        <div class="sais"><input class="border_white" type="password" name="password" placeholder="Mot de passe"required/>  </div>
-                                    </div>
-                                </div>
-                                <div class="btn_envoi">
-                                    <input class="bouton_left" type="submit" value="Se connecter">
-                                    <div class="bas_left">
-                                        <input type="checkbox">
-                                        <div class="text_bas">
-                                            <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies.</p>
-                                        </div>
+                                            else if($_GET['tempa']==0 && $_GET['tempj']==0 && $_GET['temph']==0){
+                                                echo $_GET['tempm'].' minutes '.$_GET['temps'].' secondes';  
+                                            }
+                                            else if($_GET['tempa']==0 && $_GET['tempj']==0){
+                                                echo $_GET['tempm'].' minutes '.$_GET['temps'].' secondes';
+                                            }
+                                            else if($_GET['tempa']==0){
+                                                echo $_GET['tempj'].' jours '.$_GET['temph'].' heures '.$_GET['tempm'].' minutes '.$_GET['temps'].' secondes';
+                                            }
+                                            else{
+                                                echo $_GET['tempa'].' an '.$_GET['tempj'].' jours '.$_GET['temph'].' heures '.$_GET['tempm'].' minutes '.$_GET['temps'].' secondes';
+                                            }?>
+                                        </p>
+                        <?php       }
+                                }
+                            } ?>
+                            <div class="champ_saisie">
+                                <div class="saisies">
+                                    <div class="sais">
+                                        <input class="border_white" type="text" name="pseudo" placeholder="Pseudo" required/>
                                     </div>
                                 </div>
-                        </div>
-                    </form>
+                                <div class="saisies">
+                                    <div class="sais">
+                                        <input class="border_white" type="password" name="password" placeholder="Mot de passe"required/>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_envoi">
+                                <input class="bouton_left" type="submit" value="Se connecter">
+                                <div class="bas_left">
+                                    <input type="checkbox">
+                                    <div class="text_bas">
+                                        <p> Les cookies nous aident à fournir nos services. En utilisant nos Services ou en cliquant sur J'accepte, vous acceptez notre utilisation des cookies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="conn_droite">
                     <div class="form2">
-                        
                         <form class="form_connex2" action="index.php?page=inscription" method="post">
-                        	<div class="titreconnex_droite">
+                            <div class="titreconnex_droite">
                                 <p>Création d'un compte</p>
                             </div>
-                            <?php 
-                            if((isset($error))){
+                      <?php if((isset($error))){
                                 if ($error==2){
                                     $message="L'email saisie est incorrecte."; ?>
-                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                                    <div>
+                                        <p class='errorMessage2'><?php echo $message; ?></p>
+                                    </div>
                         <?php   }
                                 else if($error==3){
                                     $message="L'email ou le pseudo est déjà existant."; ?>
-                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                                    <div>
+                                        <p class='errorMessage2'><?php echo $message; ?></p>
+                                    </div>
                         <?php   }
-                             
+
                                 else if($error==4){
                                     $message="Les mots de passe sont différents."; ?>
-                                    <div><p class='errorMessage2'><?php echo $message; ?></p></div>
+                                    <div>
+                                        <p class='errorMessage2'><?php echo $message; ?></p>
+                                    </div>
                         <?php   } 
                             }?>
                             <div class="all_saisie">

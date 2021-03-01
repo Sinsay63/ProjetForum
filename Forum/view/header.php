@@ -24,7 +24,7 @@
                         <h1 class="title">AnecdoteSpecialChars </h1>
                     </div>
                     <div class="recherche">
-                        <form action="" method="post">
+                        <form action="index.php" method="post">
                             <input class="recherche-txt" type="text" name="recherche" placeholder="Rechercher..." minlength="3">
                             <button type="submit" class="btn_search">
                             <div class="bouton-btn">
@@ -46,7 +46,7 @@
                             <div class="dropdown">
                                 <ul>
                                     <li class="menud">
-                                        <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>"/>
+                                        <img class="pp" src="<?php echo $_SESSION['Avatar'];   ?>" alt=""/>
                                         <ul class="sub-menu">
                                             <li>
                                                 <div class="lien">
@@ -67,7 +67,7 @@
                                             </li>
                                             <li>
                                                 <div class="lien">
-                                                    <a href="index.php?page=deconnexion"  value="deconnexion">Deconnexion</a>
+                                                    <a href="index.php?page=deconnexion">Déconnexion</a>
                                                     <i class="fas fa-angle-right"></i>
                                                 </div>
                                             </li>
@@ -81,7 +81,7 @@
                         else{
                     ?>
                     <div class="connexion">
-                        <a href="index.php?page=page_connexion"/>
+                        <a href="index.php?page=page_connexion">
                             <button class="btn"> <span>Connexion</span></button>
                             <button class="btn"> <span>Inscription</span></button>
                         </a>

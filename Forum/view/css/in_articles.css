@@ -105,6 +105,7 @@ html
     width: 970px;
     height: 100%;
     background-color: rgba(255,255,255,0.5);
+    margin-top: 20px;
 }
 .comment_content
 {
@@ -167,7 +168,9 @@ html
     width: 50%;
     background-color: yellow;
 }
-
+.liencom{
+    padding-top: 10px;
+}
 body.dark .content
 {
     background-color: #464649;
@@ -188,7 +191,7 @@ body.dark .datepubli{
     color: #fff;
 }
 body.dark .liencom{
-    color: #dadae0;
+    color: #c3c3e4;
 }
 body.dark .comment_content{
     color: white;

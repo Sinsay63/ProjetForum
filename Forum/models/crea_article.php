@@ -17,10 +17,10 @@ if (isset($_POST['titre'], $_POST['id_categorie'], $_POST['contenu'])){
     foreach ($results as $value) {
         $id_article=$value["ID"];
     }
-$repons = $bdd->prepare('INSERT INTO article_categorie (id_article,id_categorie) VALUES (?,?)');
-$repons->execute(array($id_article,$id_categorie));
+    $repons = $bdd->prepare('INSERT INTO article_categorie (id_article,id_categorie) VALUES (?,?)');
+    $repons->execute(array($id_article,$id_categorie));
 
-if($repons){
-    header("location: index.php");
-}
+    if($repons){
+        header("location: index.php");
+    }
 }

@@ -5,17 +5,12 @@ html
 }
 body
 {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-}
-p
-{
-    margin: revert;
 }
 @font-face
 {
@@ -37,7 +32,6 @@ p
     background-size: cover;
     background-image: url("../images/background_bleu.png");
     border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
     font-size: 15px;
     width:50%;
     display: flex;
@@ -288,7 +282,6 @@ a{
 }
 .text_bas
 {
-
     font-size: 9px;
     text-align: start;
     width: 90%;
@@ -318,6 +311,9 @@ a{
     justify-content: space-around;
     align-items: center;
 }
+.titreconnex{
+    padding-bottom: 15px;
+}
 .titreconnex, .titreconnex_droite
 {
     font-family: biko_font;
@@ -332,6 +328,7 @@ a{
     color: white;
 }
 p.errorMessage {
+    margin-top:15px;
     text-align: center;
     background-color: #e66262;
     padding: 5px 10px;
@@ -345,7 +342,7 @@ p.errorMessage {
 p.errorMessage1 
 {
     background-color: #e66262;
-    padding: 5px 10px;
+    padding: 5px 10px 20px;
     color: white;
     height:20px;
     margin:0;
@@ -407,6 +404,13 @@ body.dark .conn_gauche{
 body.dark .conn_droite{
     background-image: url(../images/backgroundbleu_dark.png);
 }
-
-
+body.dark .errorMessage,.errorMessage1,.errorMessage2{
+    background-color: #5c1616;
+}
+body.dark .errorMessage1{
+    background-color: #5c1616;
+}
+body.dark .errorMessage2{
+    background-color: #5c1616;
+}
 /* Mode nuit */

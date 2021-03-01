@@ -63,7 +63,7 @@ if (isset($_POST['pseudo'])){
         
         
         else if ($ban==0){
-            $_SESSION['pseudo'] = $username;
+            $_SESSION['pseudo'] = $result['Pseudo'];
             $_SESSION['ID']=$result['ID'];
             $_SESSION['IsAdmin']=$result['IsAdmin'];
             $_SESSION['Avatar']=$result['Avatar_Path'];

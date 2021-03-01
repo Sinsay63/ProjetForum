@@ -2,32 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Articles</title>
         <link rel="stylesheet" href="view/css/list_post.css"/>
         <script>
-function redirige (myvalue) {
-    switch(myvalue){
-        case '1':
-            window.location.assign("index.php?page=accueil&cat=1");
-            break;
-        case '2':
-            window.location.assign("index.php?page=accueil&cat=2");
-            break;
-        case '3':
-            window.location.assign("index.php?page=accueil&cat=3");
-            break;
-        case '4':
-            window.location.assign("index.php?page=accueil&cat=4");
-            break;
-        case '5':
-            window.location.assign("index.php?page=accueil&cat=moi");
-            break;
-        default:
-            window.location.assign("index.php?page=page_connexion");
-            break;
-        }
-    }
-</script>
+            function redirige (myvalue) {
+                switch(myvalue){
+                    case '1':
+                        window.location.assign("index.php?page=accueil&cat=1");
+                        break;
+                    case '2':
+                        window.location.assign("index.php?page=accueil&cat=2");
+                        break;
+                    case '3':
+                        window.location.assign("index.php?page=accueil&cat=3");
+                        break;
+                    case '4':
+                        window.location.assign("index.php?page=accueil&cat=4");
+                        break;
+                    case '5':
+                        window.location.assign("index.php?page=accueil&cat=moi");
+                        break;
+                    default:
+                        window.location.assign("index.php?page=page_connexion");
+                        break;
+                }
+            }
+        </script>
     </head>
     <body>  
         <div class="container">
@@ -65,9 +65,11 @@ function redirige (myvalue) {
                                 </div>
                                 <div class="contenu_haut">
                                     <div class="titre">
-                                        <a class="titre_text" href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>">
-                                            <p class="artitre"><?php  echo $result['Titre'];?></p>
-                                        </a>
+                                        <p class="artitre"><?php  echo $result['Titre'];?></p>
+                                    </div>
+                                    <div class="voir_article">
+                                        <a class="btn_voir_article" href="index.php?page=page_article&ID_auteur=<?php echo $result['ID_auteur'];?>&ID=<?php echo $result['ID']; ?>"> Voir l'article</a>
+                                            
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +95,7 @@ function redirige (myvalue) {
                                             <?php 
                                             if($result['IsClosed']==0){ ?>
                                                 <li>
-                                                    <div class="button_clore"><a class="white" href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a>
+                                                    <a class="white" href="index.php?page=opencloseart&id=<?php echo $result['ID'];?>&opcl=0">Clore</a>
                                                 </li>
                                                 <?php   }
                                                 else if($result['IsClosed']==1){ ?>
@@ -107,10 +109,10 @@ function redirige (myvalue) {
                                     else if($_SESSION['ID']==$result['ID_auteur']){ ?>
                                         <ul>
                                             <li>
-                                                <div class="button_plu">
-                                                    <input class="button_plus"type="button"/> 
+                                                <div class="button_plus">
+                                                    <a class="button_plus" type="button">...</a>
                                                 </div>
-                                                <ul class="options">
+                                                <ul class="box_supprimer2">
                                                     <li>
                                                         <div class="button_supprimer"><a href="index.php?page=delete&delete_post_id=<?php echo $result['ID'];?>">Supprimer</a></div>
                                                     </li>

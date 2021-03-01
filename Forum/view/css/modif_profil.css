@@ -6,7 +6,6 @@ html
 }
 body
 {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,9 +37,9 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .main_box
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80%;
     width: 65%;
     box-shadow: 30px 30px 30px rgba(0,0,0,0.2);
@@ -48,32 +47,32 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .left
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: center;
-	height: 100%;
-	width: 50%;
-	background: white;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .right
 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
-	width: 50%;
-	background: #3498db;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background: #3498db;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .avatar
 {
-	height: 30%;
-	width: 100%;
+    height: 30%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,11 +93,11 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .choix_fichier_avatar
 {
-	text-decoration: underline;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 15px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
     font-family: biko_font;
     background: #3498db;
     text-align: center;
@@ -136,7 +135,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .validation_avatar:hover
 {
-	background: #2ecc71;
+    background: #2ecc71;
 }
 .pp_avatar
 {
@@ -156,11 +155,11 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .img_avatar
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70%;
-	width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 25%;
 }
 .choix_pseudo
 {
@@ -172,7 +171,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .bouton_modif_pseudo
 {
-	font-size: 15px;
+    font-size: 15px;
     font-family: biko_font;
     background: white;
     display: block;
@@ -185,12 +184,12 @@ label .validation_avatar, .choix_fichier_avatar
     transition: 0.5s;
     cursor: pointer;
     box-shadow: 3px 5px 12px rgba(0,0,0,0.2);
-  	margin-left: 15px;
+    margin-left: 15px;
 }
 .bouton_modif_pseudo:hover
 {
-	background: #da88de;
-	color: white;
+    background: #da88de;
+    color: white;
 }
 .box_modif_pseudo
 {
@@ -216,19 +215,19 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .box_modif_pseudo:hover
 {
-	background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
 }
 .box_modif_pseudo::placeholder
 {
-	color: white;
-	opacity: 0.9;
+    color: white;
+    opacity: 0.9;
 }
 .votre_pseudo
 {
-	height: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .username2{
     padding-top:10px;
@@ -249,43 +248,43 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .text_modif_mdp, .text_modif_mail
 {
-	font-family: biko_font;
-	text-decoration: underline;
-	font-size: 25px;
-	color: #3498db;
+    font-family: biko_font;
+    text-decoration: underline;
+    font-size: 25px;
+    color: #3498db;
 }
 .modif_mdp
 {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 90%;
-	height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50%;
 }
 .mdp_container
 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-        margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
 }
 .mdp_box_container
 {
-	height: 600px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .mdp_box, .mail_box
 {
-	font-size: 14px;
+    font-size: 14px;
     background: none;
     display: block;
     margin: 12px auto;
@@ -304,7 +303,7 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .mdp_box:hover
 {
-	background: rgba(52,152,219,0.1);
+    background: rgba(52,152,219,0.1);
 }
 .mdp_box:focus
 {
@@ -314,11 +313,11 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .mail
 {
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-        margin-top:25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:25px;
 }
 .text_modif_mail
 {
@@ -340,42 +339,42 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .mail_container
 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .mail_box
 {
-	height: 5%;
-	color: white;
-	border-color: white;
+    height: 5%;
+    color: white;
+    border-color: white;
 }
 .mail_box:hover
 {
-	background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
 }
 .mail_box:focus
 {
-	background: none;
+    background: none;
     width: 70%;
     border-color: #da88de;
 }
 .mail_box::placeholder
 {
     color: white;
-	opacity: 0.9;
+    opacity: 0.9;
     color: white;
 }
 .validation
 {
-	width: 100%;
-	margin-top: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
 .btn_validation, .btn_validation_mail
 {
-	font-size: 15px;
+    font-size: 15px;
     font-family: biko_font;
     background: #3498db;
     border-radius: 5px;
@@ -394,25 +393,21 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .btn_validation:hover
 {
-	color: white;
+    color: white;
     background: #2ecc71;
 }
 .btn_validation_mail
 {
-	color: #3498db;
-	background: white;
+    color: #3498db;
+    background: white;
 }
 .btn_validation_mail:hover
 {
-	background: #da88de;
-	color: white;
+    background: #da88de;
+    color: white;
 }
 #tx_ava{
     height:20px;
-}
-
-.lien_modif_avatar
-{
 }
 
 .pp_avatar2{
@@ -421,15 +416,15 @@ label .validation_avatar, .choix_fichier_avatar
 }
 .errorMessage2
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 75%;
-	height: 15%;
-	background: #e66262;
-	color: white;
-	text-align: center;
-	border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 15%;
+    background: #e66262;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
 }
 /* Mode nuit */
 

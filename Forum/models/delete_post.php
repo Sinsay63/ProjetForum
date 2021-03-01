@@ -18,5 +18,4 @@
             $artid=$_GET['ID'];
             header("location: index.php?page=page_article&ID_auteur=$autid&ID=$artid");
         }
- 
 ?>

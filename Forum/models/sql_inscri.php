@@ -1,6 +1,5 @@
 <?php
 if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST['mdp'],$_POST['mdp_conf'],$_POST['Pseudo'])){
-    
     $username = htmlspecialchars($_POST['Pseudo']);
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['mdp']);
@@ -8,7 +7,6 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
     $nom=htmlspecialchars($_POST['nom']);
     $prénom=htmlspecialchars($_POST['prenom']);
     $age=htmlspecialchars($_POST['âge']);
-    
     
     $reponses = $bdd->prepare("SELECT Pseudo,Email FROM `logins` WHERE Pseudo= ? or Email = ? ");
     $reponses->execute(array($username,$email));
@@ -26,18 +24,11 @@ if (isset($_POST['email'], $_POST['nom'], $_POST['prenom'],$_POST['âge'],$_POST
         header("Location: index.php?page=page_connexion&error=4");
         $verif=1;
     }
-    
     else if($verif ==0){
         $reponse = $bdd->prepare('INSERT INTO logins(Email,Password,Prénom,Nom,Pseudo,Age) VALUES (?,?,?,?,?,?)');
         $reponse->execute(array($email,hash('sha256',$password),$prénom,$nom,$username,$age));
-      
-    if($reponse){ ?>
-       <div class='sucess'>
-            <h3>Vous êtes inscrit avec succès.</h3>
-            <p>Cliquez ici pour vous <a href='index.php?page=page_connexion'>connecter</a></p>
-       </div>
-       <?php
-       
-    }
+        if($reponse){ 
+           header('location: index.php?page=page_connexion');
+        }
     }
 }
