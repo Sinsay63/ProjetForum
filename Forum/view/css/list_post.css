@@ -19,7 +19,17 @@ body
     font-family: "biko_font";
     src: url(../font/Biko_Bold.otf);
 }
-
+.bouton_plus
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bouton_plus:hover
+{
+    margin-top: 35px;
+}
 .container
 {
     display: flex;
@@ -201,6 +211,7 @@ body
     align-items: center;
     color: #000000;
 }
+
 .button_plu
 {
     margin-top: 5px;
@@ -272,7 +283,7 @@ body
 
 }
 .contenu_droite li:hover input{
-    margin-left:18px; 
+    margin-left:18px;
  }
  a{
     color:black;
