@@ -460,6 +460,7 @@ body.dark .validation_avatar:hover {
 }
 body.dark .mdp_box {
     border: 2px solid #0c0f1d ;
+    background: #464649;
 }
 body.dark .mdp_box::placeholder{
     color: white;
@@ -476,6 +477,7 @@ body.dark .avatar {
 body.dark .box_modif_pseudo {
     border: 2px solid #26262c;
     color: white;
+    background: #464649;
 }
 body.dark .bouton_modif_pseudo {
     background: #26262c;
@@ -489,6 +491,7 @@ body.dark .pseudo {
 }
 body.dark .mail_box {
     border: 2px solid #26262c;
+    background: #464649;
 }
 body.dark .btn_validation_mail {
     background: #26262c;
