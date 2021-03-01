@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 27 fév. 2021 à 19:15
+-- Généré le : lun. 01 mars 2021 à 16:57
 -- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.11
+-- Version de PHP : 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,8 @@ CREATE TABLE `articles` (
 
 INSERT INTO `articles` (`ID`, `Titre`, `Contenu`, `Date_Publication`, `ID_auteur`, `IsClosed`) VALUES
 (2, 'VOICI LE PREMIER ARTICLE', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '2021-02-19 22:13:03', 1, 0),
-(31, 'dfffsetrstsdretertybdy', '&lt;div&gt;fsdfcsdfsdfsdfssdfsdcfdsdf&lt;strong&gt;dfscdfsdcfsd&lt;/strong&gt;&lt;/div&gt;', '2021-02-27 17:19:40', 1, 0);
+(31, 'dfffsetrstsdretertybdy', '&lt;div&gt;fsdfcsdfsdfsdfssdfsdcfdsdf&lt;strong&gt;dfscdfsdcfsd&lt;/strong&gt;&lt;/div&gt;', '2021-02-27 17:19:40', 1, 0),
+(34, 'sdffcsefcsefsecfxxesfcsdcfsdfcsefsc', '&lt;div&gt;ecfsefcsfseccfsfdfgdfvdfgdrgdf&lt;/div&gt;', '2021-03-01 16:05:12', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,8 @@ CREATE TABLE `article_categorie` (
 
 INSERT INTO `article_categorie` (`id_article`, `id_categorie`) VALUES
 (2, 2),
-(31, 1);
+(31, 1),
+(34, 3);
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,14 @@ CREATE TABLE `article_commentaire` (
 --
 
 INSERT INTO `article_commentaire` (`ID_article`, `ID_commentaire`) VALUES
-(2, 2);
+(2, 2),
+(2, 24),
+(2, 25),
+(2, 26),
+(2, 27),
+(2, 28),
+(2, 29),
+(31, 19);
 
 -- --------------------------------------------------------
 
@@ -116,8 +125,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `nom`, `images`) VALUES
 (1, '+18', 'view/images/pegi18.png'),
 (2, 'vacances', 'view/images/vacance.jpg'),
-(3, 'insolites', ''),
-(4, 'gênantes', 'view/images/gene.png');
+(3, 'horreur', 'view/images/horreur.png'),
+(4, 'gênante', 'view/images/gene.png');
 
 -- --------------------------------------------------------
 
@@ -137,7 +146,14 @@ CREATE TABLE `commentaires` (
 --
 
 INSERT INTO `commentaires` (`ID`, `Commentaires`, `Date_Commentaire`, `ID_auteur`) VALUES
-(2, 'COMMENTAIRE 2', '2021-01-28 07:19:05', 37);
+(2, 'COMMENTAIRE 2', '2021-01-28 07:19:05', 37),
+(19, 'jhjjhjhjhjbhjghjfgvgdfgvdgdgdvgfdfgvdgvdf', '2021-03-01 10:03:30', 1),
+(24, 'lol', '2021-03-01 10:20:46', 1),
+(25, 'azdsefexfdfxdfcxfxcfx', '2021-03-01 10:23:40', 1),
+(26, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:19', 1),
+(27, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:50', 1),
+(28, 'sdsqdxdqxdqdqzxdqzdqzdxxdqz', '2021-03-01 10:55:53', 1),
+(29, 'mdr lol je susi mort de rire', '2021-03-01 10:56:18', 1);
 
 -- --------------------------------------------------------
 
@@ -164,7 +180,7 @@ CREATE TABLE `logins` (
 INSERT INTO `logins` (`ID`, `Email`, `Password`, `Prénom`, `Nom`, `Pseudo`, `Age`, `IsAdmin`, `Avatar_Path`) VALUES
 (1, 'yanis.houdier@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Yanis', 'Houdier', 'Sinsay', 19, 1, 'view/images/hacker.jpg'),
 (37, 'maxime.larnaudie@gmail.com', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'Maxime', 'Larnaudie', 'sansheep', 19, 0, 'view/images/user.png'),
-(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user-female.png'),
+(38, 'yanis63fun@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'lol', 'lol', 'nath', 18, 0, 'view/images/user.png'),
 (39, 'dedeuchlecho@hotmail.fr', 'f4f263e439cf40925e6a412387a9472a6773c2580212a4fb50d224d3a817de17', 'asqsd', 'qsdqsd', 'LOL', 18, 0, 'view/images/hacker.jpg');
 
 --
@@ -223,7 +239,7 @@ ALTER TABLE `logins`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT pour la table `ban`
@@ -241,7 +257,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT pour la table `logins`
