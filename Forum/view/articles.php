@@ -19,10 +19,12 @@
                                         <p><?php echo html_entity_decode($value['Contenu']);  ?></p>
                                     </div> 
                                 </div> 
-                                <div>
-                                    <div class="art_bas">
+                                <div class="art_bas">
+                                    <div class="pseudoart">
                                         <p class="publié"><?php echo "Publié par ".$value['Pseudo'];  ?></p>
                                         <img class="pp1" src="<?php echo $value['Avatar_Path'];  ?>"/>
+                                    </div>
+                                    <div class="datepubli"
                                         <p ><?php echo "le  ".$value['Date_Publication'];  ?></p>
                                     </div>
                                 </div>
@@ -30,13 +32,13 @@
                 <?php   }
                         if (isset($_SESSION['ID'])){
                             if($_SESSION['IsAdmin']==1){ ?>
-                                <a href="index.php?page=delete&delete_post_id=<?php echo $value['ID'];?>">Supprimer</a>
+                                <a class="liencom" href="index.php?page=delete&delete_post_id=<?php echo $value['ID'];?>">Supprimer</a>
                 <?php
                             if($value['IsClosed']==0){ ?>
-                                <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=0&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Clore</a>
+                                <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=0&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Clore</a>
                     <?php   }
                             else if($value['IsClosed']==1){ ?>
-                                <a href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> ?>
+                                <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> ?>
                         <div class="content_com">
                         <?php    } 
                         }
@@ -57,10 +59,10 @@
                                     if(isset($_SESSION['pseudo'])) {
                                         if ($_SESSION['IsAdmin']==1 || $come['Pseudo']==$_SESSION['pseudo']){?>
                                         	<div class="margin">
-                                            	<a href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>">Supprimer</a>
+                                            	<a  class="liencom" href="index.php?page=delete&delete_com_id=<?php echo $come['ID'];?>&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>">Supprimer</a>
                                   <?php }
                                         if($come['Pseudo']==$_SESSION['pseudo']){ ?>
-                                            <a href="index.php?page=page_article&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>&modif=<?php echo $come['ID']; ?>">Modifier</a>
+                                            <a  class="liencom" href="index.php?page=page_article&ID_auteur=<?php echo $_GET['ID_auteur'];?>&ID=<?php echo $_GET['ID'];?>&modif=<?php echo $come['ID']; ?>">Modifier</a>
                                         	</div>
                                             <?php
                                         }

@@ -46,7 +46,7 @@ html
 }
 .content
 {
-    margin-top: -10px;
+    margin-top: -10%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -65,7 +65,7 @@ html
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 50%;
+    width: 70%;
     border: 2px solid #bbb;
     border-radius: 5px; 
 }
@@ -112,6 +112,7 @@ html
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 .margin
 {
@@ -136,17 +137,28 @@ html
 }
 .art_bas
 {
+    width: 100%;
     font-size: 19px;
     display:flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin: 10px;
+}
+.pseudoart{
+    display:flex;
+    align-items: center;
+}
+.datepubli{
+ margin-right: 10px;
+
 }
 .publié{
     padding-right:15px;
 }
 .pp1{
-    width:35px;
-    height:35px;
-    padding-right: 15px;
+    height:50px;
+    margin-right: 10px;
+    border-radius: 50px;
 }
 
 .partie_droite
@@ -154,4 +166,35 @@ html
     height: 100%;
     width: 50%;
     background-color: yellow;
+}
+
+body.dark .content
+{
+    background-color: #464649;
+}
+body.dark .colonne_gauche {
+    background: #18181b;
+    border: 2px solid #000000;
+}
+body.dark .content_article {
+    border: solid #000000 1px;
+    background-color: #26262c;
+}
+body.dark .commentaires{
+    background: #464649;
+     border: solid #000000 1px;
+}
+body.dark .datepubli{
+    color: #fff;
+}
+body.dark .liencom{
+    color: #dadae0;
+}
+body.dark .comment_content{
+    color: white;
+}
+body.dark .button_envoie_com {
+   color: #fff;
+    border: 1px solid #000000;
+    background: #464649;
 }
