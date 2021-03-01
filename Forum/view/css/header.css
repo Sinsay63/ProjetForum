@@ -377,3 +377,7 @@ header{
 .btn:hover::after{
     right: 80%;
 }
+.btn_search{
+    border: none;
+    background-color: transparent;
+}

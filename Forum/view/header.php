@@ -24,10 +24,14 @@
                         <h1 class="title">AnecdoteSpecialChars </h1>
                     </div>
                     <div class="recherche">
-                        <input class="recherche-txt" type="text" name="box" placeholder="Rechercher...">
-                        <a class="bouton-btn" href="#">
+                        <form action="" method="post">
+                            <input class="recherche-txt" type="text" name="recherche" placeholder="Rechercher..." minlength="3">
+                            <button type="submit" class="btn_search">
+                            <div class="bouton-btn">
                             <i class="fas fa-search"></i>
-                        </a>
+                        </div>
+                        </button>
+                        </form>
                     </div>  
                 </div>
                 <div class="droite">
