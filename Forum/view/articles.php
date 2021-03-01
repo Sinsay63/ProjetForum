@@ -24,7 +24,7 @@
                                         <p class="publié"><?php echo "Publié par ".$value['Pseudo'];  ?></p>
                                         <img class="pp1" src="<?php echo $value['Avatar_Path'];  ?>"/>
                                     </div>
-                                    <div class="datepubli"
+                                    <div class="datepubli">
                                         <p ><?php echo "le  ".$value['Date_Publication'];  ?></p>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@
                                 <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=0&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Clore</a>
                     <?php   }
                             else if($value['IsClosed']==1){ ?>
-                                <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> ?>
+                                <a class="liencom" href="index.php?page=opencloseart&id=<?php echo $value['ID'];?>&opcl=1&ID_auteur=<?php echo $_GET['ID_auteur'];?>&IDs=<?php echo $_GET['ID'];?>">Réouvrir</a> 
                         <div class="content_com">
                         <?php    } 
                         }
