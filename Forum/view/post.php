@@ -15,8 +15,8 @@
                         <option value="">Choisir une categorie</option>
                         <option value="1">+18</option>
                         <option value="2">vacances</option>
-                        <option value="3">insolites</option>
-                        <option value="4">genantes</option>
+                        <option value="3">horreur</option>
+                        <option value="4">gênante</option>
                     </select>
                     <input class="choix_titre" type="text" name="titre" placeholder="Entrez un titre" maxlength="40" minlength="20">
                     <input id="x" class="contenu" type="hidden" name="contenu" placeholder="Entrez votre message" maxlength="200" minlength="10">

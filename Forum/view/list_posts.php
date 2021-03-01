@@ -38,7 +38,7 @@ function redirige (myvalue) {
                             <option value="" hidden>Recherche de catégories</option>
                             <option value="1">+18</option>
                             <option value="2">Vacances</option>
-                            <option value="3">Insolites</option>
+                            <option value="3">Horreurs</option>
                             <option value="4">Génantes</option>
                         </select>
                     </div>
